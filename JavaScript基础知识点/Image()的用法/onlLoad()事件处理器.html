@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>onLoad()事件处理器</title>
+</head>
+
+<body>
+    Please wait, loading images...
+    <script language="JavaScript">
+        //首先在图像载入时显示一个“please wait”屏幕，然后在载入完成时将浏览器转到一个新的 URL。 
+        objImage = new Image();
+        // set what happens once the image has loaded objImage.onLoad=imagesLoaded(); 
+        // preload the image file 
+        objImage.src = 'images/image1.jpg';
+        // function invoked on image load 
+        function imagesLoaded() {
+            alert();
+            document.location.href = '预载入一个图像.html';
+        }
+    </script>
+</body>
+
+</html>

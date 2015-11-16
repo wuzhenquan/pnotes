@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>关于__proto__和prototype</title>
+    <script>
+        //相关链接:http://www.cnblogs.com/errorx/p/3738370.html
+        //相关链接:http://blog.csdn.net/lmj623565791/article/details/24423881
+        var Person = function(){}
+        var p = new Person();//p是实例, p的原型就是Person了
+        console.log(p.__proto__ == Person.prototype);
+        //2015.10.15
+        //var p = new Person();的操作是:
+        //var p = {};初始化一个对象p
+        //p.__proto__ == Person.prototype;返回true, 说明该对象的__proto__指向函数的prototype
+        //Person.call(p);调用该函数（此时注意函数的作用域是第一步新建的对象）
+        //__proto__是指向p对象在其内部初始化的一个属性,当找对象属性找不到时就会去__proto__里找这个属性
+        
+        //2015.11.15
+        //"[[Prototype]]"作为对象的内部属性，是不能被直接访问的。
+        //所以为了方便查看一个对象的原型
+        //Firefox和Chrome中提供了"__proto__"这个"非标准"的访问器
+        //（ECMA引入了标准对象原型访问器"Object.getPrototype(object)"）。
+        //"非标准"是指不是所有浏览器都支持__proto__
+    </script>
+</head>
+<body>
+     
+</body>
+</html>

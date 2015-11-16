@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>变量作用域</title>
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+    <script type="text/javascript">
+        var scope = "global scope";
+        function checkscope(){
+            var scope = "local scope";
+            function nested(){
+                var scope = "nested scope";
+                return scope; //返回nested scope
+            }
+            return nested();//返回nested scope
+        }
+        checkscope();
+    </script>
+</body>
+
+</html>

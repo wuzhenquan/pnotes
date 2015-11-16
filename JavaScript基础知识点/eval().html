@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>逻辑表达式</title>
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+    <script type="text/javascript">
+        //第85页
+       var geval = eval;
+        var x = "global",y = "global";
+        function f(){
+            var x = "local";
+            eval("x+='changed';");//这两个地方不一样
+            return x;
+        }
+        function g(){
+            var y = "local";
+            geval("y+='changed';");//这两个地方不一样
+            return y;
+        }
+        alert(f(),x);
+        alert(g(),y);
+        console.log(f(),x);//f()返回localchanged,x返回global
+        console.log(g(),y);//g()返回local,y返回globalchanged
+    </script>
+</body>
+
+</html>

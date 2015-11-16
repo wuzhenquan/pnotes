@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>闭包例子</title>
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+    <script type="text/javascript">
+        //        function outerFun() {
+        //            var a = 0;
+        //
+        //            function innerFun() {
+        //                a++;
+        //                alert(a);
+        //            }
+        //        }
+        //        innerFun()
+        //        上面的代码是错误的.innerFun() 的作用域在outerFun() 内部, 所在outerFun() 外部调用它是错误的.
+        //        改成如下, 也就是闭包:
+        function outerFun() {
+            var a = 0;
+            function innerFun() {
+                a++;
+                alert(a);
+            }
+            return innerFun; //注意这里
+        }
+        var obj = outerFun();
+        obj(); //结果为1
+        obj(); //结果为2
+        var obj2 = outerFun();
+        obj2(); //结果为1
+        obj2(); //结果为2
+    </script>
+</body>
+
+</html>

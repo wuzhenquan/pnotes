@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>声明提前</title>
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+    <script type="text/javascript">
+        //第58页
+        var scope = "global";
+        function f(){
+            console.log(scope); //输出"undefined"
+            var scope = "local";//相当于在函数嘴上面一行添加了var scope;
+            console.log(scope);//输出"local"
+
+        }
+        
+    </script>
+</body>
+
+</html>

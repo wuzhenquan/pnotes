@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>载入图像完成后提示</title>
+</head>
+
+<body>
+    <h1 id="H1">Please wait, loading images...</h1>
+    <div id="DIV">
+
+    </div>
+    <script language="JavaScript">
+        //首先在图像载入时显示一个“please wait”屏幕，然后在载入完成时将浏览器转到一个新的 URL。 
+        //需要注意的是: src 属性一定要写到 onload 的后面，否则程序在 IE 中会出错。
+        objImage = new Image();
+        objImage.onload = function () {
+            alert('图像载入完成');
+            var img1 = document.createElement("img");
+            img1.setAttribute("src", objImage.src);
+            document.getElementById("DIV").appendChild(img1);
+            document.getElementById("H1").remove();
+        }
+        objImage.src = 'images/image1.jpg';
+    </script>
+</body>
+
+</html>

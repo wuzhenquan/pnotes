@@ -13,9 +13,13 @@
     </a>
     <!--img没有onMouseOver和onMouseOut事件, 所以将img包含在a标签中-->
     <script language="JavaScript">
+        //Javascript Image()的用法:
+        //用JS预载入一个图像
         function preloader() {
-            heavyImage = new Image();
-            heavyImage.src = "images/nala.jpg";
+            imggg = new Image();
+            imggg.src = "images/nala.jpg";
+            //这两行也可以直接写成:
+            //new Image().src = "images/nala.jpg";
         }
     </script>
 </body>

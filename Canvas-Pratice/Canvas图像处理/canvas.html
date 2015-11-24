@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <style type="text/css">
+     #canvas {
+         border: 1px solid #aaa;
+         display: block;
+         margin: 50px auto;
+     }
+    </style>
+    <body>
+<!--       不建议使用css 的方式来指定canva的大小，因为css指定的实际上是canvas画布的显示的大小,而且不能用px设置大小-->
+        <canvas id="canvas">
+            
+        </canvas>
+        <script>
+           
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                var image = new Image();//因为经常要对这个变量进行操作，所以将其放在函数的外面
+  
+                window.onload = function(){
+                    
+                    canvas.width = 1152
+                    canvas.height = 768
+                    
+                    image.src = "macbook1.jpg";
+                    image.onload = function(){
+                        
+                    context.drawImage( image , 0 , 0 ) //渲染图片，而且是已图片原有的尺寸显示出来，后面两个0是放置图像的位置坐标，如果超出canvas的边界，则canvas自动裁切在边界外面的图片
+                    }//当图片读取完了之后才能被调用
+      
+                }
+        </script>
+    </body>
+</html>

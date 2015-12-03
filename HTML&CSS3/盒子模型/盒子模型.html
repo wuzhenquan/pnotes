@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style type="text/css">
+            .contentBox{
+                width: 208px;
+                padding: 32px;
+                border: 16px solid #bbb;
+                background-color: #ffe872;
+            }
+            .borderBox{
+                width: 208px;
+                padding: 32px;
+                border: 16px solid #ccc;
+                background-color: #72edff;
+                box-sizing: border-box;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--  文本会溢出 文本内加空格就不会了-->
+        <div class="contentBox">contentBox contentBox content contentBox
+             contentBox contentBox contentBox </div>
+        <div class="borderBox">borderBox borderBox borderBox borderBox borderBox
+             borderBox borderBox borderBox </div>
+        <hr>
+    </body>
+</html>

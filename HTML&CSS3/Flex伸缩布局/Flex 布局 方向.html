@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flex 布局 方向</title>
+    <style type="text/css">
+        .part {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .flexbox {
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+    </style>
+    <script type="text/javascript">
+        // 关于所有的flex的设置, 要注意没个属性都要考虑到兼容moz/webkit/o, 在Safari浏览器中，你依然需要添加前缀-webkit，
+        // 要记住的属性及其属性名:
+        // display:flex; 横向布局 默认
+        // display:flex; flex-direction: column; 纵向布局
+        // justify-content: flex-start;水平方向 向左 默认
+        // justify-content: flex-end;水平方向 向右
+        // justify-content: center;水平居中
+        // align-items: flex-start;垂直方向 向上 默认
+        // align-items: flex-end;垂直方向 向下
+        // align-items: center; 垂直居中
+    </script>
+
+</head>
+
+<body>
+    <!-- 横向 左边 默认-->
+    <div class="part">
+        <style type="text/css">
+            .flexcontainerRowLeft {
+                display: -webkit-flex;
+                display: flex;
+            }
+
+            .flexcontainerRowLeft .flexbox {
+                background-color: #ffe872;
+            }
+        </style>
+        <div class="flexcontainerRowLeft">
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+        </div>
+    </div>
+    <!-- 横向 右边 -->
+    <div class="part">
+        <style type="text/css">
+            .flexcontainerRowRight {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-justify-content: flex-end;
+                justify-content: flex-end;
+            }
+
+            .flexcontainerRowRight .flexbox {
+                background-color: orange;
+            }
+        </style>
+        <div class="flexcontainerRowRight">
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+        </div>
+    </div>
+    <!-- 纵向 左边-->
+    <div class="part">
+        <style type="text/css">
+            .flexcontainerColumnLeft {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .flexcontainerColumnLeft .flexbox {
+                background-color: #72edff;
+            }
+        </style>
+        <div class="flexcontainerColumnLeft">
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+        </div>
+    </div>
+    <!-- 纵向 右边 -->
+    <div class="part">
+        <style type="text/css">
+            .flexcontainerColumnRight {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+                -webkit-align-items: flex-end;
+                align-items: flex-end;
+            }
+
+            .flexcontainerColumnRight .flexbox {
+                background-color: #36f;
+            }
+        </style>
+        <div class="flexcontainerColumnRight">
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+        </div>
+    </div>
+    <!-- 水平居中 -->
+    <div class="part">
+        <style type="text/css">
+            .flexcontainerRowCenter {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+            }
+
+            .flexcontainerRowCenter .flexbox {
+                background-color: #36f;
+            }
+        </style>
+        <div class="flexcontainerRowCenter">
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+            <div class="flexbox"></div>
+        </div>
+    </div>
+    <!-- 垂直居中 -->
+    <div class="part">
+        <style type="text/css">
+            .flexcontainerVertical {
+                height: 300px;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+            }
+
+            .flexcontainerColumnCenter .flexbox {
+                background-color: #36f;
+            }
+        </style>
+        <div class="flexcontainerVertical">
+            <div class="flexbox" style="width: 200px; height: 50px; margin"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>

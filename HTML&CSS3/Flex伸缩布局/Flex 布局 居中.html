@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flex 布局 居中</title>
+    <style type="text/css">
+        .part {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .flexbox {
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+
+<body>
+    <!-- 居中 -->
+    关键属性display: flex; align-items: center; justify-content: center;
+    <div class="part">
+        <style type="text/css">
+            .flexcontainerVertical {
+                height: 300px;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                background-color: #ddd;
+            }
+
+            .flexcontainerVertical .flexbox {
+                background-color: #36f;
+            }
+        </style>
+        <div class="flexcontainerVertical">
+            <div class="flexbox"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>

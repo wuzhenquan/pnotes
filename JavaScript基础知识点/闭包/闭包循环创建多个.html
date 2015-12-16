@@ -11,17 +11,6 @@
 
 <body>
     <script type="text/javascript">
-//        //这个函数(闭包)返回一个总是返回v的函数
-//        function constfunc(v) {
-//            return function () {
-//                return v;
-//            };
-//        }
-//        //创建一个数组来存储函数
-//        var funcs = [];
-//        for (var i = 0; i < 10; i++) funcs[i] = constfunc(i);
-//        console.log(funcs[5]()); //=>5
-        
         //错误的, 试图将循环代码移入定义这个闭包的函数之内
         function constfuncs() {
             var funcs = [];
@@ -29,7 +18,19 @@
             return funcs;
         }
         var funcs = constfuncs();
-        alert(funcs[5]());
+        console.log(funcs[5]());
+
+        // 修正
+        //这个函数(闭包)返回一个总是返回v的函数
+        // function constfunc(v) {
+        //     return function() {
+        //         return v;
+        //     };
+        // }
+        // //创建一个数组来存储函数
+        // var funcs = [];
+        // for (var i = 0; i < 10; i++) funcs[i] = constfunc(i);
+        // console.log(funcs[4]()); //=>4
     </script>
 </body>
 

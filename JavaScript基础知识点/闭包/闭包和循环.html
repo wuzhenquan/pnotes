@@ -12,6 +12,41 @@
 <body>
     <button id="button">click</button>
     <script type="text/javascript">
+    //错误的, 试图将循环代码移入定义这个闭包的函数之内
+    function constfuncs() {
+        var funcs = [];
+        for (var i = 0; i < 5; i++)
+            funcs[i] = function () {return i;};
+        return funcs;
+    }
+    var funcs = constfuncs();
+    console.log(funcs[3]());//5
+    //错误原因
+    //constfuncs()时已经执行了function constfuncs(){}内的语句
+    //完后是这样的:
+    //funcs[0] = function () {return i;};
+    //funcs[1] = function () {return i;};
+    //funcs[2] = function () {return i;};
+    //funcs[3] = function () {return i;};
+    //funcs[4] = function () {return i;};
+    //for循环也执行完了, 但f这 5 个unction () {return i;}还没有执行(因为后面没有())
+    //所以此时 i等于10
+    //在执行funcs[5]()时, 才让function () {return i;}(此时i为5)开始执行
+    //i老早就等于5了
+
+    // 修正
+    //这个函数(闭包)返回一个总是返回v的函数
+    // function constfunc(v) {
+    //     return function() {
+    //         return v;
+    //     };
+    // }
+    // //创建一个数组来存储函数
+    // var funcs = [];
+    // for (var i = 0; i < 5; i++) funcs[i] = constfunc(i);
+    // console.log(funcs[4]()); //=>4
+
+    
         // 这段代码会以每秒一次的频率输出五次6
         // 因为延迟函数的回调会在循环结束时才执行
         // 只有一个词法作用域

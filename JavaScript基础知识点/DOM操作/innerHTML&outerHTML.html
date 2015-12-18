@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>innerHTML&outerHTML</title>
+    </head>
+    <body>
+        <div id="div1"><h3></h3></div>
+
+        <script type="text/javascript">
+            var div1=document.getElementById("div1");
+            //添加或更改
+            div1.innerHTML="<span style='color:red'>Hi</span>";
+            //读取
+            alert(div1.innerHTML);
+        </script>
+    </body>
+</html>

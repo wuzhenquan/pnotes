@@ -9,16 +9,16 @@
             margin: 0;
             color: #fff;
         }
-
+        /*很重要的设置 因为page内的所有元素浮动的*/
         #page:after,
         #page:before {
             content: "";
             display: table;
         }
-
+        /*很重要的设置 因为page内的所有元素浮动的*/
         #page:after {
             clear: both;
-            overflow: hidden;
+            /*overflow: hidden;*/
         }
 
         #page {
@@ -28,18 +28,17 @@
         #header {
             width: 100%;
             background: green;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             padding: 20px;
         }
 
-        .main {
+        #page .main {
             width: 60%;
             padding: 20px;
             background: orange;
             float: left;
         }
-
-        .sidebar {
+        #page .sidebar {
             width: 38%;
             float: right;
             background: #f36;
@@ -57,7 +56,6 @@
         .main,
         .sidebar,
         /*把footer里面的CSS去掉, 布局会被撑破*/
-
         #footer {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -70,7 +68,7 @@
 
 <body>
     <div id="header">
-        <h1>Header Content Header ContentHeader ContentHeader ContentHeader ContentHeader ContentHeader Content</h1>
+        <h1>Header Content</h1>
     </div>
     <div id="page">
         <div class="main">

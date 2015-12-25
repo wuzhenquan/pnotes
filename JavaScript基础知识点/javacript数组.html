@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 原文链接: http://web.jobbole.com/84618/;
+        // concat
+        // 该方法用于连接2个或者多个数组。该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。
+        // 语法：arrayObject.concat(array1,array2,….arrayx);
+        var arr1 = [1, 2, 3],
+            arr2 = [4, 5, 6],
+            arr3 = [7, 8, 9, 1, 2, 3];
+        console.log(arr1.concat(arr2, arr3)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3]
+        console.log(arr1); // [1,2,3]
+        console.log(arr2); // [4,5,6]
+        console.log(arr3); // [7,8,9,1,2,3]
+        // join()
+        // 该方法是把数组中的所有元素放入一个字符串中，元素通过指定的分隔符进行分割的。
+        // 语法如下：arrayObject.join(separator);
+        // separator: 指定分隔符对数组中的元素进行分割，如果省略该参数，则会使用逗号作为分隔符。
+        var arrs = [];
+        arrs[0] = "aa";
+        arrs[1] = "bb";
+        arrs[2] = "cc";
+        console.log(arrs.join()); // aa,bb,cc
+        console.log(arrs.join("/")); // aa/bb/cc
+        console.log(arrs.join("-")); // aa-bb-
+        // pop
+        // 该方法删除数组的最后一个元素，把数组的长度减1，并且返回它被删除元素的值，
+        // 如果数组变为空，则该方法不改变数组，返回undefine值
+        var arrspop = [1, 2, 3, 4];
+        console.log(arrspop.pop()); // 4
+        console.log(arrspop); // [1,2,3]
+        // push()
+        // 该方法是向数组末尾添加一个或者多个元素，并返回新的长度。
+        // 基本语法：arrayObject.push(newElem1,newElem2,…..newElemX);
+        var arrspush = [1, 2, 3];
+        arrspush.push(4);
+        console.log(arrspush); // [1,2,3,4]
+        arrspush.push(5, 6);
+        console.log(arrspush); // [1,2,3,4,5,6]
+    </script>
+</body>
+
+</html>

@@ -13,14 +13,14 @@
     <button id="button">click</button>
     <script type="text/javascript">
     //错误的, 试图将循环代码移入定义这个闭包的函数之内
-    function constfuncs() {
-        var funcs = [];
-        for (var i = 0; i < 5; i++)
-            funcs[i] = function () {return i;};
-        return funcs;
-    }
-    var funcs = constfuncs();
-    console.log(funcs[3]());//5
+    // function constfuncs() {
+    //     var funcs = [];
+    //     for (var i = 0; i < 5; i++)
+    //         funcs[i] = function () {return i;};
+    //     return funcs;
+    // }
+    // var funcs = constfuncs();
+    // console.log(funcs[3]());//5
     //错误原因
     //constfuncs()时已经执行了function constfuncs(){}内的语句
     //完后是这样的:
@@ -46,7 +46,7 @@
     // for (var i = 0; i < 5; i++) funcs[i] = constfunc(i);
     // console.log(funcs[4]()); //=>4
 
-    
+
         // 这段代码会以每秒一次的频率输出五次6
         // 因为延迟函数的回调会在循环结束时才执行
         // 只有一个词法作用域
@@ -66,14 +66,21 @@
         //     })()
         // }
         // 改进后的最终版
-        // for(var i=1;i<=5;i++){
-        //     (function(){
-        //         var j=i;//需要有自己的变量, 用来在每个迭代中存储
-        //         setTimeout(function(){
-        //             console.log(j);
-        //         },j*1000);
-        //     })();
-        // }
+        for(var i=1;i<=5;i++){
+            (function(){
+                var j=i;//需要有自己的变量, 用来在每个迭代中存储
+                setTimeout(function(){
+                    console.log(j);
+                },j*1000);
+            })();
+        }// 正计时 看看和倒计时的区别 待研究和修改
+        for(var i=1;i<=5;i++){
+                var j=i;//需要有自己的变量, 用来在每个迭代中存储
+                setTimeout(function(){
+                    j--;
+                    console.log(j);
+                },j*1000);
+        }// 倒计时 看看和正计时的区别  待研究和修改
         // //或者
         // for (var i = 1; i <= 5; i++) {
         //     (function(j) {

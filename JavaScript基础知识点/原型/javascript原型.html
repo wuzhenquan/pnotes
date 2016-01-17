@@ -16,20 +16,22 @@
         Person_1.prototype.show = function () {
                 console.log("我叫" + this.name + ",今年" + this.age);
             }
-            //创建两个对象,通过new操作符调用的函数就是构造函数
+            //实例化两个对象,通过new操作符调用的函数就是构造函数
         var person1 = new Person_1('张三', 20); //person1是实例
         var person2 = new Person_1('李四', 23); //person2是实例
-        //只有构造函数才有prototype属性，而构造函数的实例是没有该属性的,也就是说console.log(person1.protorype)输出的是undefined
+        //只有构造函数才有prototype属性，
+        //而构造函数的实例是没有该属性的,
+        //也就是说console.log(person1.protorype)输出的是undefined
+        //但person1.__proto__是有输出结果的
+        // 而且 person1.__proto__===person1.protorype
         //调用原型里面的方法
-        person1.show();
-        person2.show();
-
+        //person1.show();
+        //person2.show();
         //2015.11.5
         //相关链接:http://www.imooc.com/article/2088
         function Person_2(name, age) {
             this.name = name;
             this.age = age;
-
             this.getInfo = function () {
                 console.log(this.name + " is " + this.age + " years old");
             };
@@ -43,20 +45,21 @@
         console.log(will.constructor); //Person_2{}的整个函数
         //constructor对应创建所有指向该原型的实例的构造函数
         //will对象本身没有constructor属性
-        //但是通过原型链查找
-        //找到了will原型（will.proto）的"constructor"属
+        //但是will.__proto__===Person_2.prototype, 通过原型链查找
         //并得到了Person函数。
 
         //查看对象will的原型（will.__proto__）的原型
-        console.log("查看对象will的原型（will.__proto__）的原型:");
+        console.log("查看对象will的原型（will.__proto__)");
         console.log(will.__proto__ === Person_2.prototype); //true
-        console.log(will.__proto__); //Person_2 {}
-        console.log(will.prototype); //undefined
+
         console.log(Person_2.__proto__); //function () {}
+        console.log(will.__proto__); //Person_2 {}
         console.log(Person_2.prototype); //Person_2 {}
+        console.log(will.prototype); //undefined
+
         console.log(Person_2.__proto__ == Person_2.prototype); //false
         console.log(Person_2.prototype.__proto__); //Object(),所有对象的原型都将追溯到"Object()"对象
-        console.log(Person_2.prototype.constructor);
+        console.log(Person_2.prototype.constructor);//function () {}
         console.log(Person_2.prototype.constructor === Person_2); //true
 
         //查看对象Object的原型
@@ -144,7 +147,7 @@
         };
 
         will.getInfo(); // getInfo method from will instead of prototype
-        
+
         //对象创建方式影响原型链
         //以下的构建方式会得原型链和以上的原型链会不一样
         var July = {
@@ -155,7 +158,7 @@
             },
         }
         console.log(July.getInfo());
-        
+
         //hasOwnProperty
         //"hasOwnProperty"是"Object.prototype"的一个方法，该方法能判断一个对象是否包含自定义属性而不是原型链上的属性，因为"hasOwnProperty" 是 JavaScript 中唯一一个处理属性但是不查找原型链的函数。
         //"hasOwnProperty"还有一个重要的使用场景，就是用来遍历对象的属性。

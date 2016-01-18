@@ -13,7 +13,7 @@
             this.age = age;
         } //使用函数来定义对象
         //使用原型给类添加方法
-        Person_1.prototype.show = function () {
+        Person_1.prototype.show = function() {
                 console.log("我叫" + this.name + ",今年" + this.age);
             }
             //实例化两个对象,通过new操作符调用的函数就是构造函数
@@ -32,7 +32,7 @@
         function Person_2(name, age) {
             this.name = name;
             this.age = age;
-            this.getInfo = function () {
+            this.getInfo = function() {
                 console.log(this.name + " is " + this.age + " years old");
             };
         }
@@ -59,7 +59,7 @@
 
         console.log(Person_2.__proto__ == Person_2.prototype); //false
         console.log(Person_2.prototype.__proto__); //Object(),所有对象的原型都将追溯到"Object()"对象
-        console.log(Person_2.prototype.constructor);//function () {}
+        console.log(Person_2.prototype.constructor); //function Person_2 () {}
         console.log(Person_2.prototype.constructor === Person_2); //true
 
         //查看对象Object的原型
@@ -101,18 +101,21 @@
 
 
         //对比prototype和proto, protopyep和proto是两种不同的属性
-        //对于"prototype"和"proto"这两个属性有的时候可能会混，"Person.prototype"和"Person.proto"是完全不同的。
-        //在这里对"prototype"和"proto"进行简单的介绍：
+        //对于"prototype"和"proto"这两个属性有的时候可能会混，"Person.prototype"和"Person.__proto__"是完全不同的。
+        //在这里对"prototype"和"__proto__"进行简单的介绍：
         //对于所有的对象，都有proto属性，这个属性对应该对象的原型
-        //对于函数对象，除了proto属性之外，还有prototype属性，当一个函数被用作构造函数来创建实例时，该函数的prototype属性值将被作为原型赋值给所有对象实例（也就是设置实例的proto属性）
+        //对于函数对象，除了__proto__属性之外，还有prototype属性
+        //当一个函数被用作构造函数来创建实例时，该函数的prototype属性值将被作为原型赋值给所有对象实例（也就是设置实例的__proto__属性）
         //以上, Person_2/Object/Function的__proto__都为function () {}
         //而Person_2的prototype为Person_2{}, Object的prototype为Object{}, Function的prototype为function(){}
         //Person_2.prototype.MaxNumber = 9999;
         //person_2.__proto__.MinNumber = -9999;
-        //var will = new Person("Will", 28);
+
+        //var will = new Person_2("Will", 28);
         //console.log(will.MaxNumber);//9999
         //console.log(will.MinNumber);// undefined
-        //"Person.prototype "对应的就是Person构造出来所有实例的原型，也就是说"Person.prototype "属于这些实例原型链的一部分，所以当这些实例进行属性查找时候，就会引用到"Person.prototype "中的属性。
+        //"Person.prototype "对应的就是Person构造出来所有实例的原型
+        //也就是说"Person_2.prototype "属于这些实例原型链的一部分，所以当这些实例进行属性查找时候，就会引用到"Person_2.prototype "中的属性。
 
         //原型就是为了方便实现属性的继承, 所以以后要实现属性的继承, 考虑选择使用原型
         //通过原型改进例子
@@ -122,7 +125,7 @@
             this.age = age;
         }
 
-        Person_3.prototype.getInfo = function () {
+        Person_3.prototype.getInfo = function() {
             console.log(this.name + " is " + this.age + " years old");
         };
         var bibi = new Person_3("bibi", 26);
@@ -136,13 +139,13 @@
         function Person_4(name, age) {
             this.name = name;
             this.age = age;
-            this.getInfo = function () {
+            this.getInfo = function() {
                 console.log(this.name + " is " + this.age + " years old");
             };
         }
 
         var will = new Person_4("Will", 28);
-        will.getInfo = function () {
+        will.getInfo = function() {
             console.log("getInfo method from will instead of prototype");
         };
 
@@ -153,14 +156,16 @@
         var July = {
             name: "July",
             age: 28,
-            getInfo: function () {
+            getInfo: function() {
                 console.log(this.name + " is " + this.age + " years old");
             },
         }
         console.log(July.getInfo());
 
         //hasOwnProperty
-        //"hasOwnProperty"是"Object.prototype"的一个方法，该方法能判断一个对象是否包含自定义属性而不是原型链上的属性，因为"hasOwnProperty" 是 JavaScript 中唯一一个处理属性但是不查找原型链的函数。
+        //"hasOwnProperty"是"Object.prototype"的一个方法，
+        //该方法能判断一个对象是否包含自定义属性而不是原型链上的属性,
+        //因为"hasOwnProperty" 是 JavaScript 中唯一一个处理属性但是不查找原型链的函数。
         //"hasOwnProperty"还有一个重要的使用场景，就是用来遍历对象的属性。
         //原文链接http://www.cnblogs.com/wilber2013/p/4924309.html
     </script>

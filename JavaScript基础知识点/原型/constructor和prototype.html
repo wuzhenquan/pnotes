@@ -16,10 +16,12 @@
         alert(obj.constructor);//function a(){}
         alert(a.prototype.constructor);//function a(){}
         alert(a.prototype);//[Object Object]
-        //首先obj是没有constructor 这个属性的，但是 obj.__proto__ = a.prototype;就从a.prototype中寻找，而 a.prototype.constructor 是就a，所有两者的结果是一一样的.
+        //首先obj是没有constructor 这个属性的，
+        //但是 obj.__proto__ == a.prototype;就从a.prototype中寻找，
+        //而 a.prototype.constructor 是就a，所以两者的结果是一一样的.
     </script>
 </head>
 <body>
-     
+
 </body>
 </html>

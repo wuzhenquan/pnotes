@@ -34,9 +34,10 @@
     //var person = new Person();
     //上面这两句是在构造实例对象
     //当var person = new Person();时, Person.prototype为:Person{}(当然了, 内部还有constructor属性), 即Person.prototype指向一个空对象{},
-
     //Person.prototype.say = function(){console.log('Hello'+this.name);};这句是在添加原型方法
-    //只有构造函数才有prototype属性，而构造函数的实例是没有该属性的
+    //只有构造函数才有prototype属性，
+    //而构造函数的实例是没有该属性的,
+    //但构造函数有个内部属性__prototype__
     </script>
 </body>
 

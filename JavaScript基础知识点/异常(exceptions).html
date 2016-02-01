@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>异常</title>
+    </head>
+    <body>
+    <script type="text/javascript">
+    // 摘自 《JavaScript语言精粹》
+        var add=function(a,b){
+            if(typeof a !=='number' || typeof b!=='number'){
+                throw{
+                    name:'TypeError',
+                    message:'add needs number'
+                }
+            }
+            return a+b;
+        }
+        var try_it=function(){
+            try {
+                add("seven");
+            } catch (e) {
+                document.writeln(e.name+": "+e.message);
+            }
+        }
+        try_it();
+    </script>
+    </body>
+</html>

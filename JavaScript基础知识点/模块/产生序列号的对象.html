@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>产生序列号的对象</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // 摘自《JavaScript语言精粹》P41
+            // 模块模式的一般形式是：
+            // 一个定义了私有变量和函数的函数；
+            // 利用闭包创建可以访问私有变量和函数的特权函数;
+            // 最后返回这个特权函数, 或者把他们保存到一个可访问到的地方;
+
+            // 模块模式也可以用来产生安全对象, 假定我们想要构造一个用来产生序列号的对象
+
+            // 返回一个用来产生唯一字符串的对象
+            // 唯一字符串由两部分组成: 前缀+序列号
+            // 该对象包含一个设置前缀的方法, 一个设置序列号的方法
+            // 和一个产生唯一字符串的gensym方法
+            var serial_maker=function(){
+                var prefix='';
+                var seq=0;
+                return {
+                    set_prefix: function(p){
+                        prefix=String(p);
+                    },
+                    set_seq: function(s){
+                        seq=s;
+                    },
+                    gensym: function(){
+                        var result=prefix+seq;
+                        seq+=1;
+                        return result;
+                    }
+                }
+            }
+            var seqer=serial_maker();
+            // 没有用到new构造函数, 因为内部要设置为私有属性 P38
+            seqer.set_prefix('Q');
+            seqer.set_seq(1000);
+            var unique=seqer.gensym();//unique是"Q1000"
+        </script>
+    </body>
+</html>

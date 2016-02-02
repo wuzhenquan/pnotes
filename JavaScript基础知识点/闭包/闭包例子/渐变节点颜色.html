@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>渐变节点颜色</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var fade=function(node){
+                var level=1;
+                var step=function(){
+                    var hex=level.toString(16);
+                    node.style.backgroundColor="#ffff"+hex+hex;
+                    if(level<15){
+                        level+=1;
+                        setTimeout(step,100);//每隔0.1秒level+1;
+                    }
+                };
+                setTimeout(step,100);//这句换成 "step()"也可以
+            }
+            fade(document.body)
+        </script>
+    </body>
+</html>

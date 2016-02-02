@@ -15,8 +15,9 @@
     //错误的, 试图将循环代码移入定义这个闭包的函数之内
     // function constfuncs() {
     //     var funcs = [];
-    //     for (var i = 0; i < 5; i++)
-    //         funcs[i] = function () {return i;};
+    //     for (var i = 0; i < 5; i++) {
+    //         funcs[i] = function () {return i;}
+    //     }
     //     return funcs;
     // }
     // var funcs = constfuncs();
@@ -29,22 +30,22 @@
     //funcs[2] = function () {return i;};
     //funcs[3] = function () {return i;};
     //funcs[4] = function () {return i;};
-    //for循环也执行完了, 但f这 5 个unction () {return i;}还没有执行(因为后面没有())
+    //for循环也执行完了, 但f这 5 个function () {return i;}还没有执行(因为后面没有())
     //所以此时 i等于10
     //在执行funcs[5]()时, 才让function () {return i;}(此时i为5)开始执行
     //i老早就等于5了
 
     // 修正
-    //这个函数(闭包)返回一个总是返回v的函数
-    // function constfunc(v) {
-    //     return function() {
-    //         return v;
-    //     };
-    // }
-    // //创建一个数组来存储函数
-    // var funcs = [];
-    // for (var i = 0; i < 5; i++) funcs[i] = constfunc(i);
-    // console.log(funcs[4]()); //=>4
+    // 这个函数(闭包)返回一个总是返回v的函数
+    function constfunc(v) {
+        return function() {
+            return v;
+        };
+    }
+    //创建一个数组来存储函数
+    var funcs = [];
+    for (var i = 0; i < 5; i++) {funcs[i] = constfunc(i);}
+    console.log(funcs[4]()); //=>4
 
 
         // 这段代码会以每秒一次的频率输出五次6
@@ -66,21 +67,21 @@
         //     })()
         // }
         // 改进后的最终版
-        for(var i=1;i<=5;i++){
-            (function(){
-                var j=i;//需要有自己的变量, 用来在每个迭代中存储
-                setTimeout(function(){
-                    console.log(j);
-                },j*1000);
-            })();
-        }// 正计时 看看和倒计时的区别 待研究和修改
-        for(var i=1;i<=5;i++){
-                var j=i;//需要有自己的变量, 用来在每个迭代中存储
-                setTimeout(function(){
-                    j--;
-                    console.log(j);
-                },j*1000);
-        }// 倒计时 看看和正计时的区别  待研究和修改
+        // for(var i=1;i<=5;i++){
+        //     (function(){
+        //         var j=i;//需要有自己的变量, 用来在每个迭代中存储
+        //         setTimeout(function(){
+        //             console.log(j);
+        //         },j*1000);
+        //     })();
+        // }// 正计时 看看和倒计时的区别 待研究和修改
+        // for(var i=1;i<=5;i++){
+        //         var j=i;//需要有自己的变量, 用来在每个迭代中存储
+        //         setTimeout(function(){
+        //             j--;
+        //             console.log(j);
+        //         },j*1000);
+        // }// 倒计时 看看和正计时的区别  待研究和修改
         // //或者
         // for (var i = 1; i <= 5; i++) {
         //     (function(j) {

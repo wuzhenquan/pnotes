@@ -36,16 +36,28 @@
     //i老早就等于5了
 
     // 修正
-    // 这个函数(闭包)返回一个总是返回v的函数
-    function constfunc(v) {
-        return function() {
-            return v;
-        };
-    }
-    //创建一个数组来存储函数
+    // 让这个函数(闭包)返回一个总是返回v的函数
     var funcs = [];
-    for (var i = 0; i < 5; i++) {funcs[i] = constfunc(i);}
+    for (var i = 0; i < 5; i++) {
+        funcs[i] = function (v){
+            return function(){
+                return v
+            }
+        }(i)
+    }
     console.log(funcs[4]()); //=>4
+    // 优化
+    // function constfunc(v) {
+    //     return function() {
+    //         return v;
+    //     };
+    // }
+    // var funcs = [];
+    // for (var i = 0; i < 5; i++) {
+    //     funcs[i] = constfunc(i);
+    // }
+    // console.log(funcs[4]()); //=>4
+
 
 
         // 这段代码会以每秒一次的频率输出五次6

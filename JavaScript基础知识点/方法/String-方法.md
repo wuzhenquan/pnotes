@@ -54,7 +54,7 @@
 #### string.replace(searchValue, replaceValue)
 > 查找和替换string 并返回一个新字符串 又涉及到正则表达式 我还是不会啊→_→
 
-#string.search(regexp)
+#### string.search(regexp)
 > 涉及到正则表达 我不会→_→
 
 #### string.slice(start, end)

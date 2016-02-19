@@ -6,6 +6,8 @@
 
 git checkout -- filename 直接丢弃工作区的修改
 
+如果丢弃后又要捡回来, 在文本编辑器上用撤销快捷键
+
 > 场景2: 修改了且添加到了暂存区, 要撤销这次add的话
 
 - git reset HEAD filename 加add后的filenam文件退回到工作区
@@ -144,39 +146,34 @@ git checkout -- filename 直接丢弃工作区的修改
 
 ## 场景
 
-> 场景1:
-> 当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时
+场景1:当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时
 
- 答: 用命令git checkout -- file。
+> 答: 用命令git checkout -- file。
 
-> 场景2:
-> 当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改
+场景2:当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改
 
-答: 第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。
+> 答: 第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。
 
-> 场景3：
-> 已经提交了不合适的修改到版本库时，想要撤销本次提交
+场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交
 
-参考版本回退一节，不过前提是没有推送到远程库。
+> 参考版本回退一节，不过前提是没有推送到远程库。
 
-> 场景4:
-> 在dev分支上, 其他人最新的push和你试图push的有冲突
+场景4: 在dev分支上, 其他人最新的push和你试图push的有冲突
 
-- git pull
+> - git pull
 	- 如果失败, 说明没有指定dev分支与远程origin/dev分支的链接, 需要`git branch --set-upstream dev origin/dev`
-- 在git pull
-- git commit -m"merge & fix dev"
-- git push origin dev
+> - 在git pull
+> - git commit -m"merge & fix dev"
+> - git push origin dev
 
 
-> 场景5: 
-> master主干上有一个bug, 急需修复.新功能还没开发完, 等解决完bug之后回到刚才开发新功能的工作状态
+场景5: master主干上有一个bug, 急需修复.新功能还没开发完, 等解决完bug之后回到刚才开发新功能的工作状态
 
-答: 用git stash 相关的命令操作
+> 答: 用git stash 相关的命令操作
 
-> 场景6: 查看远程master分支是否更新
+场景6: 查看远程master分支是否更新
 
-答: `git remote origin master`后, 最后一句会显示up to date 还是local out of date
+> 答: `git remote origin master`后, 最后一句会显示up to date 还是local out of date
 
 - git stash将工作现场藏匿
 - 切换到bug 去修复后

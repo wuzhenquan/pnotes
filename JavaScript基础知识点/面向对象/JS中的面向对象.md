@@ -1,12 +1,9 @@
-→<link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
+<link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
 <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
 <script>
     hljs.tabReplace = '    ';
     hljs.initHighlightingOnLoad();
 </script>
-
-写了篇面向对象的文章 虽然我还没对象
-
 ## JavaScript中的面向对象
 
 > 面向对象都有一个类的概念, 通过类可以创建任意多个具有相同**属性**和**方法**的对象.
@@ -58,15 +55,19 @@
 
 ![构造函数, 原型对象, 实例之间的关系](http://i13.tietuku.com/dcf9d893a46043d0.png)
 
-
 ### 面向对象的设计模式
-
 
 **工厂模式**的缺点: 没有解决对象识别的问题, 不能将它的实例标识为一种特定的类型
 
 **构造函数模式**的缺点: 但构造函数中每个方法都要在每个实例上重新创建一遍. 
 
 **原型模式**的缺点: 对于包含引用类型的属性来说, 会被所有实例共享. 
+
+**寄生构造函数模式**的缺点: 返回的对象与构造函数之间没有关系(用instanceof结果返回false)
+
+**稳妥构造函数模式**的优点: 安全. 
+
+
 
 ---
 
@@ -87,11 +88,14 @@
 		this.friends = ["Shelby", "Court"];
 	}
 	// 原型模式
+	// 使用对象字面量重写原型时
+    // 要在重写的原型里面添加constructor属性和对应的属性值
+    // 不然constructor属性不再指向原来的构造函数
 	Person.prototype = {
 		constructor: Person,
 		sayName: function(){alert(this.name);}
 	}
-	
+
 	var person1 = new Person("Nicholas", 29, "Sofrware Engineer");
 	var person2 = new Person("Greg", 27, "Doctor");
 	
@@ -101,9 +105,53 @@
 	console.log(person2.friends); // ["Shelby", "Court"]
 	
 在这个例子中, 实例属性都是在构造函数中定义的, 而由所有实例共享的属性constructor和方法sayName()则是在原型中定义的.修改了person1.friends并不会影响到person2.friends
+
+##### 动态原型模式
+
+> 非常完美
 	
+	function Person(name, age, job){
+		// 属性
+		this.name = name;
+		this.age = age;
+		this.job = job;
+		// 方法
+		// 在sayName方法不存在的情况下, 才会将它添加到原型中, 完美
+		if(typeof this.sayName != "function"){
+			Person.prototype.sayName = function(){
+				alert(this.name);
+			};
+		}
+	}	
+		
+	var friend = new Person("Nicholas", 29, "Software Engineer");
+	friend.sayName();	// "Nicholas"		
 ---
 
+### 属性类型
 
-### 用ES5的特性实现面向对象编程
-> 《权威指南》P240
+> 属性类型指的是JavaScript对象中的属性有不同的特性(可写性, 可配置性, 可枚举性), 一个属性不仅可以设置它的值, 还能设置这个属性是否可写, 是否可配置, 是否可枚举
+
+在定义一个对象时, 默认的可写性, 可配置性, 可枚举性都是设置为true
+
+	var person = {name: "Nicholas"} // 可以试试
+	
+在定义一个对象并且用Object.defineProperty()时, 默认的可写性, 可配置性, 可枚举性都是设置为false
+
+	var person = {};
+	Object.defineProperty(person, "name", {
+		value: "Nicholas",		
+	}); // 可以试试
+
+##### 改变数据属性
+
+> 改变数据的值, 可写性, 可配置性, 可枚举性(能否使用for-in). 默认值都是true
+
+	var person = {};
+	Object.defineProperty(person, "name", {
+		value: "Nicholas",		
+		writable: false,        // 让person.name不能改
+		configurable: false		// 让person.name不能删
+	});
+	
+	person.name;

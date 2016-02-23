@@ -4,7 +4,7 @@
     hljs.tabReplace = '    ';
     hljs.initHighlightingOnLoad();
 </script>
-## JavaScript中的面向对象
+## JavaScript中面向对象的创建
 
 > 面向对象都有一个类的概念, 通过类可以创建任意多个具有相同**属性**和**方法**的对象.
 
@@ -67,8 +67,6 @@
 
 **稳妥构造函数模式**的优点: 安全. 
 
-
-
 ---
 
 ##### 组合使用构造函数模式和原型模式
@@ -126,32 +124,7 @@
 		
 	var friend = new Person("Nicholas", 29, "Software Engineer");
 	friend.sayName();	// "Nicholas"		
----
 
-### 属性类型
+### 小结
 
-> 属性类型指的是JavaScript对象中的属性有不同的特性(可写性, 可配置性, 可枚举性), 一个属性不仅可以设置它的值, 还能设置这个属性是否可写, 是否可配置, 是否可枚举
-
-在定义一个对象时, 默认的可写性, 可配置性, 可枚举性都是设置为true
-
-	var person = {name: "Nicholas"} // 可以试试
-	
-在定义一个对象并且用Object.defineProperty()时, 默认的可写性, 可配置性, 可枚举性都是设置为false
-
-	var person = {};
-	Object.defineProperty(person, "name", {
-		value: "Nicholas",		
-	}); // 可以试试
-
-##### 改变数据属性
-
-> 改变数据的值, 可写性, 可配置性, 可枚举性(能否使用for-in). 默认值都是true
-
-	var person = {};
-	Object.defineProperty(person, "name", {
-		value: "Nicholas",		
-		writable: false,        // 让person.name不能改
-		configurable: false		// 让person.name不能删
-	});
-	
-	person.name;
+ECMAScript支持面向对象编程, 但不适用类或者接口. 在没有类的情况下, 可以采用以上的设计模式创建对象.

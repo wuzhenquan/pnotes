@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>保护一些值不被更改</title>
+</head>
+<a href="https://www.baidu.com/">百度</a>
+<body>
+    <script type="text/javascript">
+        // myObject1中的值可以随意更改;
+        var myObject1 = {
+            value: 0,
+            increment: function(inc) {
+                this.value += typeof inc === 'number' ? inc : 1;
+            }
+        };
+        // myObject2的值被保护了不能被更改;
+        var myObject2 = (function() {
+            var value = 0;
+
+            return {
+                increment: function(inc) {
+                    value += typeof inc === 'number' ? inc : 1;
+                },
+                getValue: function() {
+                    return value;
+                }
+            };
+        }());
+    </script>
+</body>
+
+</html>

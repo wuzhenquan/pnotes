@@ -25,7 +25,7 @@ git checkout -- filename 直接丢弃工作区的修改
 
 - git reflog
 - 复制commit-id
-- git reser --hard commit-id
+- git reset --hard commit-id
 
 #### 删除文件
 

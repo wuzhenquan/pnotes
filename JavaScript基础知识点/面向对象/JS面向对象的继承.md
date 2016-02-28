@@ -7,15 +7,39 @@
 
 ## JS中面向对象的继承
 
-### 原型链继承模式
+> 通过继承, 子类型就可以访问超类型的属性和方法了
 
-JS中的继承主要是通过原型链来实现的
+
+
+### 原型链
 
 所谓**原型链**, 就是子引用类型继承了父引用类型. 这种继承是通过原型的方法, 让父引用类型的实例赋值给子引用类型的原型对象(prototype)实现的. 通过这种方法层层继承, 就构成了原型与实例的链条.
+
+而原型链的构建, 是通过将一个引用类型的实例赋值个另一个构造函数的原型实现的.
 
 上图:
 
 ![](http://i13.tietuku.com/1de7b593fc3a1c56.jpg)
+
+### 常见的继承模式
+
+- 原型链继承模式
+	- `SubType.prototype = new SuperType();`
+- 借用构造函数继承模式
+	- `function SubType](){SuperType.call(this)}`
+- 借用构造模式和原型链模式**组合式**继承模式
+	- 借用构造模式继承**实例**属性
+	- 原型链继承模式继承原型属性和方法
+- 原型式继承模式
+	- `var instance = Object.create(父对象名)`
+- 寄生式继承模式
+	- 创建一个仅用于**封装继承过程**的函数
+- 寄生**组合式**继承模式
+	- 寄生式封装继承过程
+	- 借用构造模式继承**实例**属性
+	- 原型链继承方法
+
+#### 原型链继承模式
 
 例01:
 
@@ -74,7 +98,7 @@ JS中的继承主要是通过原型链来实现的
 
 **原型链的问题**
 
-- 所有实例会共享属性
+- 对象实例共享所有继承的属性和方法
 - 不能向超类型的构造函数中传递参数
 
 例02:
@@ -97,15 +121,15 @@ JS中的继承主要是通过原型链来实现的
 
 **实践中很少会单独使用原型链**
 
-### 借用构造函数继承模式
+#### 借用构造函数继承模式
 
-使用apply()或call()方法, 把上例01中的`SubType.prototype = new SuperType();`改成`function SubType(){SuperType.call(this)}`, 就是**借用构造函数**继承原型的方法了. 
+使用apply()或call()方法, **在子类型构造函数的内部调用超类型构造函数**, 把上例01中的`SubType.prototype = new SuperType();`改成`function SubType(){SuperType.call(this)}`, 就是**借用构造函数**继承原型的方法了. 
 
 借用构造函数可以解决原型链继承中的所有问题了
 
 但借用函数本身会有一个问题, 方法都在构造函数中定义, 因此函数复用就无从谈起了. 
 
-### 原型模式和借用构造模式组合继承模式
+#### 原型模式和借用构造模式组合继承模式
 
 > 组合继承模式避免了原型链和借用构造函数的缺陷, 融合了他们的优点, 成为JavaScript中最常用的继承模式.也能用用instanceof和isPrototypeOf()识别基于组合继承创建的对象
 
@@ -119,7 +143,7 @@ JS中的继承主要是通过原型链来实现的
 	}
 	
 	SuperType.prototype.sayName = function(){
-		alert(this.name);
+		console.log(this.name);
 	}
 	
 	function SubType(name, age){
@@ -132,23 +156,23 @@ JS中的继承主要是通过原型链来实现的
 	SubType.prototype = new SuperType();
 	SubType.prototype.constructor = SubType;
 	SubType.prototype.sayAge = function(){
-		alert(this.age);
+		console.log(this.age);
 	}
 	
 	var instance1 = new SubType("Nicholas", 29);
 	instance1.colors.push("black");
-	instance1.colors; //
-	instance1.sayName();
-	instance1.sayAge();
-	
+	instance1.colors;    // ["red", "blue", "green", "black"]
+	instance1.sayName(); // "Nicholas"
+	instance1.sayAge();  // 29
+		
 	var instance2 = new SubType("Greg", 27)
-	instance2.colors2;
-	instance2.sayName();
-	instance2.sayAge();
+	instance2.colors;    // ["red", "blue", "green"]
+	instance2.sayName(); // "Greg"
+	instance2.sayAge();  // 27
 	
 组合式继承的缺点是无论什么情况下, 都会调用两次超类型构造函数, 一次是在创建子类型原型的时候, 另一次是在子类型构造函数内部. 
 
-### 原型式继承模式
+#### 原型式继承模式
 
 > 在只想让一个对象与另一个对象保持类似的情况下, 原型式是完全可以继承的.
 
@@ -190,8 +214,8 @@ JS中的继承主要是通过原型链来实现的
 	person2.friends.push("Barbie");
 	// 这样哪算兴师动众啊
 	
-### 寄生式继承模式
-
+#### 寄生式继承模式
+	// 创建一个仅用于**封装继承过程**的函数
 	function createAnother(original){
 		var clone = Object.create(original);
 		clone.sayHi = function(){
@@ -199,12 +223,12 @@ JS中的继承主要是通过原型链来实现的
 		}
 		return clone;
 	}
-	
+	// 创建超类型对象
 	var person = {
 		name: "Nicholas",
 		firends: ["Shelby", "Court", "Van"]
 	}
-	
+	// 通过createAnother()继承超类型
 	var	person1 = createAnother(person);
 	person1.sayHi();
 
@@ -212,7 +236,7 @@ JS中的继承主要是通过原型链来实现的
 
 缺点是使用寄生式继承来为对象添加函数, 会由于不能做到函数复用而降低效率; 与构造函数类似.
 
-### 寄生组合式继承模式
+#### 寄生组合式继承模式
 
 > 寄生组合式构造函数解决原型借用组合模式继承的缺点--总是会调用两次超类型构造函数.
 
@@ -257,6 +281,14 @@ JS中的继承主要是通过原型链来实现的
 	- 避免了在SubType.prototype上面创建不必要的, 多余的属性
 - 能正常的使用`instanceof`和`isPrototypeOf()`
 
+---
+### 小结
+
+原型链的构建, 是通过将一个类型的实例赋值个另一个构造函数的原型实现的. 这样子类型就可以访问超类型的属性和方法了. 单独使用原型链继承会让对象实例共享所有继承的属性和方法. 解决这个问题的技术使用构造函数, 即在子类型构造函数的内部调用超类型构造函数.
+
+原型模式和借用构造模式组合继承模式是最常用的继承模式
+
+寄生组合式继承是引用类型最理想的继承模式
 
 
 

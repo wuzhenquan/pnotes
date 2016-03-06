@@ -39,3 +39,9 @@
 - preferences > setting users 把配置信息放到该文件下
 - 保存就会立即使用该主题 
 
+## 插件
+
+代码美化
+
+- HTML-CSS-JS Prettify
+- 快捷键⌘+⇧+C

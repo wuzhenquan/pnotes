@@ -7,6 +7,8 @@
 
 在[segmentfault](segmentfalut.com)上看到一个[关于this作用域的笔试题](https://segmentfault.com/q/1010000004499240)
 
+对这道笔试题, 如果脑中有清晰的解答流程, 说明对this和作用域掌握的还不错了
+
 代码如下:
 
 	var number=2;

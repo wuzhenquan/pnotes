@@ -23,6 +23,12 @@
 	- install package 安装插件
 	- list package 列出所有插件
 
+## 自定义
+
+在`Preferences->Setting-Default`里, 是sublime的默认配置文件, 要想自定义一些配置, 建议在`Preferences->Setting-User`里直接添加
+
+比如在`Preferences->Setting-Default`里的折叠标签显示`"fade_fold_buttons": false,`要想改为true, 得在`Preferences->Setting-User`
+
 ## 安装主题
 
 - 快捷键`control+shift+P`
@@ -39,3 +45,13 @@
 - preferences > setting users 把配置信息放到该文件下
 - 保存就会立即使用该主题 
 
+## 插件
+
+- 最好看的主题 [Material Theme](https://github.com/equinusocio/material-theme)
+- 代码美化(需要nodejs)[HTMLPrettify](https://github.com/victorporof/Sublime-HTMLPrettify)
+- BufferScroll 轻松书写一个文件多个位置了
+
+## 快捷键
+
+- `Ctrl+Shift+[` 折叠代码
+- `Ctrl+Shift+]` 展开代码

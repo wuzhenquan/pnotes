@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">btn1</button>
+    <script>
+    var btn1=document.getElementById("btn1")
+    btn1.onclick = function(e) {
+        alert('2' + e.eventPhase);
+        //e.stopPropagation();//如果添加该行，则不再冒泡到父元素，父元素onclick不再被触发  
+    }
+    document.body.addEventListener("click", function(e) {
+        alert('1' + e.eventPhase);
+        console.log(e.target);
+        console.log(e.currentTarget);
+        console.log(e.target === e.currentTarget, e.currentTarget === this); //false, true  
+    }, true);
+    document.body.onclick = function(e) {
+        alert('3' + e.eventPhase);
+    }
+    </script>
+</body>
+
+</html>

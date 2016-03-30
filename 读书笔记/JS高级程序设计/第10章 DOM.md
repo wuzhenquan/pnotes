@@ -14,14 +14,16 @@
 	- Array.prototype.slice.call(somenode.childNodes, 0)
 - 节点关系
 	- parentNode
-	- childNodes
-	- firstChild
-	- lastChild
-	- previousSibling
-	- nextSibling
+	- childNodes----------children
+	- firstChild----------firstElementChild
+	- lastChild-----------lastElementChild
+	- previousSibling-----previousElementChild
+	- nextSibling---------nextElementChild
 	- hasChildNodes()
 - 操作节点
-	- appendChild()
+	- createElement()
+	- createTextNode()
+	- appendChild() 用`ele.innerHTML="<div></div>"`也是很方便的
 	- insertBefore()
 	- replaceChild()
 	- removeChild()

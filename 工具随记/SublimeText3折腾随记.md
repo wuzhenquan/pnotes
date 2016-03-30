@@ -47,10 +47,26 @@
 
 ## 插件
 
+
 - 最好看的主题 [Material Theme](https://github.com/equinusocio/material-theme)
 - 代码美化(需要nodejs)[HTMLPrettify](https://github.com/victorporof/Sublime-HTMLPrettify)
 - BufferScroll 轻松书写一个文件多个位置了
 - git和gitgutter, 不知道两者之间的区别是什么, 不过听好用的, 在window最底部会出现乱码. [解决办法](https://www.zhihu.com/question/20537304)
+<<<<<<< HEAD
+
+代码美化
+
+- HTML-CSS-JS Prettify
+- 快捷键⌘+⇧+H
+
+用指定的浏览器打开
+[view in browser](https://github.com/adampresley/sublime-view-in-browser)
+
+- control + alt + F - Firefox
+- control + alt + C - Chrome
+- control + alt + I - Internet Explorer
+- control + alt + S - Safari
+
 
 ## 快捷键
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">button</button>
+    <script>
+    var EventUtil = {
+        //  "高程"P354
+        addHandler: function(element, type, handler) {
+            if (element.addEventListener) {
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent("on" + type, handler);
+            } else {
+                element["on" + type] = handler;
+            }
+        },
+        removeHandler: function(element, type, handler) {
+            if (element.addEventListener) {
+                element.removeEventListener(type, handler, false);
+            } else if (element.detachEvent) {
+                element.detachEventListener("on" + type, handler)
+            } else {
+                element["on" + type] = handler;
+            }
+        }
+    }
+  
+
+
+    var btn = document.getElementById("btn");
+    var alert = function(){alert("haha")}.
+    var log = function(){console.log("haha")}
+    EventUtil.addHandler(btn, "click", function() {
+        console.log("haha")
+    })
+    </script>
+</body>
+
+</html>

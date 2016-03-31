@@ -5,8 +5,6 @@
     hljs.initHighlightingOnLoad();
 </script>
 
-## 第7章 DOM
-
 - 访问子节点
 	- somenode.childNodes[0]
 	- somenode.childNodes.item(0)
@@ -42,6 +40,7 @@
 - 查找元素
 	- document.getElementById();
 	- document.getElementByTagName();
+	- HTMLCollection还有一个属性叫namedItem, 取得的是元素具有指定name属性值的
 
 对于节点的属性, 只要找到对应的节点对象访问其对应的属性名就好了, 例外的是class属性, 因为class是保留字, 所以访问class属性的使用用someNode.className来访问.还有一个例外是name属性, 得用someNode.nameItem()来访问. 干脆全部写下来好了
 

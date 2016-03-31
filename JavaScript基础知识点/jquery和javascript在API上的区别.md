@@ -44,3 +44,8 @@
 - JavaScript: `element.innerHTML = "巴拉巴拉一堆元素标签"`
 - jQuery: `$element.html()`
 
+通过类名查找元素
+
+- JavaSctipt: `element.querySelectorAll(".className")`;
+- jQuery: `$element.find(".className")`;
+

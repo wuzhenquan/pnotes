@@ -73,6 +73,9 @@
 	- element.removeAttribute("title");
 	- element.removeAttribute("lang");
 	- element.removeAttribute("dir");
+- attributes属性
+	- 通过attributes得到, 移除, 设置属性不够方便
+	- 能派上用场的是用了遍历元素的特性(属性)
 - 创建元素
 	- var div = document.createElement("div");// div是元素标签名
 	- div.id = "myNewDiv";
@@ -81,12 +84,14 @@
 - 文本节点
 	- 访问文本节点: element.firstChild;
 	- 创建文本节点: document.creatTextNode(text);
-	- appendData(text);将text添加到节点;
-	- deleteDate(offset,count);从offset指定的位置删除count个字符
-	- insertData(offset, text);从offset指定的位置插入text
-	- replaceDate(offset, count, text);用text替换从offset指定的位置开始到offset+count为止的文本.
-	- splitText(offset);从offset指定的为止将当前文本节点分成两个文本节点
-	- substring(offset, count);提取从offset指定的位置开始到offset+count为止处的字符串
+	- `nodeValue`值为文本节点所包含的文本;
+	- `parentNode`是一个Element;
+	- `textNode.appendData(text);`将text添加到节点的末尾;
+	- `textNode.deleteDate(offset,count);`从offset指定的位置删除count个字符
+	- `textNode.insertData(offset, text);`从offset指定的位置插入text
+	- `textNode.replaceDate(offset, count, text);`用text替换从offset指定的位置开始到offset+count为止的文本.
+	- `textNode.splitText(offset);`从offset指定的为止将当前文本节点分成两个文本节点
+	- `textNode.substring(offset, count);`提取从offset指定的位置开始到offset+count为止处的字符串
 - 滚动
 	- scrollIntoView();
 	- 

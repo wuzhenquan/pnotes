@@ -49,3 +49,26 @@
 - JavaSctipt: `element.querySelectorAll(".className")`;
 - jQuery: `$element.find(".className")`;
 
+移除类名
+
+- JavaScript: `element.classList.remove("disabled")`(HTML5新增), IE9不支持, 用
+  ```javascript
+  var removeClassName=element.className.replace("要删除的类名 ","");//注意在"要删除的类名"后加空格
+  element.className=removeClassName;
+  ```
+
+- jQuery: `$element.removeClass("disabled")`
+
+添加类名
+
+- JavaScript: `element.classList.add("current")`(HTML5新增), IE9一下不支持, 可以用`element.calssName+=" 类名"`(记得在类名前加空格)
+- jQuery: `$element.addClass("current")`
+
+toggle类名
+
+- JavaScript: `element.classList.toggle("user")`(HTML5新增)
+- jQuery: `$element.toggleClass("user")`
+
+```
+
+\```

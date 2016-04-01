@@ -11,22 +11,49 @@
 
 - 对一个元素的类名增加, 删除, 替换
 
-  - HTML5以前的方法
-  - ​
-
-  ```html
-  <div class="bd user disabled">...</div>
-  <script>
-  	var className = div.className.split(/\s+/);
-      var pos = -1, i, len;
+  - HTML5以前的方法, 将某个元素的类名通过字符串的`split()方法`转换成数组, 通过数组的方法去增加, 删除, 替换
+    ```html
+    <div id="div" class="bd user disabled">...</div>
+    <script>
+         // 取得类名字符串并拆分成数组
+      var div = document.getElememtById("div");
+      var className = div.className.split(/\s+/);
+      // 找到要删的类名
+      var pos, i, len;
       for(i=0, len = className.length; i<len; i++){
-    		
-      }
-  </script>
-  ```
+              if(className[i] == "user"){
+                  pos = i;
+              break;
+            }
+        }
+        // 删除类名
+        className.splice(i, 1);
+        // 把剩下的类名拼成字符串并重新设置
+        className.join(" ");// 注意里面是个空格
+    </script>
+    ```
+  - HTML5 新方法, 元素会有一个`classList`属性. classList还有这些方法`add(value)`, `contains(value)`, `remove(value)`, `toggle(value)`
+    ```html
+    <div class="bd user disabled">...</div>
+    <script>
+        var div = document.getElememtById("div");
+      var className = div.className.split(/\s+/);
+      div.classList.remove("disabled");// 
+      div.calssList.toggle("user");
+      if(div.classList.contains("bd")&&!div.class.contains("disabled")){
+      // 执行操作
+        }
+      // 迭代类名
+      for(var i=0, lendiv.classList.length; i>len;i++){
+      doSomething(div.classList[i]);
+        }
+    </script>
+    ```
 
-    
 
+- 焦点管理
+  - `document.activeElement("")`返回当前获得了焦点的元素
+  - `document.hasFocus()`检查文档是否获得了焦点
 
 
 ### 样式

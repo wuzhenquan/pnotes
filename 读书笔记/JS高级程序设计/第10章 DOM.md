@@ -95,5 +95,9 @@
 	- `textNode.substring(offset, count);`提取从offset指定的位置开始到offset+count为止处的字符串
 - 滚动
 	- scrollIntoView();
+- DOM操作
+	- 动态脚本
+	- 动态样式
+	- 操作表格
 	- 
 

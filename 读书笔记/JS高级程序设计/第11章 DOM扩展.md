@@ -72,11 +72,9 @@
   - `document.defaultCharset`, 查看默认的字符集
 
 - 自定义属性
-
   - 示例: `<div data-myname="wzq"></div>`, 在JS中更改这个属性值`ele.dataset.myname="Tran"`
 
 - 插入元素
-
   - `innerHTML`
   - `outerHTML`
   - `insertAdJacentHTML()`
@@ -85,7 +83,6 @@
   - 避免在循环内使用`innerHTML`, 效率低. 最好最后一次性将结果字符串赋给`innerHTML`
 
 - 插入文本
-
   - `innerText`返回元素下(包括子元素)所有的文本节点(用字符串表示)
     - `element.innerText=element.innerText`可以过滤掉HTML标签.
     - 注意与`textContent`的区别.
@@ -95,31 +92,13 @@
   - `outerText`不建议用, 会替换整个元素
 
 - `element.scrollIntoView()`让元素出现在视口中, 与视扣顶部平齐
-
 - `element.children`
-
 - 某个节点是不是另一个节点的后代`parentElement.contains(childELement)`返回true或false
-
 - `element.compareDocumentPosition(anotherElement)`, 根据其返回的掩码值判断`element`和`anotherElement`之间的关系. 
-
 - 滚动(不是所有浏览器都支持, 不常用)
-
   - `scrollIntoViewIfNeed(alignCenter)`
-
   - `scrollByLines(lineCount)`
-
   - `scrollByPages(Pagecount)`
 
-    ​
 
 
-
-### 样式
-
-- `element.style`返回一个类数组对象, 里面除了属性(css样式), 还有一些方法
-- `element.style.backgroundImage`
-- float是保留字, 改成cssFloat
-- `element.style.cssText`返回的是什么
-- `element.style.removeProperty("属性名")`
-
-  ​

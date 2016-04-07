@@ -14,6 +14,7 @@
 
 ### 不同版本安装/切换/删除
 - 安装n模块:`npm install -g n`(前面可能要价格sudo 我没加)
+- 查看安装了那些版本:`n`
 - 全局安装某个版本:`sudo n 版本号`(不加sudo会出现三个permission denied)
 - 删除某个版本`n rm 版本号`
 - 切换版本号 `n+回车`再选择
@@ -21,7 +22,7 @@
 cd到一个新建立的空文件夹(名为beginning), 建立一个require.js文件, 将[示例代码](https://nodejs.org/en/about/)拷贝进require.js, 保存后在终端上cd到这个beginning文件夹下, 执行`node require.js`
 
 	const http = require('http');//负责创建web服务器及处理http相关的任务等等
-
+	
 	const hostname = '127.0.0.1';
 	const port = 1337;
 	

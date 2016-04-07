@@ -1,13 +1,10 @@
-<link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
-<script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
-<script>
-    hljs.tabReplace = '    ';
-    hljs.initHighlightingOnLoad();
-</script>
-
 - 访问子节点
-  - somenode.childNodes[0]
-  - somenode.childNodes.item(0)
+
+
+- somenode.childNodes[0]
+- somenode.childNodes.item(0)
+
+
 - 将Nodelist对象转换为数组
   - Array.prototype.slice.call(somenode.childNodes, 0)
 - 节点关系

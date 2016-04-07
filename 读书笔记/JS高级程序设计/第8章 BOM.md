@@ -18,13 +18,22 @@
 	var leftPos = (typeof window.screenLeft == "number")?window.screenLeft:window.screenX;
 	var topPos = (typeof window.screenTop == "number")?window.screenTop:window.screenY;
 
-### 窗口大小
+### 屏幕宽高
 
-- 浏览器窗口本身的尺寸outerHeight和outerWidth
-- 浏览器页面视区的大小innerHeight和innerWidth
+- `screen.width`
+- `screen.height`
 
-### window.location
+### 浏览器宽高
 
+- 浏览器窗口本身的尺寸`window.outerHeight`和`window.outerWidth`(包括滚动条)
+- 浏览器页面视区的大小`innerHeight`和`innerWidth`
 
+### 浏览器视口宽高
+
+- `document.body.clientWidth`and`document.body.clientHeight`(不包括滚动条)
+
+- `document.documentElement.clientWidth`and`document.documentElement.clientHeight`(不包括滚动条)
+
+  ​
 
 

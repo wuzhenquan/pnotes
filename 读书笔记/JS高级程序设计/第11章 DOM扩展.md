@@ -42,23 +42,35 @@
         className.join(" ");// 注意里面是个空格
     </script>
     ```
-  - HTML5 新方法, 元素会有一个`classList`属性. classList还有这些方法`ele.classList.add(value)`, `ele.classList.contains(value)`, `ele.classList.remove(value)`, `ele.classList.toggle(value)`
-    ```html
-    <div class="bd user disabled">...</div>
-    <script>
-        var div = document.getElememtById("div");
-      var className = div.className.split(/\s+/);
-      div.classList.remove("disabled");// 
-      div.calssList.toggle("user");
-      if(div.classList.contains("bd")&&!div.class.contains("disabled")){
-      // 执行操作
-        }
-      // 迭代类名
-      for(var i=0, lendiv.classList.length; i>len;i++){
-      doSomething(div.classList[i]);
-        }
-    </script>
-    ```
+
+  - HTML5 新方法, 元素会有一个`classList`属性. classList还有这些方法
+
+    - `ele.classList.add(value)`, 
+
+    - `ele.classList.contains(value)`, 
+
+    - `ele.classList.remove(value)`, 
+
+    - `ele.classList.toggle(value)`
+
+      ```html
+      <div class="bd user disabled">...</div>
+      <script>
+          var div = document.getElememtById("div");
+        var className = div.className.split(/\s+/);
+        div.classList.remove("disabled");// 
+        div.calssList.toggle("user");
+        if(div.classList.contains("bd")&&!div.class.contains("disabled")){
+        // 执行操作
+          }
+        // 迭代类名
+        for(var i=0, lendiv.classList.length; i>len;i++){
+        doSomething(div.classList[i]);
+          }
+      </script>
+      ```
+
+
 
 
 - 焦点管理
@@ -69,7 +81,7 @@
 - `document.head`, 和`document.body`如出一辙.
 - 字符集属性
   -  `document.charset`, 访问或者设置这个字符集, 比如`document.charset="UTF-8"`
-  - `document.defaultCharset`, 查看默认的字符集
+  -  `document.defaultCharset`, 查看默认的字符集
 
 - 自定义属性
   - 示例: `<div data-myname="wzq"></div>`, 在JS中更改这个属性值`ele.dataset.myname="Tran"`

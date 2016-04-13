@@ -1,5 +1,6 @@
 ```javascript
-(new Date()).getTime()
-// 返回从1970年1月1日到现在的时间
+(new Date()).getTime();
+(new Date()).getFullYear();
+(new Date()).getMonth();
+(new Date()).getDate();
 ```
-

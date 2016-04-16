@@ -69,6 +69,7 @@ toggle类名
 - JavaScript: `element.classList.toggle("user")`(HTML5新增)
 - jQuery: `$element.toggleClass("user")`
 
-```
+插入html内容
 
-\```
+- JavaScript: `element.innerHTML=''`
+- jQuery: `$element.html()`

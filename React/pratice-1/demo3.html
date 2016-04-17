@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./build/react.js"></script>
+    <script src="./build/react-dom.js"></script>
+    <script src="./build/browser.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+
+    <script type="text/babel">
+        // 一个JSX数组
+        var arr = [
+          <h1>Hello, i am React</h1>,
+          <h2>i am awesome</h2>,
+        ];
+        ReactDOM.render(
+          <div>{arr}</div>,
+          document.getElementById("example")
+        );
+    </script>
+</body>
+
+</html>

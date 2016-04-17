@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./build/react.js"></script>
+    <script src="./build/react-dom.js"></script>
+    <script src="./build/browser.min.js"></script>
+</head>
+
+<body>
+    <script type="text/babel">
+        var NodeList = React.createClass({
+          render: function(){
+            return (
+              <ol>
+                {
+                  React.Children.map(this.props.children, function(child){
+                    // 会让子元素child外面包裹一层li标签
+                    return <li>{child}</li>;
+                  })
+                }
+              </ol>
+            )
+          }
+        })
+        ReactDOM.render(
+          <NodeList>
+            <span>hello</span>
+            <span>world</span>
+          </NodeList>
+          ,document.body)
+    </script>
+</body>
+
+</html>

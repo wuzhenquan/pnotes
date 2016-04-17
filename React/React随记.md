@@ -1,0 +1,1 @@
+- state: 当组件状态 `state` 有更改的时候，React 会自动调用组件的 `render` 方法重新渲染整个组件的 UI

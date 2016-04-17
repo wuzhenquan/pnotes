@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./build/react.js"></script>
+    <script src="./build/react-dom.js"></script>
+    <script src="./build/browser.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+      var Mycomponent = React.createClass({
+        // handleClick是自定义的, 这里定义一个函数, 方便组件元素里用onClick调用
+        handleClick: function(){
+          this.refs.myTextInput.focus();
+        },
+        render: function(){
+          return (
+            <div>
+              <input type="text" ref=""/>
+              <input type="button" value="Focus the text input" onClick={this.handleClick}/>
+            </div>
+          )
+        }
+      });
+      ReactDOM.render(
+        <Mycomponent></Mycomponent>,
+        document.getElementById('example')
+      )
+      var input = document.querySelector('input[type="text"]');
+      input.focus();
+    </script>
+</body>
+
+</html>

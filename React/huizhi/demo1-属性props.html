@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ex15:EzLampComp</title>
+	<script src="../lib/react.js"></script>
+	<script src="../lib/react-dom.js"></script>
+	<script src="../lib/JSXTransformer.js"></script>
+	<!--组件样式-->
+	<style>
+		.ez-lamp{
+			display : inline-block;
+			margin : 5px;
+			width : 30px;
+			height : 30px;
+			border-radius : 50%;
+		}
+		.ez-lamp.on{
+			opacity : 1;
+			background : -webkit-radial-gradient(30% 30%,white 5%,red 95%);
+		}
+		.ez-lamp.off{
+			opacity : 0.5;
+			background : -webkit-radial-gradient(30% 30%,#888 5%,red 95%);
+		}
+	</style>
+</head>
+<body>
+	<div id="content"></div>
+	<script type = "text/jsx">
+		//定义React组件
+		var EzLampComp = React.createClass({
+			render : function(){
+				//取得属性值
+				var onoff = this.props.onoff;
+
+				//返回React元素
+				if(onoff == "on")
+					return <span className = "ez-lamp on"></span>;  //JSX
+				else
+					return <span className = "ez-lamp off"></span>;  //JSX
+			}
+		});
+		//渲染React元素
+		React.render(
+			<EzLampComp onoff="on"/> , //<--JSX
+			document.querySelector("#content"));
+	</script>
+</body>
+</html>

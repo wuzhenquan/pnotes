@@ -28,7 +28,30 @@
             } else {
                 element["on" + type] = null;
             }
-        }
+        },
+        getEvent: function(event){
+            return event ? event : window.event;
+        },
+        // 返回事件的目标 对应的ElementDOM节点
+        getTarget: function(event){
+            return event.target || event.srcElement;
+        },
+        // 取消事件的默认行为
+        preventDefault: function(event){
+            if (event.preventDefault){
+                event.preventDefault();
+            }else{
+                event.returnValue = false;
+            }
+        },
+        // DOM方式阻止事件流
+        stopPropagation: function(event){
+            if(event.stopPropagation){
+                event.stopPropagation();
+            }else{
+                event.cancelBubble = true;
+            }
+        },
     }
   
 

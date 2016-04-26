@@ -10,4 +10,4 @@ previousSibling			previousElementSibling
 
 firstChild				firstElementChild
 
-lastChild				lastElementChild
+lastChild					lastElementChild

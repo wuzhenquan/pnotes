@@ -25,23 +25,62 @@
   npm install sass-loader --save-dev
   ```
 
-#### webpack插件
+### webpack插件
 
-- webpack-dev-server当代码更新的时候自动刷新浏览器
+**webpack-dev-server**
 
-  ```shell
-  # 安装
-  npm install webpack-dev-server -g
-  # 运行
-  webpack-dev-server
-  ```
+当代码更新的时候自动刷新浏览器
 
-- html-webpack-plugin自动生成HTML
+方式一:
 
-  ```shell
+在 `webpack.config.js` 中声明一个 `devServer` 的对象
+
+```javascript
+module.exports = {
+  ...
+  devServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true,
+     },
+  ...
+}
+```
+
+方式二:
+
+```shell
+# 安装
+npm install webpack-dev-server -g
+# 运行
+webpack-dev-server --hot --inline
+```
+方式三: 
+
+```shell
+# 安装
+npm install webpack-dev-server --save-dev
+# 在 package.json 中指定
+"scripts": {  "start": "webpack-dev-server --line --hot"}
+# 用法
+npm run start
+```
+
+其实方式二和方式三是一样的啦😅
+
+**html-webpack-plugin**
+
+自动生成HTML
+
+```shell
   npm install html-webpack-plugin --save-dev
-  ```
+```
 
+**CommonsChunkPlugin**
 
-- CommonsChunkPlugin(自带)把入口文件里面的数组打包成verdors.js
-- UglifyJsPlugin(自带)这个使用uglifyJs压缩你的js代码
+(自带)把入口文件里面的数组打包成verdors.js
+
+**UglifyJsPlugin**
+
+(自带)这个使用uglifyJs压缩你的js代码

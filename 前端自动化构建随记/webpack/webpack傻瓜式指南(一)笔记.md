@@ -138,7 +138,7 @@
 
 ```javascript
   ...
-  // 在终端运行npm run start 会执行对应的脚步
+  // 在终端运行npm run start 会执行对应的脚本
   "scripts": {
     "start": "webpack-dev-server --hot --inline"
   },
@@ -146,6 +146,27 @@
 ```
 
   在项目根目录下输入`npm start`，在浏览器里面输入[http://localhost:8080**](https://link.zhihu.com/?target=http%3A//localhost%3A8080) 发现伟大的hello world出现了
+
+#### 发现
+
+**`hot`和`inline`的作用**
+
+- `inline` 选项用于开启页面的实时加载功能(Live reloading)
+- `hot` 选项用于开启**热加载(HMR)**功能, 好用!!!
+
+这两个的区别就是 Livereload 是一次页面刷新，HMR 则是页面不刷新，直接替换更换过后的模块。如果你两个参数都开了，那会**先尝试热加载，如果热加载不行则尝试刷新页面**。
+
+HMR 有什么用？当你要调试一个购票表单，第一步填写信息第二部选择票种，第三步付款。HMR 可以让你在改完代码后直接调试第三部而不是页面刷新，从第一步开始自己输信息。
+
+当代码更新的时候，下面这三种方式都会打包新的文件，但是又有不同。
+
+1. 不帮你刷新页面`webpack-dev-server`
+2. 直接帮你刷新整个页面`webpack-dev-server --inline`
+3. 仅仅刷新更新过的模块，如果需要的话再刷新整个页面`webpack-dev-server --inline --hot`
+
+[参考链接](https://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&mid=2651220238&idx=1&sn=ebdba528f199e10f6b273c3a6fd04650&scene=1&srcid=0419xuvMlwIOldm5sL2MHyzi&key=b28b03434249256b5e7a3aac0a1bfcefd4caeff58ab12c89025ded4dc265ed5ba5501325c12b0d9747dbb26a44a08573&ascene=0&uin=NjA4MTU0NDU%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.3+build(15D21)&version=11000003&pass_ticket=3pccOZTqfEUFrL0WdhmpOelyHalII1cFk3vXNKLyA28%3D)
+
+
 
   ### 添加sass
 

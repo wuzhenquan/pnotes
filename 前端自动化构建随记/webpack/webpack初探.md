@@ -10,13 +10,38 @@ gulp和webpack是相辅相成的关系
 
 gulp的基本作用都清楚了, 一般都是负责编译less/sass, 图片压缩成雪碧图, css/js压缩, 合并之类的一系列工作.
 
-而webpack呢. 还是举个例子吧. 有两个前端, 叫前端小白和前端小黑, 前端小白负责首页的模块, 前端小黑负责个人中心的模块, 现在每个人都在自己的文件夹下写好了各自负责的模块.....不想写了....
+但是, webpack也能做到编译less/sass, 文件压缩等gulp也有的功能
 
-参考文章
+webapck流程图: 
 
-- [WebPack在项目配置中的探索](https://github.com/MeCKodo/webpack)
-- [Webpack，101入门体验](http://html-js.com/article/3009)
-- [webpack的特点和优势](http://www.hubwiz.com/class/5670d0a77e7d40946afc5e65)
+![图来自知乎作者张轩](https://pic2.zhimg.com/c2d22f4f52e5c30c095a4e9f482bba7d_b.png)
+
+假如我们要做电脑版和手机版两套页面, 这两套有共用的文件, 也有不共有的,如图所示
+
+电脑版app.js需要的文件有
+
+- jquery
+- jquery.plugin
+- moment.js
+- sub.js
+- main.scss + header.png
+- index.html(图中没有, 以后自己再画个图)在 templates 目录
+
+手机版mobile.js需要的文件有
+
+- jquery
+- jquery.plugin
+- jquerymobileui.js
+- mobile.js
+- main.css + header.png
+- mobile.html(图中没有, 以后自己再画个图) 在 templates 目录
+
+原始的办法是在每个 html 页面中引用对应的文件, 如果遇到大型的项目, 那就很麻烦了. 然而 webpack 正好可以减轻这样的麻烦, 通过配置一些参数, 将共用的 js/css/图片 打包成一个js文件, 将不共用的再独自打包的一起(这样的好处很明显啦, 既可以压缩到一起又能减少请求数).
+
+- webpack 将 jqeury/jquery/main.scss/header.png 这些共用的文件打包成一个js文件(强大)
+- webapck 将电脑版中 moment/sub.js 打包到一起
+- webpack 将手机版中 jquerymobileui.js/mobile.js 打包到一起
+- 将 templates 目录中的 index.html(电脑版)和mobile.html(手机版) 通过配置(引用打包好的js, 加上title, 改html文件名等)生成真正可以使用的html文件.
 
 ##### 安装webpack
 
@@ -212,6 +237,10 @@ $ webpack -d // 提供source map，方便调试。
 - [Express结合Webpack的全栈自动刷新](https://segmentfault.com/a/1190000004505747)
 - [Vue.js官方教程](http://cn.vuejs.org/guide/)
 - [vue-router文档](http://vuejs.github.io/vue-router/zh-cn/)
+- [Webpack 一探究竟](https://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&mid=2651220238&idx=1&sn=ebdba528f199e10f6b273c3a6fd04650&scene=1&srcid=0419xuvMlwIOldm5sL2MHyzi&key=b28b03434249256b5e7a3aac0a1bfcefd4caeff58ab12c89025ded4dc265ed5ba5501325c12b0d9747dbb26a44a08573&ascene=0&uin=NjA4MTU0NDU%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.3+build(15D21)&version=11000003&pass_ticket=3pccOZTqfEUFrL0WdhmpOelyHalII1cFk3vXNKLyA28%3D)
+- [WebPack在项目配置中的探索](https://github.com/MeCKodo/webpack)
+- [Webpack，101入门体验](http://html-js.com/article/3009)
+- [webpack的特点和优势](http://www.hubwiz.com/class/5670d0a77e7d40946afc5e65)
 
 
 

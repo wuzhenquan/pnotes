@@ -12,17 +12,71 @@
   npm install style-loader --save-dev
   ```
 
+  ```javascript
+  module: {
+   loaders: [{
+    test: /\.css$/,
+    loader: ‘style!css’ // (short for style-loader!css-loader)
+   }]
+  }
+  ```
+
 - url-loader 会将样式中引用到的图片转为模块来处理
 
   ```shell
   npm install url-loader --save-dev
   ```
-
+  ```javascript
+  // 通过给 url-loader 配置参数使得当加载小于 1024 bytes 的图片时使用 base64 字符串的格式，我们可以将 1024 这个大小的配置通过两种方式传给 url-loader。
+  // 第一种方式 use "?" just like in URLs
+  {
+    test: /\.png$/,
+    loaders: "url-loaders?limit = 1024"
+  },
+  // 第二种方式 use "query" property
+  {
+    test: /\.png$/,  
+    loaders: "url-loader",
+    query: {limit: 1024} 
+  }
+  ```
 
 - sass-loader
 
   ```shell
   npm install sass-loader --save-dev
+  ```
+
+
+- babel-loader
+
+  ```javascript
+  // webpack.config.js 配置
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel',
+        query: {
+          presets: ['react', 'es2015'] // 要使用的编译器
+        }
+      }
+    ]
+  }
+  // 但是! 许多项目中 babel 的配置可能会很大，所以你可以在项目跟目录下建一个 .babelrc 来管理 babel 配置。babel-loader 会自动检测该文件是否存在并应用配置。
+  //webpack.config.js 配置
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel'
+      }
+    ]
+  }
+  //.bablerc 配置
+  { "presets": ["react", "es2015"]}
   ```
 
 ### webpack插件

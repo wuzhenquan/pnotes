@@ -97,6 +97,9 @@ module.exports = {
         hot: true,
         inline: true,
         progress: true,
+  	    contentBase:'./build',
+       // contentBase 很有用, 用来指定打开的目录, 如果没有其他配置的话, 会打开这个目录先的 index.html 文件
+
      },
   ...
 }

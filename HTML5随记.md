@@ -1,6 +1,7 @@
 ## HTML5新特性
 > 有些为了兼容更多文档的的省略或者简写特性, 就不记录了
 
+
 > 学习链接: [慕课网-HTML5之元素与标签结构](http://www.imooc.com/learn/24)
 
 #### 标签增加了布尔值
@@ -33,3 +34,7 @@
 - tabindex
 - contenteditable
 - designMode
+
+## 随记
+
+- `<center></cener>`然元素横向居中

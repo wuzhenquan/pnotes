@@ -140,3 +140,10 @@ loaders 的工作流程(上图):
 #### plugins: 
 
 这里定义了需要使用的插件，比如commonsPlugin在打包多个入口文件时会提取出公用的部分，生成common.js.
+
+例如
+
+[UglifyJsPlugin](https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin)用来将 bundle.js 压缩混淆，以减小大小优化加载速度。
+
+[extract-text-webpack-plugin](https://github.com/webpack/extract-text-webpack-plugin)插件在内部调用 css-loader 和 style-loader 将所有 css 内容保存为一个 style.css 文件，并且将该文件插入到  HTML 中。
+

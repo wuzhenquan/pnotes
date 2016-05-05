@@ -22,7 +22,7 @@
   ```javascript
   entry: {
     "indexEntry": './public/src/index.js',
-     "profileEntry": './public/src/profile.js'
+    "profileEntry": './public/src/profile.js'
   },
   out: {
       path: '/dist',

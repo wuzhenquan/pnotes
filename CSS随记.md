@@ -15,4 +15,4 @@
 
 
 - 给span加上宽高记得`display:inline-block`,不然就没有宽高了
-- ​
+- ​`<ul>`元素`padding-left`为40px

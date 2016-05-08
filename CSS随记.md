@@ -15,4 +15,6 @@
 
 
 - 给span加上宽高记得`display:inline-block`,不然就没有宽高了
-- ​`<ul>`元素`padding-left`为40px
+- `<ul>`元素的默认`padding-left`为40px
+- 把`<li>`打横并去掉默认样式`ul,li{margin:0px;padding:0pc}li{list-style-type:none;}`
+- `body, div, ul, li, h2{margin:0;padding:0;}`把他们默认的 margin 和 padding 都去掉. 其他元素也需要的话后面补上就好. 

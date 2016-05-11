@@ -10,7 +10,7 @@
 	btn3.removeEventListener("click", 函数名, false);//删除刚才添加的事件
 	//false表示不在捕获阶段处理，一般来说冒泡处理在各浏览器中兼容性较好
 	//这种方法的好处:更直接，也最简便
-	
+
 
 #### 同步/异步/并发
 
@@ -48,7 +48,7 @@
 
 - 度量viewport`document.documentElement.clientWidth/clientHeight`
 
-- 事件中的坐标`pageX/Y, clientX/Y, screenX/Y`	90%会用到pageX/Y
+  - 事件中的坐标`pageX/Y, clientX/Y, screenX/Y`90%会用到pageX/Y
 
 - 如果不懂,请参考[viewport的故事](http://blog.jobbole.com/44319/)
 
@@ -65,3 +65,4 @@ window.onload = function(){}
 - 用getElementsByClassName("divclass")[0]的适合记得加索引, 即使className只有一个
 - 阻止冒泡 e.stopPropagation();
 - Math.round()
+- 在循环里面注册没有被立即调用的函数, 闭包的时候那就要尤为注意了

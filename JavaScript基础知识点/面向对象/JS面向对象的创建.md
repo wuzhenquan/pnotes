@@ -17,7 +17,7 @@
 		age: 18,  //属性
 		sayName: function(){alert(this.name)} //方法
 	}
-	
+
 构造函数的方式创建JavaScript对象
 
 	var person = new Object(); 
@@ -32,25 +32,25 @@
 在了解JavaScript的面向对象设计模式之前, 需要些了解几个概念
 
 - **引用类型**和**"类"**
-	- 引用类型是一种**数据结构**, 用于将**数据**和**功能**组织在一起
-	- 引用类型常被称为类(在《JS权威指南》中引用类型被称为类) , 但并不妥当 
-	- ES不具备传统的面向对象所支持的类和借口等基本结构
-	- 引用类型也被称为对象定义
-	
+  - 引用类型是一种**数据结构**, 用于将**数据**和**功能**组织在一起
+  - 引用类型常被称为类(在《JS权威指南》中引用类型被称为类) , 但并不妥当 
+  - ES不具备传统的面向对象所支持的类和借口等基本结构
+  - 引用类型也被称为对象定义
+
 - **构造函数**
-	- 构造函数是专门用来生成对象的函数
-	- new运算符创建并初始化一个新的对象实例, 后面跟随一个函数调用, 这个函数称作构造函数----《JS权威指南》P120
-	- 调用构造函数的一个重要特征是, 构造函数的**prototype**属性被用作新对象的原型
-	- 定义了构造函数, 就是定义了一个引用类型
-	- 构造函数的函数名首字母大写
-	
+  - 构造函数是专门用来生成对象的函数
+  - new运算符创建并初始化一个新的对象实例, 后面跟随一个函数调用, 这个函数称作构造函数----《JS权威指南》P120
+  - 调用构造函数的一个重要特征是, 构造函数的**prototype**属性被用作新对象的原型
+  - 定义了构造函数, 就是定义了一个引用类型
+  - 构造函数的函数名首字母大写
+
 - **原型对象**
-	- 原型对象作为一个母体, 其属性被子对象所继承
-	- 每个构造函数都有一个对应的原型对象
-	- 每创建一个新函数, 这个新函数就有一个**prototype**属性, 这个属性**指向**原型对象
-	- 原型对象有一个**constructor**属性(constructor指得就是构造函数)
-	- 实例化的对象有一个指针`[[prototype]]`, 指向原型对象.
-	- `[[prototype]]`是**不可访问**的, 在chrome里, 用`__proto__`可以访问得到
+  - 原型对象作为一个母体, 其属性被子对象所继承
+  - 每个构造函数都有一个对应的原型对象
+  - 每创建一个新函数, 这个新函数就有一个**prototype**属性, 这个属性**指向**原型对象
+  - 原型对象有一个**constructor**属性(constructor指得就是构造函数)
+  - 实例化的对象有一个指针`[[prototype]]`, 指向原型对象.
+  - `[[prototype]]`是**不可访问**的, 在chrome里, 用`__proto__`可以访问得到
 
 
 ![构造函数, 原型对象, 实例之间的关系](http://i13.tietuku.com/dcf9d893a46043d0.png)
@@ -77,53 +77,57 @@
 
 优点: 每个实例都会有自己的一份实例属性的副本, 但同时又共享着对方法的引用, 最大限度的节省了内存.
 
-	
-	// 构造函数模式
-	function Person(name, age, job){
-		this.name = name;
-		this.age = age;
-		this.job = job;
-		this.friends = ["Shelby", "Court"];
-	}
-	// 原型模式
-	// 使用对象字面量重写原型时
-    // 要在重写的原型里面添加constructor属性和对应的属性值
-    // 不然constructor属性不再指向原来的构造函数
-	Person.prototype = {
-		constructor: Person,
-		sayName: function(){alert(this.name);}
-	}
 
-	var person1 = new Person("Nicholas", 29, "Sofrware Engineer");
-	var person2 = new Person("Greg", 27, "Doctor");
-	
-	person1.friends.push("Van")
-	
-	console.log(person1.friends); // ["Shelby", "Court", "Van"]
-	console.log(person2.friends); // ["Shelby", "Court"]
-	
+```javascript
+// 构造函数模式
+function Person(name, age, job){
+	this.name = name;
+	this.age = age;
+	this.job = job;
+	this.friends = ["Shelby", "Court"];
+}
+// 原型模式
+// 使用对象字面量重写原型时
+// 要在重写的原型里面添加constructor属性和对应的属性值
+// 不然constructor属性不再指向原来的构造函数
+Person.prototype = {
+	constructor: Person,
+	sayName: function(){alert(this.name);}
+}
+
+var person1 = new Person("Nicholas", 29, "Sofrware Engineer");
+var person2 = new Person("Greg", 27, "Doctor");
+
+person1.friends.push("Van")
+
+console.log(person1.friends); // ["Shelby", "Court", "Van"]
+console.log(person2.friends); // ["Shelby", "Court"]
+```
+
 在这个例子中, 实例属性都是在构造函数中定义的, 而由所有实例共享的属性constructor和方法sayName()则是在原型中定义的.修改了person1.friends并不会影响到person2.friends
 
 ##### 动态原型模式
 
 > 非常完美
+
+```javascript
+function Person(name, age, job){
+	// 属性
+	this.name = name;
+	this.age = age;
+	this.job = job;
+	// 方法
+	// 在sayName方法不存在的情况下, 才会将它添加到原型中, 完美
+	if(typeof this.sayName != "function"){
+		Person.prototype.sayName = function(){
+			alert(this.name);
+		};
+	}
+}	
 	
-	function Person(name, age, job){
-		// 属性
-		this.name = name;
-		this.age = age;
-		this.job = job;
-		// 方法
-		// 在sayName方法不存在的情况下, 才会将它添加到原型中, 完美
-		if(typeof this.sayName != "function"){
-			Person.prototype.sayName = function(){
-				alert(this.name);
-			};
-		}
-	}	
-		
-	var friend = new Person("Nicholas", 29, "Software Engineer");
-	friend.sayName();	// "Nicholas"		
+var friend = new Person("Nicholas", 29, "Software Engineer");
+friend.sayName();	// "Nicholas"		
+```
 
 ### 小结
 

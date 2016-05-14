@@ -24,7 +24,7 @@ person.name = "Jay";// 不会报错, 但是再次执行person.name时, 名字还
 
 ##### 数据属性
 
-> 改变数据的值, 可写性, 可配置性, 可枚举性(能否使用for-in). 
+> 改变数据的值, 可写性, 可配置性, 可枚举性(能否使用for-in), 用 `Object.defineProperty() `方法. 
 
 示例代码: 
 
@@ -43,7 +43,7 @@ person.name = "eason";		// 改不了
 
 ##### 访问器属性
 
-> 访问对象属性(读取和写入对象属性)时的特性
+> 在读取访问器属性时, 会调用 getter 函数; 在写入访问器属性时, 会调用 setter 函数; 
 
 - `get: function(){}`设置对象属性被访问时所调用的方法
 - `set: function(){}`设置对象属性被写入时所调用的方法
@@ -61,7 +61,7 @@ var book = {
 	edition: 1
 };
 // 设置book.year的访问器属性
-Object.Date.prototype.__defineGetter__('year', function() {return this.getFullYear();alert("a")}); (book, "year", {
+Object.defineProperty(book, "year", {
 // 当book.year被调用时返回book._year
 	get: function(){
 		return this._year;
@@ -74,4 +74,6 @@ Object.Date.prototype.__defineGetter__('year', function() {return this.getFullYe
 		}
 	}
 });
+book.year = 2005;
+alert(book.edition); // 2
 ```

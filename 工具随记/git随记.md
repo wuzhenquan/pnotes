@@ -45,17 +45,17 @@ git checkout -- filename 直接丢弃工作区的修改
 - 生成SSH: `ssh-keygen -t rsa -C "username@example.com"`(注册的邮箱)
 - 添加公钥: 本地打开 id_rsa.pub 文件，复制其中全部内容，填写到SSH_RSA公钥key下的一栏, 然后点击添加
 - 如果`git remote show origin`后还要输入密码, 用`git remote -v`查看是在用HTTPS还是用SSH方式访问仓库, 如果是用HTTPS方式访问仓库, 要修改成SSH方式
-	- 执行`git remote remove origin`删除该远程路径
-	- 执行`git remote add origin git@aaaaaa.github.com:aaaaaa/xxxxxx.git`加上正确的远程仓库。
+  - 执行`git remote remove origin`删除该远程路径
+  - 执行`git remote add origin git@aaaaaa.github.com:aaaaaa/xxxxxx.git`加上正确的远程仓库。
 
 #### 将已有git项目放到github上
 
 - 在github上创建一个同名仓库, 例如:hello-world
 - 在本地git仓库下
-	- git remote add origin git@github.com:wuzhenquan/hello-world
-	- git push -u origin master
-	- "-u"了一次之后, 就不用再"-u"了, 直接 git push origin master就行了
-	
+  - git remote add origin git@github.com:wuzhenquan/hello-world
+  - git push -u origin master
+  - "-u"了一次之后, 就不用再"-u"了, 直接 git push origin master就行了
+
 #### 克隆github上的项目
 > clone后, 只有默认的master是可见的, 要让dev可见, 需**建立远程origin的dev到本地dev**
 
@@ -65,12 +65,12 @@ git checkout -- filename 直接丢弃工作区的修改
 #### 与主干保存同步
 
 - 第一种
-	- git pull origin 分支名
+  - git pull origin 分支名
 - 第二种
-	- git fetch origin master
-		- git fetch origin表示取回所有分支的更新
-		- git fetch origin master表示只取回origin主机的master分支
-	- git log -p master..origin/master 比较本地的master分支和origin/master分支的差别
+  - git fetch origin master
+    - git fetch origin表示取回所有分支的更新
+    - git fetch origin master表示只取回origin主机的master分支
+  - git log -p master..origin/master 比较本地的master分支和origin/master分支的差别
     - git merge origin/master 将本地master和远程master(origin/master)合并
 
 
@@ -80,12 +80,12 @@ git checkout -- filename 直接丢弃工作区的修改
 
 
 - 创建并切换分支: git checkout -b dev
-	- 创建分支: git branch dev
-	- 切换分支: git checkout dev
+  - 创建分支: git branch dev
+  - 切换分支: git checkout dev
 - 列出所有的分支并显示当前分支: git branch 
 - 合并分支: git merge dev
-	- 在master上合并dev(fast forward模式): git merge dev (merge后显示不出分支信息)
-	- 在master上合并dev(禁用fast forward模式): git merge --no-ff -m"备注信息" dev
+  - 在master上合并dev(fast forward模式): git merge dev (merge后显示不出分支信息)
+  - 在master上合并dev(禁用fast forward模式): git merge --no-ff -m"备注信息" dev
 - 删除分支: git branch -d dev 
 
 如果在分支上修改没有提交就直接切换回master上的话, 文件是不会更改的
@@ -111,8 +111,8 @@ git checkout -- filename 直接丢弃工作区的修改
 > 将分支推送到远程仓库, 要注意哪些必须需要推送哪些不需要推送
 
 - **master和dev分支必须推送**
-	- git push origin master
-	- git push origin dev
+  - git push origin master
+  - git push origin dev
 - 如果本地新建的分支不推送到远程, 对其他人就是不可见的
 - 从本地推送分支
 
@@ -120,8 +120,8 @@ git checkout -- filename 直接丢弃工作区的修改
 > git pull(会自动merge), 把最新的提交从origin上抓下来
 
 - git pull
-	- 如果失败, 说明没有指定dev分支与远程origin/dev分支的链接, 需要`git branch --set-upstream dev origin/dev`
-	- 如果提示有冲突, 要手动解决冲突
+  - 如果失败, 说明没有指定dev分支与远程origin/dev分支的链接, 需要`git branch --set-upstream dev origin/dev`
+  - 如果提示有冲突, 要手动解决冲突
 - 再git pull
 - git commit -m"merge & fix dev"
 - git push origin dev
@@ -129,10 +129,10 @@ git checkout -- filename 直接丢弃工作区的修改
 #### 标签管理
 
 - 创建标签 `git tag v1.0 `
-	- 在master上建一个带有备注信息的v1.0版本的标签 `git tag -a v1.0 -m "version 0.1 released"`
+  - 在master上建一个带有备注信息的v1.0版本的标签 `git tag -a v1.0 -m "version 0.1 released"`
 - 删除标签 `git tag -d v0.1`
 - 推送标签到远程`git push origin tagname`
-	- 一次性全部推送`git push origin --tags`
+  - 一次性全部推送`git push origin --tags`
 - 在历史提交的commit-id上打标签 `git tag v1.0 commit-id`
 - 查看标签 `git tag` (列出的标签是按字母顺序的)
 - 查看标签某一个标签信息 `git show v1.0`

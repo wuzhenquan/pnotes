@@ -106,7 +106,7 @@ function SubType(){}
 // 让SubTYpe继承SuperType
 SubType.prototype = new SuperType();
 var instance1 = new SubType();
-var instance2 = new SupType();
+var instance2 = new SuperType();
 instance1.colors.push("black");
 ```
 
@@ -230,7 +230,7 @@ function createAnother(original){
 // 创建超类型对象
 var person = {
 	name: "Nicholas",
-	firends: ["Shelby", "Court", "Van"]
+	friends: ["Shelby", "Court", "Van"]
 }
 // 通过createAnother()继承超类型
 var	person1 = createAnother(person);

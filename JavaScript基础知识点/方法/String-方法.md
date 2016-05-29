@@ -90,17 +90,35 @@ console.log(a);
 #### string.replace(searchValue, replaceValue)
 > 查找和替换string 并返回一个新字符串 
 
+replaceValue 可以是一个字符串或一个函数
+
+如果 replaceValue 是一个字符串, 字符 $ 拥有特别的含义
+
+- $$ 表示替换 $
+- $& 表示替换整个匹配文本
+- $number 表示替换分组捕获的文本
+- $` 表示替换匹配之前的文本
+- $' 表示替换匹配之后的文本
+
 ```javascript
 var oldareacode = /\((\d{3})\)/g;
 var p = '(555)666-1212'.replace(oldareacode, '$1-');
 // p 是 '555-666-1212'
 ```
 
-#### string.search(regexp)
-> 涉及到正则表达 
+如果 replaceValue 是一个函数, 那么每遇到一次匹配就会被调用一次, 而该函数返回的字符串就会被用作替换文本.
 
 ```javascript
-javascript
+之前的代码抄错了 不知道哪里写错. 遂删
+```
+
+#### string.search(regexp)
+
+> 如果找到匹配, 它返回第一个匹配的首字符位置. 如果没找到, 返回-1.
+
+```javascript
+var text = 'and in it he says "Any damn fool could';
+var pos = text.search(/["']/); // pos 是 18
 ```
 
 #### string.slice(start, end)

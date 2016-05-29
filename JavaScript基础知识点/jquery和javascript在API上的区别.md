@@ -7,7 +7,7 @@
 设置radio属性的checked值
 
 - javascript: document.querySelector("input[type='radio']").checked=true;
-- jquery: `$("input[type='radio']").prop("checked","checked")`
+- jquery: `$("input[type='radio']").prop("checked","checked") ` 或者`$("input[type='radio']").prop("checked",true)`
 
 
 获取属性(以获取id属性为例)

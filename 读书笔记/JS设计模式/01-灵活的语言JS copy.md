@@ -101,7 +101,7 @@ a.checkName().checkEmail().checkPassword();// 为什么会错?
 ```javascript
 var CheckObject = function(){}
 CheckObject.prototype = {
-	checkName: function(){return this},
+    checkName: function(){return this},
     checkEmail: function(){return this},
     checkPassword: function(){return this}
 }
@@ -122,7 +122,9 @@ Function.prototype.addMethod = function(name, fn){
 }
 var methods = function(){};
 
-methods.addMethod('checkName', function(){}).addMethod('checkEmail', function(){}).addMethod('checkPassword', function(){});
+methods.addMethod('checkName', function(){})
+	   .addMethod('checkEmail', function(){})
+	   .addMethod('checkPassword', function(){});
 
 methods.checkName().checkEmail();
 ```

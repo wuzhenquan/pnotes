@@ -1,9 +1,3 @@
-<link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
-<script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
-<script>
-    hljs.tabReplace = '    ';
-    hljs.initHighlightingOnLoad();
-</script>
 ## JavaScript中面向对象的创建
 
 > 面向对象都有一个类的概念, 通过类可以创建任意多个具有相同**属性**和**方法**的对象.
@@ -12,18 +6,22 @@
 
 对象字面量的方式创建JavaScript对象
 
-	var person = {
-		name: "Jane", //属性
-		age: 18,  //属性
-		sayName: function(){alert(this.name)} //方法
-	}
+```javascript
+var person = {
+	name: "Jane", //属性
+	age: 18,  //属性
+	sayName: function(){alert(this.name)} //方法
+}
+```
 
 构造函数的方式创建JavaScript对象
 
-	var person = new Object(); 
-	person.name = "Jane"; //属性
-	person.age = 18; //属性
-	person.sayName =  function(){alert(this.name);}; //属性
+```javascript
+var person = new Object(); 
+person.name = "Jane"; //属性
+person.age = 18; //属性
+person.sayName =  function(){alert(this.name);}; //属性
+```
 
 > 通过构造函数或对象字面量创建对象的缺点不言而喻了----使用一个接口创建很多对象会产生大量重复代码. 
 
@@ -66,8 +64,6 @@
 **寄生构造函数模式**的缺点: 返回的对象与构造函数之间没有关系(用instanceof结果返回false)
 
 **稳妥构造函数模式**的优点: 安全. 
-
----
 
 ##### 组合使用构造函数模式和原型模式
 

@@ -88,7 +88,7 @@ var number=['one','two','three','four','five']
 number.splice(2,3) //2代表索引位置 3代表删除的个数
 // 数组结果var number=['one','two']
 
-number.splice(2,3,'six','seven') 
+number.splice(2,3,'six','seven') // 返回的是删除的部分
 //'six','seven'替换删掉的这3个元素
 // 数组结果var number=['one','two','six','seven']
 ```
@@ -134,6 +134,15 @@ var aaa=number.map(function(aaa){return aaa+'quan'});
 console.log(aaa); // ["onequan", "twoquan", "threequan", "fourquan", "fivequan"]
 ```
 
+##### array.forEach(callback[, thisArg])
+
+和 map 很像, 但是 forEach 不返回值, 也不会对原来的数组有任何的改动, 仅仅只是对数组进行操作
+
+```javascript
+var arr = [1,2,3];
+arr.map(function(x){return x*2}); //[2, 4, 6]
+arr.forEach(function(x){return x*2}); // undefined
+```
 
 ##### for in
 

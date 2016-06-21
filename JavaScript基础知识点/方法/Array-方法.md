@@ -86,10 +86,13 @@ number.slice(2,4)
 ```javascript
 var number=['one','two','three','four','five']
 number.splice(2,3) //2代表索引位置 3代表删除的个数
-// 数组结果var number=['one','two']
+// 返回值是 ["three", "four", "five"]
+// 数组结果number == ['one','two']
 
+var number=['one','two','three','four','five']
 number.splice(2,3,'six','seven') // 返回的是删除的部分
 //'six','seven'替换删掉的这3个元素
+// 返回值是 ["three", "four", "five"]
 // 数组结果var number=['one','two','six','seven']
 ```
 

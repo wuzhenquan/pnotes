@@ -19,7 +19,7 @@
 - 原型链继承模式
   - `SubType.prototype = new SuperType();`
 - 借用构造函数继承模式
-  - `function SubType](){SuperType.call(this)}`
+  - `function SubType(){SuperType.call(this)}`
 - 借用构造模式和原型链模式**组合式**继承模式
   - 借用构造模式继承**实例**属性
   - 原型链继承模式继承原型属性和方法
@@ -138,7 +138,7 @@ instance1.colors.push("black");
 function SuperType(name){
 	this.name = name;
 	this.colors = ["red", "blue", "green"];
-}
+}	
 
 SuperType.prototype.sayName = function(){
 	console.log(this.name);

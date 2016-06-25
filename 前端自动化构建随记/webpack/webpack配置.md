@@ -137,6 +137,15 @@ loaders 的工作流程(上图):
 2. `css-loader` 将所有 CSS 以及 CSS 内的依赖（例如 `@import xxx.css`）写进一个 JSON 里，然后将内容传到 `style-loader` 里。
 3. `style-loader` 拿到 JSON 后将内容处理并插入到 HTML 的`` 标签内。
 
+loaders 功能
+
+1. loader 管道：在同一种类型的源文件上，可以同时执行多个 loader ， loader 的执行方式可以类似管道的方式，管道执行的方向为从右到左。
+2. loader 可以支持同步和异步
+3. loader 可以接收配置参数
+4. loader 可以通过正则表达式或者文件后缀指定特定类型的源文件
+5. 插件可以提供给 loader 更多功能
+6. loader 除了做文件转换以外，还可以创建额外的文件
+
 #### plugins: 
 
 这里定义了需要使用的插件，比如commonsPlugin在打包多个入口文件时会提取出公用的部分，生成common.js.

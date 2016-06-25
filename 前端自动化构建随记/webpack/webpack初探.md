@@ -98,7 +98,7 @@ Webpack 本身只能处理原生的 JavaScript 模块，但是 loader转换�
 ```javascript
 var Webpack = require("webpack");// 额 好像不要这句也可以
 module.exports = {
-    entry: ["./entry.js"],
+    entry: ["./entry1.js", "./entry2.js"],
     output: {  // 配置打包结果
         path: __dirname,  // 定义输出文件夹
         filename: "bundle.js"  //打包结果文件的名称

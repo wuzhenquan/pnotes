@@ -62,3 +62,25 @@ dev server 可以实现一个基于 node + express 的前端 server
 $ npm install webpack-dev-server --save-dev
 ```
 
+第六步: npm install 依赖模块
+
+```shell
+# babel 相关的模块
+$ npm install babel-loader babel-preset-es2015 babel-preset-stage-0 babel-preset-react babel-polyfill --save-dev
+
+# react 相关的模块
+$ npm install react react-dom --save
+```
+
+第七步: loader
+
+```shell
+$ npm install css-loader style-loader --save-dev
+```
+
+第八步: plugin
+
+```shell
+# 安装一个 plugin 
+$ npm install bell-on-bundler-error-plugin --save-dev
+```

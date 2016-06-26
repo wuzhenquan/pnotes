@@ -66,7 +66,7 @@ $ npm install webpack-dev-server --save-dev
 
 ```shell
 # babel 相关的模块
-$ npm install babel-loader babel-preset-es2015 babel-preset-stage-0 babel-preset-react babel-polyfill --save-dev
+$ npm install babel-loader babel-core babel-preset-es2015 babel-preset-stage-0 babel-preset-react babel-polyfill --save-dev
 
 # react 相关的模块
 $ npm install react react-dom --save
@@ -83,4 +83,5 @@ $ npm install css-loader style-loader --save-dev
 ```shell
 # 安装一个 plugin 
 $ npm install bell-on-bundler-error-plugin --save-dev
+$ npm install html-webpack-plugin --save-dev
 ```

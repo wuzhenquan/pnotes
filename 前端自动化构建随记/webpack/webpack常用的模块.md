@@ -131,7 +131,7 @@ npm run start
 自动生成HTML
 
 ```shell
-  npm install html-webpack-plugin --save-dev
+npm install html-webpack-plugin --save-dev
 ```
 
 **CommonsChunkPlugin**
@@ -141,3 +141,18 @@ npm run start
 **UglifyJsPlugin**
 
 (自带)这个使用uglifyJs压缩你的js代码
+
+**React Transform**
+
+页面不刷新，直接替换修改的Component
+
+```shell
+# 基本的架子
+npm install --save-dev babel-plugin-react-transform
+# Hot Module Replacement 
+npm install --save-dev react-transform-hmr
+#在页面上直接显示catch到的错误的transform
+npm install --save-dev react-transform-catch-errors redbox-react
+#
+npm install babel-preset-react-hmre --save-dev
+```

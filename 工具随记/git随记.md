@@ -1,4 +1,14 @@
+#### 用户信息操作
 
+配置
+
+- git config --global user.name
+- git config --global user.email
+
+获取
+
+- git config --get user.name
+- git config --get user.email
 
 #### 撤销修改
 
@@ -79,14 +89,14 @@ git checkout -- filename 直接丢弃工作区的修改
 > 使用分支完成某个任务, 合并后再删掉分支, 虽然和在master分支上工作效果一样, 但过程更为安全
 
 
-- 创建并切换分支: git checkout -b dev
-  - 创建分支: git branch dev
-  - 切换分支: git checkout dev
+- 创建并切换分支: git checkout -b branchname
+  - 创建分支: git branch branchname
+  - 切换分支: git checkout branchname
 - 列出所有的分支并显示当前分支: git branch 
-- 合并分支: git merge dev
-  - 在master上合并dev(fast forward模式): git merge dev (merge后显示不出分支信息)
-  - 在master上合并dev(禁用fast forward模式): git merge --no-ff -m"备注信息" dev
-- 删除分支: git branch -d dev 
+- 合并分支: git merge branchname
+  - 在master上合并(fast forward模式): git merge branchname (merge后显示不出分支信息)
+  - 在master上合并(禁用fast forward模式): git merge --no-ff -m"备注信息" branchname
+- 删除分支: git branch -d branchname 
 
 如果在分支上修改没有提交就直接切换回master上的话, 文件是不会更改的
 

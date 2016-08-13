@@ -181,6 +181,26 @@ git checkout -- filename 直接丢弃工作区的修改
 
 > 答: 用git stash 相关的命令操作
 
+场景6: 想切换分支, 但是还有修改的代码没 commit
+
+> 答: 用 git stash 相关命令暂存现在的工作区
+
+###### 基础命令
+
+- git stash 暂存工作区
+- 切换到其他分支做其他的工作
+- git stash pop 将之前暂存的工作区还原
+
+###### stash命令汇总
+
+- git stash          # save uncommitted changes
+- git stash list     # list stashed changes in this git
+- git show stash@{0} # see the last stash 
+- git stash pop      # apply last stash and remove it from the list
+- git stash pop stash@{0} 恢复指定的stash
+- git stash --help   # for more info
+- git stash clear 清空所有的 stash list
+
 场景6: 查看远程master分支是否更新
 
 > 答: `git remote origin master`后, 最后一句会显示up to date 还是local out of date
@@ -190,14 +210,7 @@ git checkout -- filename 直接丢弃工作区的修改
 - git stash list
 - git stash pop 
 
-###### 其他stash命令
 
-- git stash          # save uncommitted changes
-- git stash list     # list stashed changes in this git
-- git show stash@{0} # see the last stash 
-- git stash pop      # apply last stash and remove it from the list
-- git stash pop stash@{0} 恢复指定的stash
-- git stash --help   # for more info
 
 
 ## git命令汇总

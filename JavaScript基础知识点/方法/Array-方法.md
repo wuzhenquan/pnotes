@@ -150,4 +150,29 @@ arr.forEach(function(x){return x*2}); // undefined
 ##### for in
 
 > 用for in遍历数组的所有属性无法保证属性的顺序
+```javascript
+var arr = [1,2,3];
+for(x in arr){
+  console.log(x)
+}
+```
 
+##### array.reduce(callbackfn[, initialValue])
+
+> 从数组的某一个元素起开始执行 callbackfn, callbacfn 的第一个参数是上次计算返回的结果
+
+```javascript
+// 1
+var arr = [1,2,3];
+arr.reduce(function(previousValue, currentValue){
+	return previousValue + currentValue
+}) // 6
+
+// 2
+var arr = [1,2,3];
+arr.reduce(function(previousValue, currentValue){
+	return previousValue + currentValue
+},-1)  // 5
+
+// 还有更多的方法
+```

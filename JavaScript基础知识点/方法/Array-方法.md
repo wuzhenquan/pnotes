@@ -196,4 +196,11 @@ arr.reduce(function(pre,cur,index,arr){return pre * cur});
 // 求最大值
 var arr = [1,2,3,4]
 var max = a.reduce(function(pre,cur,inde,arr){return pre>cur?pre:cur;});
+// 将数组合并成字符串
+var initState = '';
+var actions = ['a', 'b', 'c'];
+var newState = actions.reduce(
+    ( (prevState, action) => prevState + action ),
+    initState
+);// newState 为 "abc"
 ```

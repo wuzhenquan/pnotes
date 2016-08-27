@@ -60,9 +60,6 @@ number.reverse()
 //数组结果number=["five", "four", "three", "two", "one"]
 ```
 
-
-
-
 ##### delete array[i]
 
 ```javascript
@@ -135,6 +132,10 @@ m.sort(function(a,b){
 var number=['one','two','three','four','five']
 var aaa=number.map(function(aaa){return aaa+'quan'});
 console.log(aaa); // ["onequan", "twoquan", "threequan", "fourquan", "fivequan"]
+// 求和
+var arr = [1,2,3,4],
+sum = 0;
+arr.map(function(obj){sum += obj});//return undefined array. sum = 10  
 ```
 
 ##### array.forEach(callback[, thisArg])
@@ -145,6 +146,10 @@ console.log(aaa); // ["onequan", "twoquan", "threequan", "fourquan", "fivequan"]
 var arr = [1,2,3];
 arr.map(function(x){return x*2}); //[2, 4, 6]
 arr.forEach(function(x){return x*2}); // undefined
+// 求和
+var arr = [1,2,3,4],
+sum = 0;
+arr.forEach(function(e){sum += e;}); // sum = 10  
 ```
 
 ##### for in
@@ -160,6 +165,7 @@ for(x in arr){
 ##### array.reduce(callbackfn[, initialValue])
 
 > 从数组的某一个元素起开始执行 callbackfn, callbacfn 的第一个参数是上次计算返回的结果
+> reduce 专为累加这种操作而设计，为累加这类操作而设计的参数，十分方便
 
 ```javascript
 // 1
@@ -174,5 +180,20 @@ arr.reduce(function(previousValue, currentValue){
 	return previousValue + currentValue
 },-1)  // 5
 
-// 还有更多的方法
+
+// 不传 initialValue 值
+var arr = [1,2,3];
+arr.reduce(function(pre,cur,index,arr){debugger;return pre+cur}); // return 6
+// 传 initialValue 值
+var arr = [1,2,3];
+arr.reduce(function(pre,cur,index,arr){debugger;return pre+cur},10); // return 10
+// 求和
+var arr = [1,2,3,4];
+arr.reduce(function(pre,cur){return pre + cur});// return 10
+// 求乘积
+var arr = [1,2,3,4]
+arr.reduce(function(pre,cur,index,arr){return pre * cur});
+// 求最大值
+var arr = [1,2,3,4]
+var max = a.reduce(function(pre,cur,inde,arr){return pre>cur?pre:cur;});
 ```

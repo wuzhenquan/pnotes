@@ -83,6 +83,8 @@
 
 ## 我的配置
 
+`Preferences` => `Settings-user`
+
 ```javascript
 {
 	"caret_style": "phase",

@@ -36,11 +36,13 @@
 - 输入主题名字比如`Material Theme` 回车
 - 安装完成之后会 sublime会出现package control message文件, 是关于这个Material Theme主题的说明
 - 找到配置信息比如
-
+   
+   ```javascript
     {
       "theme": "Material-Theme.sublime-theme",
       "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
     }
+    ```
 
 - preferences > setting users 把配置信息放到该文件下
 - 保存就会立即使用该主题
@@ -78,3 +80,23 @@
 - `Ctrl+Shift+[` 折叠代码
 - `Ctrl+Shift+]` 展开代码
 - `ctrl+k+b` 隐藏/关闭侧边栏
+
+## 我的配置
+
+```javascript
+{
+	"caret_style": "phase",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"font_size": 12,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1.5,
+	"line_padding_top": 1.5,
+	"tab_size": 2,
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"translate_tabs_to_spaces": false
+}
+```

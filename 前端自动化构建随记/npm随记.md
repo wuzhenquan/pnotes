@@ -10,7 +10,9 @@
 - npm update #升级当前目录下的项目的所有模块 
 - npm update express #升级当前目录下的项目的指定模块 
 - npm update -g express #升级全局安装的express模块 
-  - npm uninstall express #删除指定的模块
+- npm uninstall express #删除指定的模块
+- npm outdated 查看当前目录下哪些包可更新
+- npm update 更新当前目录下所有的包
 
 
 #### npm插件推荐

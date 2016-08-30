@@ -13,7 +13,7 @@
 - npm uninstall express #删除指定的模块
 - npm outdated 查看当前目录下哪些包可更新
 - npm update 更新当前目录下所有的包
-- npm install npm -g 升级 npm 
+- sudo npm install npm -g 升级 npm 
 
 
 #### npm插件推荐

@@ -47,6 +47,15 @@ git checkout -- filename 直接丢弃工作区的修改
 >场景2: 误删要恢复
 
 - git checkout -- filename
+- 
+#### 合并 commit 
+
+> 场景1: 合并最新的三个commit
+
+- `git rebase -i HEAD~~~` (要合并几个 commit 就几个波浪号)
+- 此时进入vim, 第一行不懂, 后面两行把 `pick` 改成 `s` ( s 代表squash), 保存退出
+- 删掉默认的 commit 备注, 自己写一个commit 备注, 保存退出
+- 参考链接: http://blog.csdn.net/zmyde2010/article/details/8603810
 
 ## 多人协作 
 

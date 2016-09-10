@@ -1,11 +1,18 @@
 Promise 构造函数接受一个 `function(resolve, reject){}` 作为参数
 
+- Promise 有两种状态变化
+  - 从 Pending 变为 Resolved
+  - 从 Pending 变为 Rejected
+- new 一个 Promise, 实际上就是创建一个这样的对象: `Promise {[[PromiseStatus]]: "resolved", [[PromiseValue]]: "hello promise"}`, 其中, 属性 PromiseStatus 的属性值优 resolve 或者 reject 函数决定, 属性 PromiseValue 的属性值由 resolve 或者 reject 函数所带的值决定.
+
 新建一个 promise 实例
 
-
-
 ```javascript
-var promise = new Promise();
+var promise = new Promise((resolve,reject)=>{
+  // resolve 和 reject 是两个函数
+  // 想让 Promise 从 Pending 变为 Resolved, 用 resolve(), 所带参数是 Promise 对象中 PromiseValue 属性的值
+  // 想让 Promise 从 Pending 变为 Rejected, 用 reject(), 所带参数是 Promise 对象中 PromiseValue 属性的值
+});
 ```
 
 - resolve 

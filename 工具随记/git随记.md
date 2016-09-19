@@ -37,6 +37,10 @@ git checkout -- filename 直接丢弃工作区的修改
 - 复制commit-id
 - git reset --hard commit-id
 
+>  场景6: 修改已经提交的 commit 的作者
+
+-  git commit --amend --author "username  <wzq@gmail.com>"
+
 #### 删除文件
 
 > 场景1: 确实要删除

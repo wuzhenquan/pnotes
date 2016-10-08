@@ -124,6 +124,12 @@ m.sort(function(a,b){
 })
 ```
 
+##### array.every(callbackfn[, thisArg])
+
+##### array.some(callbackfn[, thisArg])
+
+##### array.filter(callbackfn[, thisArg])
+
 ##### array.map(callback[, thisArg])
 
 [MDN Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)

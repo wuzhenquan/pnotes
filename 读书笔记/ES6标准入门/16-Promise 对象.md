@@ -4,6 +4,9 @@ Promise 构造函数接受一个 `function(resolve, reject){}` 作为参数
   - 从 Pending 变为 Resolved
   - 从 Pending 变为 Rejected
 - new 一个 Promise, 实际上就是创建一个这样的对象: `Promise {[[PromiseStatus]]: "resolved", [[PromiseValue]]: "hello promise"}`, 其中, 属性 PromiseStatus 的属性值优 resolve 或者 reject 函数决定, 属性 PromiseValue 的属性值由 resolve 或者 reject 函数所带的值决定.
+- `new Promise((resolve, reject)=>{})` 里
+  - 执行了 resolve , 这个 Promise 实例的状态(PromiseStatus)就会变成 Resolved
+  - 执行了 reject , 这个 Promise 实例的状态(PromiseStatus)就会变成 Rejected
 
 新建一个 promise 实例
 
@@ -56,6 +59,33 @@ then 方法, 指定 Resolved 状态和 Rejected 状态的回调函数,  当从 P
 - then 方法返回的是一个新的 Promise 实例
 - Promise 的实例状态变为 Resolved, 就会触发 then 绑定的回调函数
 - then 绑定的回调函数的参数是对应的 resolve 或 reject 函数的参数? 
+
+
+#### resolve 的参数如果是另一个 Promise 实例
+
+```javascript
+var p1 = new Promise((resolve, reject)=>{
+  setTimeout(() => resolve('成功啦哈哈哈'), 3000)
+})
+var p2 = new Promise((resolve, reject)=>{
+  setTimeout(() => resolve(p1), 3000)
+})
+p2.then(result => console.log(result))
+p2.catch(error => console.log(error))
+// 3秒之后, p2 是: Promise {[[PromiseStatus]]: "resolved", [[PromiseValue]]: "成功啦哈哈哈"}
+var p1 = new Promise((resolve, reject)=>{
+  setTimeout(() => reject('失败啦哈哈哈'), 3000)
+})
+var p2 = new Promise((resolve, reject)=>{
+  setTimeout(() => resolve(p1), 3000)
+})
+p2.then(result => console.log(result))
+p2.catch(error => console.log(error))
+// 3秒之后 p2 是: Promise {[[PromiseStatus]]: "rejected", [[PromiseValue]]: "失败啦哈哈哈"}
+```
+
+
+
 
 
 

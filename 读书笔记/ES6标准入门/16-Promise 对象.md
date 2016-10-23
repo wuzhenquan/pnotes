@@ -39,6 +39,19 @@ var promise = new Promise((resolve,reject)=>{
 
   - 在异步操作失败时调用, 并将异步操作报出的错误作为参数传递出去
 
+
+
+- resolve 和 reject 的参数
+
+  - resolve: 
+
+    - 可能是正常的值, 表示异步操作的结果有可能是一个值. 
+    - 可能是另一个 Promise 实例, 表示异步操作的结果有可能是另一个异步操作
+
+  - reject:
+
+    - 通常是 Error 对象的实例
+
   - ```javascript
     // 好难理解
     var p1 = new Promise(function(resolve, reject){
@@ -51,14 +64,6 @@ var promise = new Promise((resolve,reject)=>{
     p2.catch(error => resolve(p1), 1000)
     // p1 是个 Promise , 3秒之后变为 Rejected. p2的状态由 p1 决定, 1秒之后, p2 调用 resolved 方法, 但是此时 p1 的状态还没有改变, 因此 p2 的状态也不会改变. 又过了 2 秒, p1 变为 Rejected , p2 也跟着变为 Rejected. 
     ```
-
-then 方法, 指定 Resolved 状态和 Rejected 状态的回调函数,  当从 Pending 切换到 Resolved 或者 Rejected 时, 调用 then 方法里面的回调函数. then 方法可以接受两个回调函数作为参数:
-
-- 状态变为 Resolved 时调用
-- 状态变为 Rejected 时调用
-- then 方法返回的是一个新的 Promise 实例
-- Promise 的实例状态变为 Resolved, 就会触发 then 绑定的回调函数
-- then 绑定的回调函数的参数是对应的 resolve 或 reject 函数的参数? 
 
 
 #### resolve 的参数如果是另一个 Promise 实例
@@ -84,46 +89,15 @@ p2.catch(error => console.log(error))
 // 3秒之后 p2 是: Promise {[[PromiseStatus]]: "rejected", [[PromiseValue]]: "失败啦哈哈哈"}
 ```
 
+#### Promise.prototype.then(()=>{},()=>{})
 
+指定 Resolved 状态和 Rejected 状态的回调函数,  当从 Pending 切换到 Resolved 或者 Rejected 时, 调用 then 方法里面的回调函数. then 方法可以接受两个回调函数作为参数:
 
+- 第一个参数是当从 Pending 切换到 **Resolved** 时调用的回调函数
+- 第二个参数是当从 Pending 切换到 **Rejected** 时调用的回调函数
 
+- then 绑定的回调函数的参数是对应的 resolve 或 reject 函数的参数( resolve 函数和 reject 函数所带的参数会被传递给 then 中的回调函数作为这些回调函数的参数)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- then 方法返回的是一个新的 Promise 实例, 因此可以采用链式写法, 即 then 方法后面再调用一个 then 方法
+- 
 

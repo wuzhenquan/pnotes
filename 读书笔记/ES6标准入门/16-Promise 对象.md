@@ -95,9 +95,26 @@ p2.catch(error => console.log(error))
 
 - 第一个参数是当从 Pending 切换到 **Resolved** 时调用的回调函数
 - 第二个参数是当从 Pending 切换到 **Rejected** 时调用的回调函数
-
 - then 绑定的回调函数的参数是对应的 resolve 或 reject 函数的参数( resolve 函数和 reject 函数所带的参数会被传递给 then 中的回调函数作为这些回调函数的参数)
-
 - then 方法返回的是一个新的 Promise 实例, 因此可以采用链式写法, 即 then 方法后面再调用一个 then 方法
-- 
+- 第二个参数其实没必要了, 用 catch 方法就好了.
+
+
+#### Promise.prototype.catch()
+
+是 `.then(null, rejection)` 的别名(所以, 就没必要用`.then(null, rejection)`这样的写法了), 用于指定发生错误时的回调函数. 如果 Promise 对象状态变为 Rejected, 就会调用 catch 方法指定的回调函数处理这个错误. 
+
+```javascript
+var promise = new Promise(function(resolve, reject){
+  resolve("ok")
+  throw new Error('test')
+})
+promise.then(function(value){console.log(value)}).catch(function(error){console.log(error)})
+
+var promise = new Promise(function(resolve, reject){
+  resolve("ok")
+  setTimeout(function(){throw new Error('test')}, 0)
+})
+promise.then(function(value){console.log(value)})
+```
 

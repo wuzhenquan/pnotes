@@ -64,7 +64,14 @@ module.exports = {
         loaders: [
             {test: /\.scss$/, loaders: ['style', 'css', 'sass'], include: APP_PATH},
             {test: /\.(png|jpg)$/, loader: 'url?limit=40000'},
-            {test: /\.jsx?$/, loader: 'babel', include: APP_PATH, query: {presets: ['es2015']}},
+            {
+              test: /\.jsx?$/, 
+              loader: 'babel', 
+              include: APP_PATH, 
+              // 若是已經單獨使用 .babelrc 作為 presets 設定的話，則可以省略 query
+              // preset 則是使用的 babel 轉譯規則，這邊使用 react、es2015
+              query: {presets: ['es2015']}
+            },
         ],
         perLoaders: [
             {

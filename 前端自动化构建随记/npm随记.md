@@ -2,15 +2,18 @@
 - 文件夹下有package.json的话, 在终端输入`npm install`就会安装所有依赖的模块
 
 ####几个npm的常用命令
+
+> moduleName 表示的是一个模块的名字
+
 - npm -v #显示版本，检查npm 是否正确安装。 
-- npm install express #安装express模块 
-- npm install -g express #全局安装express模块 
+- npm install moduleName #安装moduleName模块 
+- npm install -g moduleName #全局安装moduleName模块 
 - npm list #列出已安装模块 
-- npm show express #显示模块详情 
+- npm show moduleName #显示模块详情 
 - npm update #升级当前目录下的项目的所有模块 
-- npm update express #升级当前目录下的项目的指定模块 
-- npm update -g express #升级全局安装的express模块 
-- npm uninstall express #删除指定的模块
+- npm update moduleName #升级当前目录下的项目的指定模块 
+- npm update -g moduleName #升级全局安装的moduleName模块 
+- npm uninstall moduleName #删除指定的模块
 - npm outdated 查看当前目录下哪些包可更新
 - npm update 更新当前目录下所有的包
 - sudo npm install npm -g 升级 npm 

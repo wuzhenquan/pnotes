@@ -66,3 +66,4 @@ window.onload = function(){}
 - 阻止冒泡 e.stopPropagation();
 - Math.round()
 - 在循环里面注册没有被立即调用的函数, 闭包的时候那就要尤为注意了
+- `Array.prototype.push.apply(arr1, arr2);`和`arr1.push(...arr2);`, 前者是 ES5 的写法, 后者是 ES6 的写法. 很明显 ES6 的写法更简洁

@@ -72,9 +72,9 @@ delete number[2]
 
 ```javascript
 var number=['one','two','three','four','five'];
-number.slice(2,4)
+number.slice(2); // 返回 ['three','four','five']
+number.slice(2,4); // 返回 ['three','four']
 // 摘取数组中的片段 2代表起始位置, 4代表复制的个数
-// 返回值var number=['three','four']
 // 但number仍然是['one','two','three','four','five'];
 ```
 

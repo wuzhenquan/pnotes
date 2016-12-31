@@ -173,6 +173,10 @@ for(x in arr){
 > 从数组的某一个元素起开始执行 callbackfn, callbacfn 的第一个参数是上次计算返回的结果
 > reduce 专为累加这种操作而设计，为累加这类操作而设计的参数，十分方便
 
+**注意了:  callbackfn 可以带四个参数: previousValue, currnetValue, currentIndex, array **
+
+http://elijahmanor.com/reducing-filter-and-map-down-to-reduce/
+
 ```javascript
 // 1
 var arr = [1,2,3];
@@ -209,4 +213,38 @@ var newState = actions.reduce(
     ( (prevState, action) => prevState + action ),
     initState
 );// newState 为 "abc"
+
+
+// 不用 map 和 filter, 改用 reduce
+var doctors = [
+    { number: 1,  actor: "William Hartnell",      begin: 1963, end: 1966 },
+    { number: 2,  actor: "Patrick Troughton",     begin: 1966, end: 1969 },
+    { number: 3,  actor: "Jon Pertwee",           begin: 1970, end: 1974 },
+    { number: 4,  actor: "Tom Baker",             begin: 1974, end: 1981 },
+    { number: 5,  actor: "Peter Davison",         begin: 1982, end: 1984 },
+    { number: 6,  actor: "Colin Baker",           begin: 1984, end: 1986 },
+    { number: 7,  actor: "Sylvester McCoy",       begin: 1987, end: 1989 },
+    { number: 8,  actor: "Paul McGann",           begin: 1996, end: 1996 },
+    { number: 9,  actor: "Christopher Eccleston", begin: 2005, end: 2005 },
+    { number: 10, actor: "David Tennant",         begin: 2005, end: 2010 },
+    { number: 11, actor: "Matt Smith",            begin: 2010, end: 2013 },
+    { number: 12, actor: "Peter Capaldi",         begin: 2013, end: 2013 }    
+];
+doctors = _.reduce(doctors, function(memo, doctor) {
+    if (doctor.begin > 2000) {
+        memo.push({
+            doctorNumber: "#" + doctor.number,
+            playedBy: doctor.actor,
+            yearsPlayed: doctor.end - doctor.begin + 1
+        });
+    }
+    return memo;
+}, []);
+console.log(JSON.stringify(doctors, null, 4));
+//[
+//    { doctorNumber: "#9",  playedBy: "Christopher Eccleston", yearsPlayed: 1 },
+//    { doctorNumber: "#10", playedBy: "David Tennant",         yearsPlayed: 6 },
+//    { doctorNumber: "#11", playedBy: "Matt Smith",            yearsPlayed: 4 },
+//    { doctorNumber: "#12", playedBy: "Peter Capaldi",         yearsPlayed: 1 }
+//] 
 ```

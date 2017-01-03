@@ -89,6 +89,40 @@ p2.catch(error => console.log(error))
 // 3秒之后 p2 是: Promise {[[PromiseStatus]]: "rejected", [[PromiseValue]]: "失败啦哈哈哈"}
 ```
 
+#### 用 Promise 对象实现的 AJAX 操作的例子
+
+```javascript
+let getJSON = function(url){
+  let promise = new Promise(function(resolve, reject){
+    let client = new XMLHttpRequest()
+    client.open("GET", url)
+    client.onreadystatechange = handler
+    client.responseType = "json"
+    client.setRequestHeader("Accept", "application/json")
+    client.send()
+    function handler(){
+      if(this.readyState !== 4){
+        return
+      }
+      if(this.status === 200){
+        resolve(this.response)
+      }else{
+        reject(new Error(this.statusText))
+      }
+    }
+  })
+  return promise
+}
+let url = "https://api.github.com/search/users?q=wuzhenquan"
+getJSON(url).then(function(json){
+  console.log('Contents: ' + json)
+}).catch(function(error){
+  console.error('出错了', error)
+})
+```
+
+
+
 #### Promise.prototype.then(()=>{},()=>{})
 
 指定 Resolved 状态和 Rejected 状态的回调函数,  当从 Pending 切换到 Resolved 或者 Rejected 时, 调用 then 方法里面的回调函数. then 方法可以接受两个回调函数作为参数:

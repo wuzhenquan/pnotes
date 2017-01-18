@@ -49,6 +49,8 @@ point.toString()
 
 每一个使用class方式定义的类默认都有一个**constructor**函数， 这个函数是构造函数的主函数， 该函数体内部的**this**指向生成的实例
 
+如果没有显示定义constructor 方法, 那么这个方法就会默认添加(任何一个子类都有 constructor 方法)
+
 ```javascript
 class Cat { 
   constructor(name) {
@@ -97,9 +99,9 @@ var a = {
 console.log(a.val()) // 返回 true
 ```
 
-在 constructor(){} 中想让子类用 this 对象, 子类必须在 constructor(){} 方法中调用 super 方法, 否则新建实例时会报错. 这是因为 constructor(){} 里的 this 对象不是自己的 this 对象, 而是继承了父类的 this 对象然后对其进行加工. 如果不调用 super 方法, 子类的 constructor(){} 就得不到 this 对象. 
+在 `constructor(){}` 中想让子类用 this 对象, 子类必须在 `constructor(){}` 方法中调用 super 方法, 否则新建实例时会报错. 这是因为 `constructor(){}` 里的 this 对象不是自己的 this 对象, 而是继承了父类的 this 对象然后对其进行加工. 如果不调用 super 方法, 子类的 `constructor(){}` 就得不到 this 对象. 
 
-在子类的构造函数 constructor(){} 中, 只有调用 super 之后, constructor(){} 才可以使用 this 关键字, 否则会报错.
+在子类的构造函数 constructor(){} 中, 只有调用 super 之后, `constructor(){}` 才可以使用 this 关键字, 否则会报错.这是因为子类实例的构建基于对父类实例的加工, 在 `constructor`中(其实这样描述不严谨)只有 super 方法才能返回父类实例.
 
 ```javascript
 class Point {
@@ -117,7 +119,19 @@ class Color extends Point {
 }
 ```
 
+只要子类显示定义了 constructor 方法, 却没有用到 super, 实例化这个子类的同时就会报错.
 
+```javascript
+class Point{}
+class Color extends Point{
+  constructor(){}
+}
+new Color // ReferenceError: this is not defined
+```
+
+ES5 的继承实质上是先创造子类的实例对象 this, 然后再将父类的方法添加到 this 上(`Parent.apply(this)`)
+
+ES6 的继承实质上是先创造父类的实例对象 this (所以必须调用 super 方法), 然后再用子类的构造函数修改 this. 
 
 **Object.setPrototypeOf()** 设置一个对象的 prototype 对象
 

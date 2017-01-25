@@ -1,0 +1,14 @@
+- 看看这个属性属选择器, [CSS Selector Reference](http://www.w3schools.com/cssref/css_selectors.asp)
+  - [~=](http://www.w3schools.com/cssref/sel_attribute_value_contains.asp):  `label[for~="weight"] {color: #FF4081;}` 
+  - [|=](http://www.w3schools.com/cssref/sel_attribute_value_lang.asp)
+  - [^=](http://www.w3schools.com/cssref/sel_attr_begin.asp)(css3)
+  - [$=](http://www.w3schools.com/cssref/sel_attr_end.asp)(css3): `label[for$="eight"]{color: #FF4081;}` 匹配以 `eight` 字符串结尾的
+  - [*=](http://www.w3schools.com/cssref/sel_attr_contain.asp)(css3)
+- 上下文选择器
+  - `,`: 表示「和」
+  - `空格`: 表示后代关系(可儿子可孙子)
+  - `>` :子选择器(只有儿子哦)
+  - `+` :亲兄弟选择器
+  - `~` : `div~label` 选择父类有 div 的 label
+- 伪类: `:link`, `:visited`, `:hover`, `:active`, `:focus`, `:enabled`, `:disabled`, `:first-letter`, `:first-line`, `first-child`, `::after`, `:before`, `:first-of-type`, `:last-of-type`, `:first-child`, `:nth-child(n)`, `:nth-last-child(n)`, `nth-child(even)`,   `nth-child(odd)`, `:nth-of-type(n)`, `:nth-last-of-type(n)`, `:only-child`, `:only-of-type`
+

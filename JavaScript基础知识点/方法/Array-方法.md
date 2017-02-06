@@ -230,7 +230,7 @@ var doctors = [
     { number: 11, actor: "Matt Smith",            begin: 2010, end: 2013 },
     { number: 12, actor: "Peter Capaldi",         begin: 2013, end: 2013 }    
 ];
-doctors = _.reduce(doctors, function(memo, doctor) {
+doctors = doctors.reduce(function(memo, doctor) {
     if (doctor.begin > 2000) {
         memo.push({
             doctorNumber: "#" + doctor.number,

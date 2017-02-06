@@ -128,6 +128,11 @@ m.sort(function(a,b){
 
 ##### array.some(callbackfn[, thisArg])
 
+```javascript
+// 找出 collection 中满足条件和那个元素
+[{ 'a': 1, 'b': 2 },{'a':333,'b':444}].some(function(item){return item.a===1})
+```
+
 ##### array.filter(callbackfn[, thisArg])
 
 ##### array.map(callback[, thisArg])

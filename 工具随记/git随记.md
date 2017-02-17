@@ -111,8 +111,9 @@ git checkout -- filename 直接丢弃工作区的修改
 - 合并分支: git merge branchname
   - 在master上合并(fast forward模式): git merge branchname (merge后显示不出分支信息)
   - 在master上合并(禁用fast forward模式): git merge --no-ff -m"备注信息" branchname
-- 删除分支: git branch -d branchname 
-
+- 删除分支: 
+  - 删除本地分支: git branch -d branchname 
+  - 删除远程分支: git push origin --delete branchname
 如果在分支上修改没有提交就直接切换回master上的话, 文件是不会更改的
 
 

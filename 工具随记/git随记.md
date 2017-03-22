@@ -107,6 +107,7 @@ git checkout -- filename 直接丢弃工作区的修改
 - 创建并切换分支: git checkout -b branchname
   - 创建分支: git branch branchname
   - 切换分支: git checkout branchname
+  - 从远程分支创建到本地分支: git checkout -b 本地分支名 origin/远程分支名  或者  git feich origin 远程分支名:本地分支名
 - 列出所有的分支并显示当前分支: git branch 
 - 合并分支: git merge branchname
   - 在master上合并(fast forward模式): git merge branchname (merge后显示不出分支信息)

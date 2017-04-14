@@ -153,7 +153,10 @@ git checkout -- filename 直接丢弃工作区的修改
 - git commit -m"merge & fix dev"
 - git push origin dev
 
-#### 标签管理
+#### 把已经提交的commit, 从一个分支放到另一个分支
+> git cherry-pick <commit id> (这里的 commit id 指的是另外一个要合并的分支的 commt id)
+
+## 标签管理
 
 - 创建标签 `git tag v1.0 `
   - 在master上建一个带有备注信息的v1.0版本的标签 `git tag -a v1.0 -m "version 0.1 released"`

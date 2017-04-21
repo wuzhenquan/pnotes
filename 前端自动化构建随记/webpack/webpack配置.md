@@ -4,8 +4,15 @@
 
 三种格式都可以:
 
-- entry-String字符串形式, `entry: './public/src/index.js'`
-
+- entry-String字符串形式
+  ```javascript
+  entry: './public/src/index.js,
+  out: {
+    path: '/dist',
+    filename: "bundle.js"
+  }  
+  // 生成 bundle.js 文件
+  ```
 - entry-Array 数组形式
 
   ```javascript
@@ -14,7 +21,7 @@
     path: '/dist',
     filename: "bundle.js"
   }  
-  // 生成 entry.js 文件
+  // 生成 bundle.js 文件
   ```
 
 - entry-Object 对象形式,
@@ -28,11 +35,11 @@
       path: '/dist',
       filename: "[name].js"
   }
-  // 生成 index.js 和 profile.js 文件
+  // 生成 indexEntry.js 和 indexEntry.js 文件
   ```
 
 
-​       打包后的 js 名就是 entry 对象的 key: `indexEnetr.js` 和 `profileEntry.js`
+​       打包后的 js 名就是 entry 对象的 key: `indexEntry.js` 和 `profileEntry.js`
 
 还可以混合使用
 

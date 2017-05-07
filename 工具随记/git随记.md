@@ -107,12 +107,14 @@ git checkout -- filename 直接丢弃工作区的修改
 - 创建并切换分支: git checkout -b branchname
   - 创建分支: git branch branchname
   - 切换分支: git checkout branchname
+  - 从远程分支创建到本地分支: git checkout -b 本地分支名 origin/远程分支名  或者  git feich origin 远程分支名:本地分支名
 - 列出所有的分支并显示当前分支: git branch 
 - 合并分支: git merge branchname
   - 在master上合并(fast forward模式): git merge branchname (merge后显示不出分支信息)
   - 在master上合并(禁用fast forward模式): git merge --no-ff -m"备注信息" branchname
-- 删除分支: git branch -d branchname 
-
+- 删除分支: 
+  - 删除本地分支: git branch -d branchname 
+  - 删除远程分支: git push origin --delete branchname
 如果在分支上修改没有提交就直接切换回master上的话, 文件是不会更改的
 
 
@@ -151,7 +153,10 @@ git checkout -- filename 直接丢弃工作区的修改
 - git commit -m"merge & fix dev"
 - git push origin dev
 
-#### 标签管理
+#### 把已经提交的commit, 从一个分支放到另一个分支
+> git cherry-pick <commit id> (这里的 commit id 指的是另外一个要合并的分支的 commt id)
+
+## 标签管理
 
 - 创建标签 `git tag v1.0 `
   - 在master上建一个带有备注信息的v1.0版本的标签 `git tag -a v1.0 -m "version 0.1 released"`

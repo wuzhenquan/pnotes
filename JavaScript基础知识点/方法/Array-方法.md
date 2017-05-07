@@ -130,6 +130,11 @@ m.sort(function(a,b){
 
 ##### array.some(callbackfn[, thisArg])
 
+```javascript
+// 找出 collection 中满足条件和那个元素
+[{ 'a': 1, 'b': 2 },{'a':333,'b':444}].some(function(item){return item.a===1})
+```
+
 ##### array.filter(callbackfn[, thisArg])
 
 ##### array.map(callback[, thisArg])
@@ -232,7 +237,7 @@ var doctors = [
     { number: 11, actor: "Matt Smith",            begin: 2010, end: 2013 },
     { number: 12, actor: "Peter Capaldi",         begin: 2013, end: 2013 }    
 ];
-doctors = _.reduce(doctors, function(memo, doctor) {
+doctors = doctors.reduce(function(memo, doctor) {
     if (doctor.begin > 2000) {
         memo.push({
             doctorNumber: "#" + doctor.number,

@@ -28,6 +28,8 @@ number.push('six','seven');
 // 数组结果var number=['one','two','three','four','five','six','seven']
 ```
 
+要慎用 `arr.push`, 因为 `arr.push` 会改变数组自身的值. 这点在当函数里的参数在引用外部的数组时尤其要注意. 这涉及到了"值和引用"的概念了.
+
 ##### unshift(item...)
 
 ```javascript

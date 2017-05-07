@@ -13,3 +13,7 @@
 - Reactjs code snippets
 - ESLint
 - gitignore
+
+别人的配置
+
+https://gist.github.com/barretlee/a5170eb6ca1805f66687063d2e3a4983

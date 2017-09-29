@@ -60,6 +60,7 @@
 - BufferScroll 轻松书写一个文件多个位置了
 - git和gitgutter, 不知道两者之间的区别是什么, 不过听好用的, 在window最底部会出现乱码. [解决办法](https://www.zhihu.com/question/20537304)
 - 提示目录资源[AutoFileName](https://segmentfault.com/q/1010000002736092)
+- [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 
 代码美化
 

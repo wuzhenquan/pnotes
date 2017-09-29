@@ -29,19 +29,24 @@ git checkout -- filename 直接丢弃工作区的修改
 
 - git reset --hard HEAD^
 
-> 场景4: 误删要恢复
+> 场景4: 撤回最近一次 commit, 并将这次修改的地方放到暂存区
+
+- git reset --soft HEAD^
+
+> 场景5: 误删要恢复
 
 - git checkout -- filename
 
-> 场景5: 回退到之前的版本号之后, 再跳到最新的版本号
+> 场景6: 回退到之前的版本号之后, 再跳到最新的版本号
 
 - git reflog
 - 复制commit-id
 - git reset --hard commit-id
 
->  场景6: 修改已经提交的 commit 的作者
+>  场景7: 修改已经提交的 commit 的作者
 
 -  git commit --amend --author "username  <wzq@gmail.com>"
+
 
 #### 删除文件
 
@@ -59,7 +64,7 @@ git checkout -- filename 直接丢弃工作区的修改
 > 场景1: 合并最新的三个commit
 
 - `git rebase -i HEAD~~~` (要合并几个 commit 就几个波浪号)
-- 此时进入vim, 第一行不懂, 后面两行把 `pick` 改成 `s` ( s 代表squash), 保存退出
+- 此时进入vim, 第一行不动, 后面两行把 `pick` 改成 `s` ( s 代表squash), 保存退出
 - 删掉默认的 commit 备注, 自己写一个commit 备注, 保存退出
 - 参考链接: http://blog.csdn.net/zmyde2010/article/details/8603810
 
@@ -107,7 +112,7 @@ git checkout -- filename 直接丢弃工作区的修改
 - 创建并切换分支: git checkout -b branchname
   - 创建分支: git branch branchname
   - 切换分支: git checkout branchname
-  - 从远程分支创建到本地分支: git checkout -b 本地分支名 origin/远程分支名  或者  git feich origin 远程分支名:本地分支名
+  - 从远程分支创建到本地分支: git checkout -b 本地分支名 origin/远程分支名  或者  git fetch origin 远程分支名:本地分支名
 - 列出所有的分支并显示当前分支: git branch 
 - 合并分支: git merge branchname
   - 在master上合并(fast forward模式): git merge branchname (merge后显示不出分支信息)
@@ -258,7 +263,7 @@ git checkout -- filename 直接丢弃工作区的修改
 - `git reset --hard HEAD^` 回退到上一版本
 - `git reset --hard HEAD^^` 回退到上上版本
 - `git reset --hard HEAD~100` 回退到上100个版
-- `git reset —hard <commit id前几位>`  回退到指定版本
+- `git reset --hard <commit id前几位>`  回退到指定版本
 - `git reflog` 查看历史版本，如果有需要，随后可以根据显示的commit id进行回退
 - `git add`后如果又修改了，此时git commit只会提交add过的版本，后面修改的不会提交
 - `git checkout -- filename` 让文件到add或commit过最新的版本，先add的版本，再最新的版本

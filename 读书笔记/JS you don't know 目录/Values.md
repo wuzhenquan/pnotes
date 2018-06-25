@@ -1,0 +1,17 @@
+- Values
+  - Arrays
+    - Array-Likes
+  - Strings
+  - Numbers
+    - Numeric Syntax
+    - Small Decimal Values
+    - Safe Integer Ranges
+    - Testing for Integers
+    - 32-bit (Signed) Integers
+  - Special Values
+    - The Non-value Values
+    - Undefined
+    - Special Numbers
+    - Special Equality
+  - Value vs. Reference
+  - Review

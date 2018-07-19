@@ -85,7 +85,7 @@
   - [Abstract Relational Comparison](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch4.md#abstract-relational-comparison)
   - [Review](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch4.md#review)
 
-  ## Chapter 5: Grammar
+ ## Chapter 5: Grammar
 
 - [Statements & Expressions](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch5.md#statements--expressions)
   - [Statement Completion Values](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch5.md#statement-completion-values)

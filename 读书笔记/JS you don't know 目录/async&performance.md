@@ -1,4 +1,4 @@
-### Chapter 1: Asynchrony
+## Chapter 1: Asynchrony
 
 - [A Program in Chunks](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#a-program-in-chunks)
   - [Async Console](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#async-console)
@@ -8,12 +8,12 @@
 - [Concurrency](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#concurrency)
   - [Noninteracting](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#noninteracting)
   - [Interaction](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#interaction)
-  -[Cooperation](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#cooperation)
+  - [Cooperation](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#cooperation)
 - [Jobs](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#jobs)
 - [Statement Ordering](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#statement-ordering)
 - [Review](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#review)
 
-### Chapter 2: Callbacks
+## Chapter 2: Callbacks
 
 - [Continuations](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#continuations)
 - [Sequential Brain](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#sequential-brain)
@@ -25,7 +25,7 @@
 - [https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#trying-to-save-callbacks](Trying to Save Callbacks)
 - [Review](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#review)
 
-### Chapter 3: Promises
+## Chapter 3: Promises
 
 - [What Is a Promise?](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#what-is-a-promise)
   - [Future Value](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#future-value)
@@ -71,7 +71,7 @@
   - [Promise Performance](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#promise-performance)
 - [Review](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#review)
 
-### Chapter 4: Generators
+## Chapter 4: Generators
 
 - [Breaking Run-to-Completion](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#breaking-run-to-completion)
   - [Input and Output](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#input-and-output)
@@ -105,7 +105,7 @@
   - [Automatic Transpilation](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#automatic-transpilation)
 - [Review](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#review)
 
-### Chapter 5: Program Performance
+## Chapter 5: Program Performance
 
 - [Web Workers](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch5.md#web-workers)
   - [Worker Environment](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch5.md#worker-environment)
@@ -118,7 +118,7 @@
   - [asm.js Modules](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch5.md#asmjs-modules)
 -[Review](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch5.md#review)
 
-### Chapter 6: Benchmarking & Tuning
+## Chapter 6: Benchmarking & Tuning
 
 - [Benchmarking](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch6.md#benchmarking)
   - [Repetition](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch6.md#repetition)

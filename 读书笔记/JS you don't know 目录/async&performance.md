@@ -22,7 +22,7 @@
 - [Trust Issues](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#trust-issues)
   - [Tale of Five Callbacks](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#tale-of-five-callbacks)
   - [Not Just Others' Code](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#not-just-others-code)
-- [https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#trying-to-save-callbacks](Trying to Save Callbacks)
+- [Trying to Save Callbacks](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#trying-to-save-callbacks)
 - [Review](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md#review)
 
 ## Chapter 3: Promises

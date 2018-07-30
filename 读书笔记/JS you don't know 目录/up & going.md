@@ -6,7 +6,7 @@
 - [Try It Yourself](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#try-it-yourself)
   - [Output](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#output)
   - [Input](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#input)
-- [https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#input](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#operators)
+- [Operators](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#operators)
 - [Values & Types](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#values--types)
   - [Converting Between Types](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#converting-between-types)
 - [Code Comments](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#code-comments)

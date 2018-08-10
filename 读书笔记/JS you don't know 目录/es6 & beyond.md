@@ -7,6 +7,7 @@
 ## Chapter 2: Syntax
 - [Block-Scoped Declarations](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#block-scoped-declarations)
   - [let Declarations](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#let-declarations)
+    - [`let` +`for`](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#let--for)
   - [const Declarations](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#const-declarations)
   - [Block-scoped Functions](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#block-scoped-functions)
 - [Spread/Rest](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#spreadrest)
@@ -59,8 +60,8 @@
 
 ## Chapter 3: Organization
 - [Iterators](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#iterators)
-- [Interfaces](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#interfaces)
-  - [IteratorResult](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#iteratorresult)
+  - [Interfaces](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#interfaces)
+    - [IteratorResult](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#iteratorresult)
   - [next() Iteration](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#next-iteration)
   - [Optional: return(..) and throw(..)](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#optional-return-and-throw)
   - [Iterator Loop](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#iterator-loop)

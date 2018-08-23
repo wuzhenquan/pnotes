@@ -10,6 +10,8 @@
 - npm install -g moduleName #全局安装moduleName模块 
 - npm list #列出已安装模块 
 - npm show moduleName #显示模块详情 
+- npm ls 查看 目录下所有安装的 packages 及其版本
+- npm outdated 查看哪些 packages 已经变成旧版本了
 - npm update #升级当前目录下的项目的所有模块 
 - npm update moduleName #升级当前目录下的项目的指定模块 
 - npm update -g moduleName #升级全局安装的moduleName模块 

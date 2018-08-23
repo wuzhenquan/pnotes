@@ -1,4 +1,4 @@
-##### 在服务器上安装 Node.js
+##### 安装 Node.js
 
 1.安装 Node.js
 
@@ -37,6 +37,22 @@
           }
       ```
     6. 重启 nginx `sudo systemctl restart nginx` 或者 `service nginx restart`
+
+##### 安装 mongodb
+
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04
+安装后启动 mongodg `sudo systemctl start mongod` 遇到了这个问题 
+
+```
+Failed to start mongod.service: Unit mongod.service not found.
+```
+解决方法 https://askubuntu.com/questions/770054/mongodb-3-2-doesnt-start-on-lubuntu-16-04-lts-as-a-service
+
+
+
+
+
 
       
 

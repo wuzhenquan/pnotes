@@ -16,7 +16,7 @@
   sudo apt-get install build-essential
   ```
 
-   3. install [PM2](http://pm2.keymetrics.io/), which is a process manager for Node.js applications.
+   3. install [PM2](https://pm2.io/), which is a process manager for Node.js applications.
 
   ```
   sudo npm install -g pm2
@@ -49,12 +49,14 @@ Failed to start mongod.service: Unit mongod.service not found.
 ```
 解决方法 https://askubuntu.com/questions/770054/mongodb-3-2-doesnt-start-on-lubuntu-16-04-lts-as-a-service
 
+- 启动 mongo:`sudo systemctl start mongod`
+
+- 查看 mongo 运行状态: `sudo systemctl status mongod`
 
 
 
 
-
-      
+​      
 
 [How To Install Node.js on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)
 

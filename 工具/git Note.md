@@ -47,6 +47,21 @@ git checkout -- filename 直接丢弃工作区的修改
 
 -  git commit --amend --author "username  <wzq@gmail.com>"
 
+>  场景8: 回退的版本要再提交
+
+-  /*1.新建分支*/
+  -  git checkout -b temp              //新建分支并切换到temp分支
+  -  git push origin temp:temp         //将代码push到temp分支
+-  /*2.删除主分支*/
+  -  git push origin --delete master   //删除远端主分支
+  -  git branch -d master              //删除本地主分支
+-  /*3.新建主分支*/
+  -  git checkout -b master            //新建主分支并切换到主分支
+  -  git push origin master            //提交主分支
+- /*4.删除暂存分支*/
+  -  git branch -d temp
+  -  git push origin --delete temp
+
 
 #### 删除文件
 

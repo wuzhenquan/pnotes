@@ -1,0 +1,37 @@
+## async function
+```js
+async function f() {
+  return 1; // equal to `return Promsie.resolve()`
+}
+f().then(alert); // 1
+```
+
+- the function always returns a promise
+
+## await 
+
+ wait promise
+
+wait until  promise settles and returns its result. That doesn’t cost any CPU resources, because the engine can do other jobs meanwhile: execute other scripts, handle events etc.
+
+## why
+
+compare `promise.then`, it is more elegant syntax, easier to read/write. 
+
+pretty clean and easy to read. 
+
+## error handling
+
+best: [Promises Chaining]()
+
+try...catch 
+
+## others
+
+- async/await code flow will never be interrupted by other handlers or events.
+- rarely need to write `promise.then/catch`
+
+reference:
+
+https://javascript.info/async-await#error-handling
+

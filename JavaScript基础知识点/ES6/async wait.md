@@ -10,15 +10,30 @@ f().then(alert); // 1
 
 ## await 
 
- wait promise
+wait promise
 
-wait until  promise settles and returns its result. That doesn’t cost any CPU resources, because the engine can do other jobs meanwhile: execute other scripts, handle events etc.
+wait until  promise settles and **returns its result**. That doesn’t cost any CPU resources, because the engine can do other jobs meanwhile: execute other scripts, handle events etc.
 
 ## why
 
 compare `promise.then`, it is more elegant syntax, easier to read/write. 
 
 pretty clean and easy to read. 
+
+```js
+//less readable
+fetch('https://api.com/values/1')
+    .then(response => response.json())
+    .then(json => console.log(json));
+// more readable
+const request = async () => {
+    const response = await fetch('https://api.com/values/1');
+    const json = await response.json();
+}
+request
+```
+
+
 
 ## error handling
 
@@ -33,5 +48,5 @@ try...catch
 
 reference:
 
-https://javascript.info/async-await#error-handling
+https://javascript.info/async-await#error-handling(还有练习题)
 

@@ -1,4 +1,4 @@
-## Iterables and Iterators --- new way to loop over any collection
+## for...of
 
 ```js
 const arr = []
@@ -20,9 +20,9 @@ console.log(iterator.next()) // { value: 3, done: false};
 console.log(iterator.next()) // { value: undefined, done: true};
 ```
 
-### Iterables
+## Iterables
 
-#### what
+### what
 
 what iterable are?  if it implements a method who is key is [Symbol.iterator], we call it iterable.
 
@@ -39,7 +39,7 @@ A lot of things are iterables in JavaScript
 - The spread operator (...)
 - `Promise.all` and `Promise.race` accept iterables over Promises.
 
-#### why
+### why
 
 - easy to manage the iteration on data for various type of data structure.(iterating on array is different from iterating on an object)
 - for sets and maps.
@@ -54,14 +54,14 @@ A lot of things are iterables in JavaScript
   - `foo(...a)`
     - `var b = [0, ...a, 6]`
 
-#### how
+### how
 
 1. create an iterator: `const iter = iterable[Symbol.iterator]()`
 2. `iterable[Symbol.iterator]()` handles the whole iteration
 3. call iterator's method `iter.next()` ,  form is `{done: Boolean, value: any}`
 4. `done=true` means that the iteration is finished
 
-#### make our own custom objects iterable!
+### make our own custom objects iterable!
 
 ```js
 const iterable = {
@@ -90,19 +90,19 @@ iterator.next() // { value: 'iterable', done: false};
 iterator.next() // { value: undefined, done: true};
 ```
 
-### Iterators
+## Iterators
 
 - The result of `iterable[Symbol.iterator]` is called an *iterator*
 
 - An iterator must have the method named `next()` that returns an object `{done: Boolean, value: any}`, here `done:true` denotes the iteration end, otherwise the `value` is the next value.
 
-#### iterators also can be synchronous
+### iterators also can be synchronous
 
 Generator!!!!!!!!!!!!!!!!
 
-### practice
+## practice
 
-#### practice 1
+### practice 1
 
 how to loop it to get all authors?
 
@@ -158,7 +158,7 @@ for (const author of myFavouriteAuthors) {
 console.log(...myFavouriteAuthors) // ["Agatha Christie", "J. K. Rowling", "Dr. Seuss", "Neal Stephenson", "Arthur Clarke", "Isaac Asimov", "Robert Heinlein", "J. R. R. Tolkien", "J. K. Rowling", "Terry Pratchett"] 也太方便了吧！
 ```
 
-#### practice 2
+## practice 2
 
 ```js
 let range = { from: 1, to: 5};
@@ -190,7 +190,7 @@ for (let num of range) {
 }
 ```
 
-### reference
+## reference
 
 [A Simple Guide to ES6 Iterators in JavaScript with Examples](https://codeburst.io/a-simple-guide-to-es6-iterators-in-javascript-with-examples-189d052c3d8e)
 

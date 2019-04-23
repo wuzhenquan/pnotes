@@ -190,6 +190,8 @@ for (let num of range) {
 }
 ```
 
+## iterator 真的不如  generator 吗？
+
 ## reference
 
 [A Simple Guide to ES6 Iterators in JavaScript with Examples](https://codeburst.io/a-simple-guide-to-es6-iterators-in-javascript-with-examples-189d052c3d8e)

@@ -33,7 +33,7 @@ const request = async () => {
 request
 ```
 
-
+## async/await is a combination of Promisesand Generators?.
 
 ## error handling
 

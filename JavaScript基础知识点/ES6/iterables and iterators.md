@@ -26,6 +26,19 @@ console.log(iterator.next()) // { value: undefined, done: true};
 
 what iterable are?  if it implements a method who is key is [Symbol.iterator], we call it iterable.
 
+```js
+const iterable = {
+	[Symbol.iterator](){
+  	return {
+    	next(){
+        }
+    }
+  }
+}
+```
+
+
+
 A lot of things are iterables in JavaScript
 
 - Arrays and [TypedArrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
@@ -96,9 +109,9 @@ iterator.next() // { value: undefined, done: true};
 
 - An iterator must have the method named `next()` that returns an object `{done: Boolean, value: any}`, here `done:true` denotes the iteration end, otherwise the `value` is the next value.
 
-### iterators also can be synchronous
-
-Generator!!!!!!!!!!!!!!!!
+```js
+{next(){return {done: Boolean, value: any}}}
+```
 
 ## practice
 

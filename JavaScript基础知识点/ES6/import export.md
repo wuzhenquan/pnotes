@@ -48,6 +48,28 @@ export default class Main {
 }
 ```
 
+#### export imports
+
+```js
+import d, {obj} from '...';
+export {obj, d};
+export {obj as name1, d as name2};
+```
+
+#### re-export
+
+```js
+// re-export all named imports
+export * from '...';
+export * as name1 from '...';
+// re-export some named imports
+export {a, b as name1} from '...';
+// re-export default import as default export
+export { default } from '...';
+// re-export default import as named export
+export {default as name1} from '...';
+```
+
 
 
 [import, export, default cheatsheet](<https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f>)

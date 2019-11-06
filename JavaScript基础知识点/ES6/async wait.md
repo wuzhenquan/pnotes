@@ -21,7 +21,7 @@ compare `promise.then`, it is more elegant syntax, easier to read/write.
 pretty clean and easy to read. 
 
 ```js
-//less readable
+// less readable
 fetch('https://api.com/values/1')
     .then(response => response.json())
     .then(json => console.log(json));

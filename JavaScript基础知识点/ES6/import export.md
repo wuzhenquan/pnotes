@@ -1,24 +1,30 @@
 #### Name exports
 
+- one file can have multiple exports
+- use any name we like
+
 ```js
 //------ lib.js ------
 export const sqrt = Math.sqrt;
 export function square(x) { return x * x; }
 
 //------ main.js ------
-import { sqrt, square } from 'lib';
-// or
-import * as lib from 'lib';
+// two ways
+import { sqrt, square } from 'lib'; // different
+import * as lib from 'lib'; // different
 ```
 
 #### Default exports (one per module)
+
+- on file only have one export
+- no name
 
 ```js
 //------ myFunc.js ------
 export default function () { ... };
 
 //------ main1.js ------
-import myFunc from 'myFunc';
+import myFunc from 'myFunc'; // different
 ```
 
 #### Mixed named & default exports

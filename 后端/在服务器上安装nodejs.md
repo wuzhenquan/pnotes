@@ -2,13 +2,10 @@
 
 1.安装 Node.js
 
-   https://github.com/nodesource/distributions 
+从里面选择想要的 node 版本
 
-	```
-	# Using Ubuntu
-	curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-	sudo apt-get install -y nodejs
-	```
+https://github.com/nodesource/distributions
+
 
    2. in order for some `npm` packages to work (such as those that require compiling code from source), you will need to install the `build-essential` package(我现在故意没装，看看会不会发生什么问题)
 

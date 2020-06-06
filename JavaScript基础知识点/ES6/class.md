@@ -1,3 +1,30 @@
+只是一种语法糖
+
+```js
+function Point(x, y) {
+  this.x = x;
+  this.y = y;
+}
+
+Point.prototype.toString = function() {
+  return '(' + this.x + ',' + this.y + ')';
+}
+```
+
+等同于
+
+```js
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  toString() {
+    return '(' + this.x + ',' + this.y + ')';
+  }
+}
+```
+
 #### constructor 
 
 就是 ES5 中的构造函数
@@ -24,8 +51,8 @@
 #### 继承
 
 ```js
-class Point (){
-	construction(){
+class Point{
+	construction(x, y){
 		this.x = x;
 		this.y = y;
 	}
@@ -53,3 +80,39 @@ https://www.jianshu.com/p/fc79756b1dc0
 
 [http://hjaiim.github.io/2018/07/05/ES5%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0&&ES6class/](http://hjaiim.github.io/2018/07/05/ES5构造函数&&ES6class/)
 
+### es2019
+
+```javascript
+class MyClass {
+  a = 1;
+}
+// 
+class MyClass {
+  constructor() {
+    this.a = 1;
+  }
+}
+```
+
+```javascript
+class MyClass {
+  static z = 3;
+}
+// 等于
+class MyClass {}
+MyClass.z = 3;
+
+```
+
+```js
+// 私有属性
+class MyClass {
+  #b = 2;         // .#b is private
+  static #c = 3;  // .#c is private and static
+  incB() { this.#b++; }
+}
+let m = new MyClass();
+m.incB(); // runs OK
+m.#b = 0; // error - private property cannot be modified outside class
+MyClass.#c // error
+```

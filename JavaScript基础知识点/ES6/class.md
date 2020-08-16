@@ -1,17 +1,20 @@
-只是一种语法糖
+### class 应用
 
-```js
-function Point(x, y) {
-  this.x = x;
-  this.y = y;
-}
+> 在 JavaScript 的现实场景中，尤其是前端代码，我们很少用到类继承，大多数时候，工厂函数就能完成我们的目标
 
-Point.prototype.toString = function() {
-  return '(' + this.x + ',' + this.y + ')';
-}
-```
 
-等同于
+
+
+
+
+
+
+
+
+
+
+
+class 只是一种语法糖
 
 ```js
 class Point {
@@ -22,6 +25,15 @@ class Point {
   toString() {
     return '(' + this.x + ',' + this.y + ')';
   }
+}
+等同于
+function Point(x, y) {
+  this.x = x;
+  this.y = y;
+}
+
+Point.prototype.toString = function() {
+  return '(' + this.x + ',' + this.y + ')';
 }
 ```
 
@@ -116,3 +128,50 @@ m.incB(); // runs OK
 m.#b = 0; // error - private property cannot be modified outside class
 MyClass.#c // error
 ```
+
+
+
+### class 的一些缺陷
+
+```js
+class Person {
+  constructor (name) {
+    this.name = name
+  }
+  talk () {
+    console.log(`${this.name} says hello`)
+  }
+}
+const Grey = new Person('Grey')
+const mockDomButton = {} // 模拟一个DOM上的按钮对象
+mockDomButton.onClick = Grey.talk; // 绑定点击事件
+mockDomButton.onClick() // 输出的结果是 undefined says hello 为了修改这种，必须绑定 talk
+
+// 方案一：在构造器里显式调用 bind 函数绑定 this
+constructor (name) {
+   this.talk = this.talk.bind(this); // 缺点：繁琐
+}
+// 方案二：使用类属性+箭头函数的方式来定义方法
+class Person {
+  talk = () => { console.log(`${this.name} says hello`) }
+}
+// 缺点一：这个方法不在原型链上，即 Person.prototype.talk 的值是undefined ，所以这个类的子类并不能使用 super.talk() 调用到父类这个方法。
+class Student extends Person {
+  talk = () => {
+    super.talk(); // 报错
+    console.log("student talk hi");
+  }
+}
+const student = new Student('Tom');
+student.talk();
+// 缺点二：每次创建一个 Person 实例都会创建一个 talk 函数，造成性能浪费
+const Grey = new Person('Grey')
+const Tom = new Person('Tom')
+console.log(Grey.talk === Tom.talk); //  输出 false
+```
+
+
+
+优秀文章：
+
+[应该在 JavaScript 中使用 Class 吗？](https://zhuanlan.zhihu.com/p/158956514) 

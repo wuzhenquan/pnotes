@@ -36,7 +36,7 @@ let name: string | undefined
 
 - 定义参数的类型
 - 定义返回值的类型
-- [可选参数和默认参数](https://www.typescriptlang.org/docs/handbook/functions.html#optional-and-default-parameters) 
+- [可选参数和默认参数](https://www.typescriptlang.org/docs/handbook/functions.html#optional-and-default-parameters) (Optional and Default Parameters)
 - [Rest Parameters](https://www.typescriptlang.org/docs/handbook/functions.html#optional-and-default-parameters) 
 
 Lambda表达式。
@@ -58,6 +58,19 @@ function func(x: number, y: number): string {
 let info: (name: string, age: number) => string = function (x: string, y:number) { 
   return String(x + y );
 };
+// 可选参数
+function buildName(name?: string) { return name }
+// default parameters
+function buildName(name = 'Smith') { return name }
+// 不返回值
+function sayHi(): void { console.log('Hi!')}
+
+// Typing Destructured Object Parameters in TypeScript
+// https://mariusschulz.com/articles/typing-destructured-object-parameters-in-typescript
+function toJSON(value: any, { pretty }: { pretty: boolean }) {
+  const indent = pretty ? 4 : 0;
+  return JSON.stringify(value, null, indent);
+}
 ```
 
 ## 类
@@ -90,7 +103,7 @@ https://www.typescriptlang.org/docs/handbook/classes.html#accessors
 
 属性的get和set访问器
 
-## interface
+## 接口
 
 - 可选属性
 - 函数类型
@@ -142,7 +155,7 @@ class Clock implements ClockInterface {
 }
 ```
 
-继承接口
+### 继承接口
 
 https://www.typescriptlang.org/v2/docs/handbook/interfaces.html#interfaces-extending-classes
 

@@ -85,13 +85,33 @@ git checkout -- filename 直接丢弃工作区的修改
 
 ## 多人协作 
 
-#### 添加SSH公钥
+#### 添加单个SSH公钥
 
 - 生成SSH: `ssh-keygen -t rsa -C "username@example.com"`(注册的邮箱)
 - 添加公钥: 本地打开 id_rsa.pub 文件，复制其中全部内容，填写到SSH_RSA公钥key下的一栏, 然后点击添加
 - 如果`git remote show origin`后还要输入密码, 用`git remote -v`查看是在用HTTPS还是用SSH方式访问仓库, 如果是用HTTPS方式访问仓库, 要修改成SSH方式
   - 执行`git remote remove origin`删除该远程路径
   - 执行`git remote add origin git@aaaaaa.github.com:aaaaaa/xxxxxx.git`加上正确的远程仓库。
+
+#### 添加多个SSH公钥
+
+[reference](https://blog.csdn.net/lyfqyr/article/details/87892271) 
+
+1. 创建第二个密钥 `ssh-keygen -t rsa -C "$your_email"`
+2. 此时命令行出现 `Enter file in which to save the key (Users/Spring/.ssh/id_rsa):`，此时自己输入第二个密钥名，例如 `id_rsa_meiyou` 
+3. 在 `.ssh` 目录下新建 config 文件，示例：
+  ```
+  Host github.com
+    HostName      github.com
+    User  git
+    IdentityFile  /Users/Spring/.ssh/id_rsa_github
+  Host gitlab.meiyou.com
+    HostName      gitlab.meiyou.com
+    User  git
+    IdentityFile  /Users/Spring/.ssh/id_rsa_meiyou
+  ```
+4. 清空 `.ssh/known_hosts` 文件内容
+5. ssh命令验证结果 `ssh -T git@gitlab.meiyou.com`
 
 #### 将已有git项目放到github上
 

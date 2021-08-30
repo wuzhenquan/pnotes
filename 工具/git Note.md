@@ -4,8 +4,8 @@
 
 配置
 
-- git config --global user.name
-- git config --global user.email
+- git config --global user.name <yourname>
+- git config --global user.email <youremail>
 
 获取
 

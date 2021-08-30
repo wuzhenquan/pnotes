@@ -29,10 +29,7 @@ what iterable are?  if it implements a method who is key is [Symbol.iterator], w
 ```js
 const iterable = {
 	[Symbol.iterator](){
-  	return {
-    	next(){
-      }
-    }
+  	return { next(){} }
   }
 }
 ```

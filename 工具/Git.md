@@ -88,7 +88,7 @@ git checkout -- filename 直接丢弃工作区的修改
 #### 添加单个SSH公钥
 
 - 生成SSH: `ssh-keygen -t rsa -C "username@example.com"`(注册的邮箱)
-- 添加公钥: 本地打开 id_rsa.pub 文件，复制其中全部内容，填写到SSH_RSA公钥key下的一栏, 然后点击添加
+- 添加公钥: `vi .ssh/id_rsa.pub`，复制其中全部内容，填写到SSH_RSA公钥key下的一栏, 然后点击添加
 - 如果`git remote show origin`后还要输入密码, 用`git remote -v`查看是在用HTTPS还是用SSH方式访问仓库, 如果是用HTTPS方式访问仓库, 要修改成SSH方式
   - 执行`git remote remove origin`删除该远程路径
   - 执行`git remote add origin git@aaaaaa.github.com:aaaaaa/xxxxxx.git`加上正确的远程仓库。

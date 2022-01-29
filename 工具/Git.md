@@ -1,5 +1,3 @@
-参考:[颜海镜的git笔记](https://zhuanlan.zhihu.com/p/22609000#tipjar)
-
 #### 用户信息操作
 
 配置

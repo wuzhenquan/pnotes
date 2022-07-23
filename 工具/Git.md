@@ -1,3 +1,63 @@
+
+
+
+## git命令汇总
+
+- git config 配置
+- git log 显示提交日志
+- git log --graph 显示提交日志 图形化查看分支情况
+- git log --abbrev-commit 只显示版本号和修改动作
+- git log --pretty=oneline --abbrev-commit  只显示缩略版本号和修改动作
+- git reflog 显示每一条命令的记录
+- git reset --hard 版本号 
+- git status 查看工作区状态(是否修改了文件, 是否add了, 是否commit了)
+- git checkout -- file 将file退回到暂存区(没有添加到暂存区的话就回到和版本库一样的状态)
+- git checkout -- file 恢复被删除的file
+- git reset HEAD file 把暂存区的修改撤销掉
+- `git init` 创建版本库
+- `git add` 添加文件到缓冲区 all是`git add`的默认参数, 也可以用`git add .`
+- `git commit -m ‘xxx’` 提交到本地仓库
+- `git commit --amend -m 'Your message'`- helps re-write messages
+- `git status` 查看当前目录状态
+- `git diff`查看文件变化的内容
+- `git reset --hard HEAD^` 回退到上一版本
+- `git reset --hard HEAD^^` 回退到上上版本
+- `git reset --hard HEAD~100` 回退到上100个版
+- `git reset --hard <commit id前几位>`  回退到指定版本
+- `git reset --source <hash code> index.html>`- removes commits and goes back to the commit for that hash code only for that particular file.
+- `git reflog` 查看历史版本，如果有需要，随后可以根据显示的commit id进行回退
+- `git add`后如果又修改了，此时git commit只会提交add过的版本，后面修改的不会提交
+- `git checkout -- filename` 让文件到add或commit过最新的版本，先add的版本，再最新的版本
+- `git reset HEAD <file>` 可以撤销git add的版本
+- `git rm` 会同时删除仓库里的文件和本地文件，但是在提交之前，还是可以通过git reset HEAD && git checkout —- <file>恢复文件
+- `git rm` 相当于本地rm <file> 再git add
+- `git remote add origin git@server-name:path/repo-name.git` 关联一个远程库
+- `git push -u origin master`第一次推送master分支的所有内容
+- `git push origin master`推送最新修改(对远程库非第一次)
+- `git branch` 查看分支
+- `git branch <name>` 创建分支
+- `git checkout <name>` 切换分支
+- `git checkout -b <name>` 创建+切换分支
+- `git merge <name>` 合并某分支到当前分支
+- `git branch -d <name>` 删除分支
+- `git log —graph` 查看分支合并图
+- `git stash` 保存工作现场
+- `git stash list` 查看保存的stash
+- `git stash apply stash@{n}` 恢复指定的stash
+- `git stash pop stash@{n}` 恢复现场并删除该stash
+- 如果一个分支没有被合并过，`git branch -d feature` 会被友情提醒，需要通过`git branch -D feature` 强行删除
+- `git tag <name>`新建一个标签，默认为HEAD，也可以指定一个commit id；
+- `git tag -a <tagname> -m "blablabla..."`可以指定标签信息；
+- `git tag -s <tagname> -m "blablabla..."`可以用PGP签名标签；
+- `git tag`可以查看所有标签。
+- `git push origin <tagname>`可以推送一个本地标签；
+- `git push origin --tags`可以推送全部未推送过的本地标签；
+- `git tag -d <tagname>`可以删除一个本地标签；
+- `git push origin :refs/tags/<tagname>`可以删除一个远程标签。
+- `git restore .` - restores the files to the previous commit/ undos all the local changes that haven't been commited.
+- `git restore index.html` - restores only that particular file to the recent commit/ undos all the local/uncommited changes for that file.
+- `git revert <hash code>`- helps to roll back to a previous commit by creating a new commit for it. Doesn't removes those commits from the `log` like `git reset` does.
+
 #### 用户信息操作
 
 配置
@@ -167,10 +227,6 @@ git checkout -- filename 直接丢弃工作区的修改
 - git add filename
 - git commit -m"conflict fixed"
 
-
-
-
-
 #### 推送分支 
 
 > 将分支推送到远程仓库, 要注意哪些必须需要推送哪些不需要推送
@@ -268,61 +324,4 @@ git checkout -- filename 直接丢弃工作区的修改
 - git stash list
 - git stash pop 
 
-
-
-
-## git命令汇总
-
-- git config 配置
-- git log 显示提交日志
-- git log --graph 显示提交日志 图形化查看分支情况
-- git log --abbrev-commit 只显示版本号和修改动作
-- git log --pretty=oneline --abbrev-commit  只显示缩略版本号和修改动作
-- git reflog 显示每一条命令的记录
-- git reset --hard 版本号 
-- git status 查看工作区状态(是否修改了文件, 是否add了, 是否commit了)
-- git checkout -- file 将file退回到暂存区(没有添加到暂存区的话就回到和版本库一样的状态)
-- git checkout -- file 恢复被删除的file
-- git reset HEAD file 把暂存区的修改撤销掉
-
-
-以下摘自[cloudstone.txt](https://github.com/michaelliao/learngit/blob/master/cloudstone.txt)
-
-- `git init`创建版本库
-- `git add` 添加文件到缓冲区 all是`git add`的默认参数, 也可以用`git add .`
-- `git commit -m ‘xxx’` 提交到本地仓库
-- `git status` 查看当前目录状态
-- `git diff`查看文件变化的内容
-- `git reset --hard HEAD^` 回退到上一版本
-- `git reset --hard HEAD^^` 回退到上上版本
-- `git reset --hard HEAD~100` 回退到上100个版
-- `git reset --hard <commit id前几位>`  回退到指定版本
-- `git reflog` 查看历史版本，如果有需要，随后可以根据显示的commit id进行回退
-- `git add`后如果又修改了，此时git commit只会提交add过的版本，后面修改的不会提交
-- `git checkout -- filename` 让文件到add或commit过最新的版本，先add的版本，再最新的版本
-- `git reset HEAD <file>` 可以撤销git add的版本
-- `git rm` 会同时删除仓库里的文件和本地文件，但是在提交之前，还是可以通过git reset HEAD && git checkout —- <file>恢复文件
-- `git rm` 相当于本地rm <file> 再git add
-- `git remote add origin git@server-name:path/repo-name.git` 关联一个远程库
-- `git push -u origin master`第一次推送master分支的所有内容
-- `git push origin master`推送最新修改(对远程库非第一次)
-- `git branch` 查看分支
-- `git branch <name>` 创建分支
-- `git checkout <name>` 切换分支
-- `git checkout -b <name>` 创建+切换分支
-- `git merge <name>` 合并某分支到当前分支
-- `git branch -d <name>` 删除分支
-- `git log —graph` 查看分支合并图
-- `git stash` 保存工作现场
-- `git stash list` 查看保存的stash
-- `git stash apply stash@{n}` 恢复指定的stash
-- `git stash pop stash@{n}` 恢复现场并删除该stash
-- 如果一个分支没有被合并过，`git branch -d feature` 会被友情提醒，需要通过`git branch -D feature` 强行删除
-- `git tag <name>`新建一个标签，默认为HEAD，也可以指定一个commit id；
-- `git tag -a <tagname> -m "blablabla..."`可以指定标签信息；
-- `git tag -s <tagname> -m "blablabla..."`可以用PGP签名标签；
-- `git tag`可以查看所有标签。
-- `git push origin <tagname>`可以推送一个本地标签；
-- `git push origin --tags`可以推送全部未推送过的本地标签；
-- `git tag -d <tagname>`可以删除一个本地标签；
-- `git push origin :refs/tags/<tagname>`可以删除一个远程标签。
+- 

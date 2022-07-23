@@ -42,7 +42,7 @@ Point.prototype.toString = function() {
 
 - 子类的构造函数必须执行一次 super, 而且还是显式的.
 
-#### static
+#### [static](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static) 
 
 - 表示该方法不会被实例获取(静态方法)
 - 静态方法可以与非静态方法重名

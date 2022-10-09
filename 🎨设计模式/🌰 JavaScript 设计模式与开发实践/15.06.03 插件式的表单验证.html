@@ -1,0 +1,121 @@
+<html>
+  <body>
+    用户名：<input id="username" type="text" /> 密码：
+    <input id="password" type="password" />
+    <input id="submitBtn" type="button" value="“提交”" />
+  </body>
+  <script>
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const submitBtn = document.getElementById("submitBtn");
+
+    // 这里的缺点
+    // formSubmit 承担了两个职责，
+    // 一个是验证输入合法，
+    // 另一个是 ajax 请求
+    const formSubmit = function () {
+      if (username.value === "") return alert("用户名不能为空");
+      if (password.value === "") return alert("密码不能为空");
+      const param = {
+        username: username.value,
+        password: password.value,
+      };
+      ajax("http://xxx.com/login", param);
+    };
+
+    submitBtn.onclick = () => formSubmit();
+  </script>
+</html>
+
+<!-- 改造 -->
+<!-- 把校验的逻辑都放到了 validata 函数中 -->
+<!-- 已经有了一些改进 -->
+<html>
+  <body>
+    用户名：<input id="username" type="text" /> 密码：
+    <input id="password" type="password" />
+    <input id="submitBtn" type="button" value="“提交”" />
+  </body>
+  <script>
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const submitBtn = document.getElementById("submitBtn");
+
+    const validata = () => {
+      if (username.value === "") {
+        alert("用户名不能为空");
+        return false;
+      }
+      if (password.value === "") {
+        alert("密码不能为空");
+        return false;
+      }
+      return true;
+    };
+
+    const formSubmit = function () {
+      if (!validata()) return; // 校验未通过
+      const param = {
+        username: username.value,
+        password: password.value,
+      };
+      ajax("http://xxx.com/login", param);
+    };
+
+    submitBtn.onclick = () => formSubmit();
+  </script>
+</html>
+
+<!-- 进一步优化这段代码 -->
+<!-- 使 validata 和 formSubmit 完全分离开来 -->
+
+<html>
+  <body>
+    用户名：<input id="username" type="text" /> 密码：
+    <input id="password" type="password" />
+    <input id="submitBtn" type="button" value="“提交”" />
+  </body>
+  <script>
+    Function.prototype.before = function (beforefn) {
+      const _self = this;
+      return function () {
+        beforefn.apply(this, arguments);
+        return _self.apply(this, arguments);
+      };
+    };
+
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const submitBtn = document.getElementById("submitBtn");
+
+    const validata = () => {
+      if (username.value === "") {
+        alert("用户名不能为空");
+        return false;
+      }
+      if (password.value === "") {
+        alert("密码不能为空");
+        return false;
+      }
+      return true;
+    };
+
+    let formSubmit = function () {
+      const param = {
+        username: username.value,
+        password: password.value,
+      };
+      ajax("http://xxx.com/login", param);
+    };
+
+    // 校验和输入完全分离
+    // validata 成为一个即插即用的函数，
+    // validata 甚至可以被写成配置文件的形式，
+    // 这有利于我们分开维护这两个函数。
+    // 再利用策略模式稍加改造，
+    // 就可以把这些校验规则都写成插件的形式，用在不同的项目中。
+    formSubmit = formSubmit.before(validata);
+
+    submitBtn.onclick = () => formSubmit();
+  </script>
+</html>

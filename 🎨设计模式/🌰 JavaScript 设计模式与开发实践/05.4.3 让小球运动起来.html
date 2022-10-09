@@ -1,0 +1,85 @@
+<body>
+  <div style="position: absolute; background: blue" id="div">我是 DIV</div>
+</body>
+<script>
+  /* ---------------------------------------- 策略类 ---------------------------------------- */
+  //动画算法
+  const tween = {
+    linear: (t, b, c, d) => (c * t) / d + b,
+    easeIn: (t, b, c, d) => c * (t /= b) + b,
+    strongEaseIn: (t, b, c, d) => c * (t /= d) * t * t * t * t + b,
+    strongEaseOut: (t, b, c, d) =>
+      c * ((t = t / d - 1) * t * t * t * t + 1) + b,
+    strongEaseIn: (t, b, c, d) => c * (t /= d) * t * t + b,
+    strongEaseOut: (t, b, c, d) => c * ((t = t / d - 1) * t * t + 1) + b,
+  };
+
+  /* ---------------------------------------- 环境类 ---------------------------------------- */
+  // 定义 Animate 类
+  const Animate = function (dom) {
+    this.dom = dom; // 进行运动的 dom 节点
+    this.startTime = 0; // 动画开始事件
+    this.startPos = 0; // 动画开始时，dom 节点的位置，即 dom 的初始位置
+    this.endPos = 0; // 动画结束时，dom 节点的位置，即 dom 的目标位置
+    this.propertyName = 0; // dom 节点需要被改变的 css 属性名
+    this.easing = 0; // 缓动算法
+    this.duration = null; // 动画持续时间
+  };
+
+  // 负责启动这个动画 在动画被启动的瞬间 要记录一些信息 供缓动算法在以后计算小球当前位置的的时候使用
+  // 在记录完这些信息后 此方法还要负责启动定时器
+  Animate.prototype.start = function (propertyName, endPos, duration, easing) {
+    this.startTime = +new Date();
+    this.startPos = this.dom.getBoundingClientRect()[propertyName]; // dom 节点初始位置
+    this.propertyName = propertyName; // dom 节点需要被改变的 CSS 属性名
+    this.endPos = endPos; // dom 节点目标位置
+    this.duration = duration; // 动画持续时间
+    this.easing = tween[easing]; // 缓动算法
+
+    const self = this;
+    const timeId = setInterval(function () {
+      // 启动定时器 开始执行动画
+      if (self.step() === false) {
+        // 如果动画仪结束 则清除定时器
+        clearInterval(timeId);
+      }
+    }, 19);
+  };
+
+  // 小球运动每一帧要做的事情
+  // 负责计算小球当前位置和调用更新 CSS 属性的方法 Animate.prototype.update
+  Animate.prototype.step = function () {
+    const t = +new Date(); // 取得当前时间
+    if (t >= this.startTime + this.duration) {
+      // 如果(当前时间)>(动画开始时间 + 动画持续时间) 说明动画已经结束 要开始修正小球的位置
+      this.update(this.endPos); // 更新小球的 CSS 属性只值
+      return false; // 返回 false 可以通知 Animate.property.start 方法清除定时器
+    }
+    const pos = this.easing(
+      t - this.startTime,
+      this.startPos,
+      this.endPos - this.startPos,
+      this.duration
+    ); // pos 为小球当前位置
+    this.update(pos); // 更新小球的 CSS 属性值
+  };
+
+  // 更新小球 CSS 属性值
+  Animate.prototype.update = function (pos) {
+    this.dom.style[this.propertyName] = pos + "px";
+  };
+
+  /* ---------------------------------------- 测试 ---------------------------------------- */
+  const div = document.getElementById("div");
+  const animate = new Animate(div);
+  animate.start("left", 500, 1000, "strongEaseOut");
+  animate.start("left", 500, 1000, "strongEaseIn");
+
+  /* ---------------------------------------- 总结 ---------------------------------------- */
+  // 利用动画类和一些缓动算法就可以让小球运动起来
+  // 使用策略类把算法传入动画类中 来达到各种不同的动画效果
+  // 这些算法都可以轻易地被替换为另外一个算法
+  // 这是策略模式的经典运用之一
+  // 策略模式的实现并不复杂
+  // 关键是找到封装变化、委托和多态性的这些思想价值
+</script>

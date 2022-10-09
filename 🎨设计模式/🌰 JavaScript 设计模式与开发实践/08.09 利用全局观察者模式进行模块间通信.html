@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button id="count">点我</button>
+    <div id="show"></div>
+  </body>
+  <script type="text/JavaScript">
+    const a = (function(){
+      let count = 0;
+      const button = document.getElementById('count');
+      button.onclick = () => Event.trigger('add', count++);
+    })();
+
+    const b = (function(){
+      let count = 0;
+      const button = document.getElementById('show');
+      Event.listen('add', count => div.innerHTML = count);
+    })();
+  </script>
+</html>

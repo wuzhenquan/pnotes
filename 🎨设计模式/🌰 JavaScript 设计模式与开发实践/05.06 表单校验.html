@@ -1,0 +1,78 @@
+<html>
+  <body>
+    <form id="registerForm">
+      请输入用户名：<input type="text" name="userName" /><br />
+      请输入密码：<input type="text" name="password" /><br />
+      轻输入手机号码：<input type="text" name="phoneNumber" /><br />
+      <button id="submitBtn">提交</button>
+    </form>
+    <script>
+      /* ------------------------- 二代 用策略模式重构表达校验 ------------------------- */
+      /* 策略对象 */
+      var strategies = {
+        isNonEmpty: (value, errorMsg) => (value === "" ? errorMsg : undefined),
+        minLength: (value, length, errorMsg) =>
+          value.length < length ? errorMsg : undefined,
+        isMobile: (value, errorMsg) =>
+          !/(^1[3|5|8][0-9]{9}$)/.test(value) ? errorMsg : undefined,
+      };
+
+      /* Validator 环境类 */
+      var Validator = function () {
+        this.cache = [];
+      }; // 保存校验规则
+
+      Validator.prototype.add = function (dom, rules) {
+        const self = this;
+
+        for (let i = 0, rule; (rule = rules[i++]); ) {
+          (function (rule) {
+            // e.g { strategy: 'minLength:6', errorMsg: '用户名长度不能少于 6 位' } => 'minLength' & [dom.value, '6', errorMsg]
+
+            self.cache.push(function () {
+              const strategyAry = rule.strategy.split(":"); // e.g. 'minLength:6' => ['minLength', '6']
+              const strategy = strategyAry.shift(); // e.g. ['minLength', '6'] => 'minLength'
+              strategyAry.unshift(dom.value); // e.g. ['6'] => [dom.value, '6']
+              strategyAry.push(rule.errorMsg); // e.g. [dom.value, '6'] => [dom.value, '6', errorMsg]
+              return strategies[strategy].apply(dom, strategyAry); // e.g. strategies.isNonEmpty.apply(dom, [dom.value, '6', errorMsg])
+            });
+          })(rule);
+        }
+      };
+
+      Validator.prototype.start = function () {
+        for (let i = 0, validatorFunc; (validatorFunc = this.cache[i++]); ) {
+          const errorMsg = validatorFunc();
+          if (errorMsg) return errorMsg;
+        }
+      };
+
+      /* client调用代码(client 对 Context 发起请求) */
+      const registerForm = document.getElementById("registerForm");
+      const validateFunc = function () {
+        const validator = new Validator();
+
+        /* 客户编辑校验规则 */
+        validator.add(registerForm.userName, [
+          { strategy: "isNonEmpty", errorMsg: "用户名不能为空" },
+          { strategy: "minLength:6", errorMsg: "用户名长度不能少于 6 位" },
+        ]);
+        validator.add(registerForm.password, [
+          { strategy: "minLength:6", errorMsg: "密码长度不能少于 6 位" },
+        ]);
+        validator.add(registerForm.phoneNumber, [
+          { strategy: "isMobile", errorMsg: "手机号码格式不正确" },
+        ]);
+
+        const errorMsg = validator.start();
+        return errorMsg;
+      };
+
+      document.getElementById("submitBtn").onclick = function () {
+        const errorMsg = validateFunc();
+        console.log("errorMsg", errorMsg);
+        errorMsg && console.error(errorMsg);
+      };
+    </script>
+  </body>
+</html>

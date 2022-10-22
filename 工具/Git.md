@@ -1,63 +1,3 @@
-
-
-
-## git命令汇总
-
-- git config 配置
-- git log 显示提交日志
-- git log --graph 显示提交日志 图形化查看分支情况
-- git log --abbrev-commit 只显示版本号和修改动作
-- git log --pretty=oneline --abbrev-commit  只显示缩略版本号和修改动作
-- git reflog 显示每一条命令的记录
-- git reset --hard 版本号 
-- git status 查看工作区状态(是否修改了文件, 是否add了, 是否commit了)
-- git checkout -- file 将file退回到暂存区(没有添加到暂存区的话就回到和版本库一样的状态)
-- git checkout -- file 恢复被删除的file
-- git reset HEAD file 把暂存区的修改撤销掉
-- `git init` 创建版本库
-- `git add` 添加文件到缓冲区 all是`git add`的默认参数, 也可以用`git add .`
-- `git commit -m ‘xxx’` 提交到本地仓库
-- `git commit --amend -m 'Your message'`- helps re-write messages
-- `git status` 查看当前目录状态
-- `git diff`查看文件变化的内容
-- `git reset --hard HEAD^` 回退到上一版本
-- `git reset --hard HEAD^^` 回退到上上版本
-- `git reset --hard HEAD~100` 回退到上100个版
-- `git reset --hard <commit id前几位>`  回退到指定版本
-- `git reset --source <hash code> index.html>`- removes commits and goes back to the commit for that hash code only for that particular file.
-- `git reflog` 查看历史版本，如果有需要，随后可以根据显示的commit id进行回退
-- `git add`后如果又修改了，此时git commit只会提交add过的版本，后面修改的不会提交
-- `git checkout -- filename` 让文件到add或commit过最新的版本，先add的版本，再最新的版本
-- `git reset HEAD <file>` 可以撤销git add的版本
-- `git rm` 会同时删除仓库里的文件和本地文件，但是在提交之前，还是可以通过git reset HEAD && git checkout —- <file>恢复文件
-- `git rm` 相当于本地rm <file> 再git add
-- `git remote add origin git@server-name:path/repo-name.git` 关联一个远程库
-- `git push -u origin master`第一次推送master分支的所有内容
-- `git push origin master`推送最新修改(对远程库非第一次)
-- `git branch` 查看分支
-- `git branch <name>` 创建分支
-- `git checkout <name>` 切换分支
-- `git checkout -b <name>` 创建+切换分支
-- `git merge <name>` 合并某分支到当前分支
-- `git branch -d <name>` 删除分支
-- `git log —graph` 查看分支合并图
-- `git stash` 保存工作现场
-- `git stash list` 查看保存的stash
-- `git stash apply stash@{n}` 恢复指定的stash
-- `git stash pop stash@{n}` 恢复现场并删除该stash
-- 如果一个分支没有被合并过，`git branch -d feature` 会被友情提醒，需要通过`git branch -D feature` 强行删除
-- `git tag <name>`新建一个标签，默认为HEAD，也可以指定一个commit id；
-- `git tag -a <tagname> -m "blablabla..."`可以指定标签信息；
-- `git tag -s <tagname> -m "blablabla..."`可以用PGP签名标签；
-- `git tag`可以查看所有标签。
-- `git push origin <tagname>`可以推送一个本地标签；
-- `git push origin --tags`可以推送全部未推送过的本地标签；
-- `git tag -d <tagname>`可以删除一个本地标签；
-- `git push origin :refs/tags/<tagname>`可以删除一个远程标签。
-- `git restore .` - restores the files to the previous commit/ undos all the local changes that haven't been commited.
-- `git restore index.html` - restores only that particular file to the recent commit/ undos all the local/uncommited changes for that file.
-- `git revert <hash code>`- helps to roll back to a previous commit by creating a new commit for it. Doesn't removes those commits from the `log` like `git reset` does.
-
 #### 用户信息操作
 
 配置
@@ -107,16 +47,16 @@ git checkout -- filename 直接丢弃工作区的修改
 
 >  场景8: 回退的版本要再提交
 
--  /*1.新建分支*/
+-  新建分支
   -  git checkout -b temp              //新建分支并切换到temp分支
   -  git push origin temp:temp         //将代码push到temp分支
--  /*2.删除主分支*/
+-  删除主分支
   -  git push origin --delete master   //删除远端主分支
   -  git branch -d master              //删除本地主分支
--  /*3.新建主分支*/
+-  新建主分支
   -  git checkout -b master            //新建主分支并切换到主分支
   -  git push origin master            //提交主分支
-- /*4.删除暂存分支*/
+- 删除暂存分支
   -  git branch -d temp
   -  git push origin --delete temp
 
@@ -131,7 +71,7 @@ git checkout -- filename 直接丢弃工作区的修改
 >场景2: 误删要恢复
 
 - git checkout -- filename
-- 
+
 #### 合并 commit 
 
 > 场景1: 合并最新的三个commit
@@ -255,8 +195,8 @@ git checkout -- filename 直接丢弃工作区的修改
 - 创建标签 `git tag v1.0 `
   - 在master上建一个带有备注信息的v1.0版本的标签 `git tag -a v1.0 -m "version 0.1 released"`
 - 删除标签 `git tag -d v0.1`
-- 推送标签到远程`git push origin tagname`
-  - 一次性全部推送`git push origin --tags`
+- 推送标签到远程`git push origin <tagname>` 
+  - 一次性全部推送`git push origin --tags` 
 - 在历史提交的commit-id上打标签 `git tag v1.0 commit-id`
 - 查看标签 `git tag` (列出的标签是按字母顺序的)
 - 查看标签某一个标签信息 `git show v1.0`
@@ -299,29 +239,3 @@ git checkout -- filename 直接丢弃工作区的修改
 
 > 答: 用 git stash 相关命令暂存现在的工作区
 
-###### 基础命令
-
-- git stash 暂存工作区
-- 切换到其他分支做其他的工作
-- git stash pop 将之前暂存的工作区还原
-
-###### stash命令汇总
-
-- git stash          # save uncommitted changes
-- git stash list     # list stashed changes in this git
-- git show stash@{0} # see the last stash 
-- git stash pop      # apply last stash and remove it from the list
-- git stash pop stash@{0} 恢复指定的stash
-- git stash --help   # for more info
-- git stash clear 清空所有的 stash list
-
-场景6: 查看远程master分支是否更新
-
-> 答: `git remote origin master`后, 最后一句会显示up to date 还是local out of date
-
-- git stash将工作现场藏匿
-- 切换到bug 去修复后
-- git stash list
-- git stash pop 
-
-- 

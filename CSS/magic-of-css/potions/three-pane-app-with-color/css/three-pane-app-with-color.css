@@ -1,0 +1,18 @@
+.three-pane-app.three-pane-app-with-color .top {
+  border-bottom-color: rgba(52, 133, 204, 0.2);
+  background: #3485cc; }
+  .three-pane-app.three-pane-app-with-color .top .title {
+    background: #c5e4ff; }
+.three-pane-app.three-pane-app-with-color .bottom .left {
+  border-right-color: rgba(52, 133, 204, 0.2);
+  background: rgba(52, 133, 204, 0.1); }
+.three-pane-app.three-pane-app-with-color .bottom .right {
+  border-left-color: rgba(52, 133, 204, 0.2);
+  background: rgba(52, 133, 204, 0.1); }
+.three-pane-app.three-pane-app-with-color .bottom .item {
+  border-bottom-color: rgba(52, 133, 204, 0.2); }
+  .three-pane-app.three-pane-app-with-color .bottom .item:hover {
+    background: rgba(52, 133, 204, 0.2);
+    border-bottom-color: rgba(0, 0, 0, 0); }
+.three-pane-app.three-pane-app-with-color .title {
+  background: #3485cc; }

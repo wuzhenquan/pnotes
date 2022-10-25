@@ -1,0 +1,63 @@
+@import compass/css3
+
+// Content
+
+table
+    border-collapse: collapse
+    border-spacing: 0
+
+    th
+        vertical-align: bottom
+
+    th, td
+        text-align: left
+
+        &[data-numeric], &[data-month-day-year]
+            text-align: right
+
+// Light grid style
+
+table.light-grid
+    width: 100%
+    background: #f2f2f2
+
+    th, td
+        padding: .625em
+
+    th
+        font-weight: bold
+
+    tbody td
+        border-top: .0625em solid #e0e0e0
+
+// Content-only style
+
+table.content-only
+    width: 100%
+
+    th
+        font-weight: normal
+        border-bottom: .0625em solid #e0e0e0
+
+    th, td
+        padding: .625em
+
+    tr
+
+        > td, > th
+
+            &:first-child
+                padding-left: 0
+
+            &:last-child
+                padding-right: 0
+
+        &:not(:first-child)
+
+            > td, > th
+                padding-top: 0
+
+        &:last-child
+
+            > td
+                padding-bottom: 0

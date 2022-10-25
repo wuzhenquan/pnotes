@@ -1,0 +1,19 @@
+@import compass/css3
+@import compass/utilities/general/clearfix
+
+.mock-paragraph b
+    +inline-block
+    background: rgba(0, 0, 0, .1)
+    width: 3.125em
+    height: .5em
+    margin-right: .3125em
+    margin-bottom: .3125em
+
+    &:nth-last-child(4n+1)
+        width: 4.5625em
+
+    &:nth-last-child(10n+1)
+        width: .875em
+
+    &:nth-last-child(9n+1)
+        width: 5em

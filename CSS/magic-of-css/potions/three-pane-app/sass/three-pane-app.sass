@@ -1,0 +1,76 @@
+@import compass/css3
+
+html, body
+    height: 100%
+    overflow: hidden
+
+.three-pane-app
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+    *, *::after, *::before
+        +box-sizing(border-box)
+
+    .top
+        position: absolute
+        height: 3.75em
+        padding: 1.25em
+        line-height: 2.5em
+        width: 100%
+        border-bottom: .0625em solid rgba(0, 0, 0, .1)
+
+    .bottom
+        position: absolute
+        top: 3.75em
+        bottom: 0
+        width: 100%
+
+        .left
+            border-right: .0625em solid rgba(0, 0, 0, .1)
+            position: absolute
+            width: 20%
+            height: 100%
+            overflow: auto
+
+        .middle
+            position: absolute
+            width: 60%
+            left: 20%
+            height: 100%
+            overflow: auto
+
+            .page
+                width: 40em
+                padding: 1.25em
+                max-width: 100%
+                margin: 0 auto
+
+        .right
+            border-left: .0625em solid rgba(0, 0, 0, .1)
+            position: absolute
+            width: 20%
+            right: 0
+            height: 100%
+            overflow: auto
+
+        .item
+            height: 4em
+            border-bottom: .0625em solid rgba(0, 0, 0, .1)
+            cursor: pointer
+
+            &:hover
+                background: rgba(0, 0, 0, .1)
+                border-bottom: .0625em solid rgba(0, 0, 0, 0)
+
+            &:last-child
+                border-bottom: 0
+
+    .title
+        +inline-block
+        background: rgba(0, 0, 0, .1)
+        width: 10em
+        height: 1em
+        margin-bottom: 1.25em

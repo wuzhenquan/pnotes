@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blackboard — Magic of CSS — Adam Schwartz</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="icon" href="/magic-of-css/favicon.ico">
+
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/logo.css">
+
+        <style>
+            html, body {
+                background: #000;
+                color: #fff;
+                height: 100%
+            }
+
+            .logo {
+                font-size: .3rem;
+                position: fixed;
+                top: 2em;
+                left: 2em
+            }
+
+            .logo .the-magic-of {
+                display: none;
+            }
+
+            .blackboard {
+                width: 100%;
+                min-height: 100%;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                font-size: 10vh
+            }
+
+            .blackboard ::-moz-selection {
+                background-color: #00ffb8;
+                color: #fff
+            }
+
+            .blackboard ::selection {
+                background-color: #00ffb8;
+                color: #fff
+            }
+
+            .blackboard [contenteditable]:focus {
+                outline: none
+            }
+        </style>
+    </head>
+    <body>
+        <a class="logo" href="/magic-of-css"><h1 class="the-magic-of">The Magic of CSS</h1><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div></div></a>
+
+        <div class="blackboard"></div>
+
+        <script type="text/javascript">
+            (function(){ try {
+                var insertTextAtCursor = function(text) {
+                    var sel, range, html;
+                    if (window.getSelection) {
+                        sel = window.getSelection();
+                        if (sel.getRangeAt && sel.rangeCount) {
+                            range = sel.getRangeAt(0);
+                            range.deleteContents();
+                            range.insertNode( document.createTextNode(text) );
+                        }
+                    } else if (document.selection && document.selection.createRange) {
+                        document.selection.createRange().text = text;
+                    }
+                }
+                var resetBoard = function() {
+                    if (blackboard.textContent.trim() === '') {
+                        blackboard.innerHTML = '<div contenteditable>Magic</div><br><pre><code contenteditable>/* CSS */</code></pre>'
+                        disableSpellcheck();
+                    }
+                };
+                var blackboard = document.querySelector('.blackboard')
+                var observer = new MutationObserver(resetBoard);
+                observer.observe(blackboard, {
+                    childList: true,
+                    attributes: true,
+                    characterData: true,
+                    subtree: true
+                });
+                resetBoard();
+                var tabDown = false;
+                blackboard.addEventListener('keydown', function(e){
+                    if (tabDown) {
+                        return;
+                    }
+                    if (e.keyCode === 9) { // tab
+                        tabDown = true;
+                        e.preventDefault();
+                        insertTextAtCursor('    ');
+                    }
+                });
+                blackboard.addEventListener('keyup', function(e){
+                    if (e.keyCode === 9) {
+                        tabDown = false;
+                    }
+                });
+            } catch (e) {} })();
+        </script>
+    </body>
+</html>

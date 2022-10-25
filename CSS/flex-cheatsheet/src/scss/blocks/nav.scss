@@ -1,0 +1,83 @@
+.nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &__subheader {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.45rem;
+    line-height: 1;
+    color: var(--aside-header-color);
+
+    @media ( min-width: 1130px ) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__subheader-link {
+    text-decoration: none;
+    color: inherit;
+    transition: all .15s;
+
+    &:hover {
+      color: inherit;
+      opacity: .65;
+    }
+  }
+
+  &__list {
+    margin: 0 1.25rem;
+  }
+
+  &__list--inner {
+    margin-top: .6rem;
+
+    @media ( min-width: 900px ) {
+      margin-top: .8rem;
+    }
+  }
+
+  &__item {
+    margin-bottom: .6rem;
+
+    @media ( min-width: 900px ) {
+      margin-bottom: .8rem;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    color: var(--nav-link);
+
+    &:hover {
+      text-decoration: none;
+      color: var(--nav-link-hover);
+    }
+  }
+
+  &__item--current > &__link {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--nav-link-current);
+  }
+}
+
+/* Marker
+--------------------------------------------- */
+.nav__marker {
+  position: absolute;
+  z-index: 2;
+  margin-top: -.45rem;
+  right: -1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--nav-marker-bg);
+  box-shadow: 0 0 0 10px var(--nav-marker-border);
+  transition: top .5s;
+}

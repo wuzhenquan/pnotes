@@ -1,6 +1,19 @@
-[react-typescript-cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet) 
+### [react-typescript-cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet) 
 
-[practical ways to advance your TypeScript skills](https://www.sitepoint.com/advance-typescript-skills-practical-ways/) 
+#### [practical ways to advance your TypeScript skills](https://www.sitepoint.com/advance-typescript-skills-practical-ways/) 
+
+### types
+
+https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/index.d.ts
+
+```tsx
+React.MouseEvent
+React.Dispatch<React.SetStateAction<Photo[]>>
+React.LegacyRef<HTMLDivElement>
+useRef<HTMLDivElement>(null)
+```
+
+
 
 ### Components
 
@@ -218,6 +231,19 @@ function TextInputWithFocusButton() {
 [context 2 example](https://codesandbox.io/s/react-ts-complex-context-function-f1cv4?fontsize=14&hidenavigation=1&theme=dark) 
 
 [context 4 example](https://codesandbox.io/s/react-ts-context-no-default-8ch32?fontsize=14&hidenavigation=1&theme=dark) 
+
+### 其他
+
+```tsx
+type IInquiryItemStatus = 'success' | 'warning' | 'loading'; 
+const [status, setStatus] = useState<IInquiryItemStatus>('success');
+
+messages.reduce((tempArr: React.ReactElement<any>[], item)=>{
+    ...
+}
+```
+
+
 
 参考的系列文章
 

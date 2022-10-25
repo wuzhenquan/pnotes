@@ -1,0 +1,260 @@
+@import compass/css3
+@import compass/utilities/general/clearfix
+
+@import rainbow
+@import colors
+@import variables
+
+body
+    margin: 0
+
+    @media (min-width: $chapterBreakPointLarge)
+        margin: 8em 0
+
+.page
+    text-align: center
+    padding: 2em 0
+
+    @media (min-width: $chapterBreakPointLarge)
+        padding: 0
+
+.separator
+    height: 2.5em
+
+    @media (min-width: $chapterBreakPointLarge)
+        height: 10em
+
+p.author
+    font-size: 1.4rem
+    margin-top: 2em
+    letter-spacing: .05em
+    padding-left: .43em
+    color: #888
+    font-weight: 300
+
+    a
+        text-decoration: none
+        color: inherit
+
+.share
+    margin-top: -.7rem
+    margin-bottom: .7rem
+    padding-left: .6rem
+    font-size: 0
+
+    iframe
+        +inline-block
+        background: #eee
+        border-radius: 5px
+        margin-left: auto
+        margin-right: auto
+        border: 0
+        height: 2.4rem
+        width: 13.6rem
+        height: 1.6rem
+        opacity: .8
+
+        &:hover
+            opacity: 1
+
+        &.github
+            width: 8rem
+
+h2
+    font-weight: 300
+    text-transform: uppercase
+    letter-spacing: .4em
+    font-size: 1.375em
+    line-height: 1
+    position: relative
+    margin: 2.5rem 0
+    color: #aaa
+    padding: 0 1rem
+
+    span
+        margin-right: -.4em
+
+    @media (min-width: $chapterBreakPointLarge)
+        margin: 5rem 0
+
+ol.chapters
+    list-style-type: none
+    margin-left: 0
+
+    > li
+        +pie-clearfix
+        clear: left
+        counter-increment: chaptersCounter
+
+        &::before
+            +inline-block
+            content: counter(chaptersCounter) " "
+            margin-bottom: .875rem
+            color: #aaa
+            text-align: center
+            width: 1em
+            margin-right: .625em
+            font-weight: 300
+            float: left
+
+        &.coming-soon
+
+            &::before
+                opacity: 0
+
+            a
+                font-size: .8em
+                margin-top: .2em
+                opacity: .4
+
+    &:first-child
+        counter-reset: chaptersCounter
+
+    a
+        +inline-block
+        margin-bottom: 1rem
+
+ol.chapters, ul.potions, .preface-link
+    font-weight: 300
+    letter-spacing: .01em
+    margin-right: -.01em
+    font-size: 1.25em
+    line-height: 1
+    position: relative
+    width: 14em
+    max-width: 100%
+    text-align: left
+    margin: 0 auto
+    padding: 0 1rem
+
+    @media (min-width: $chapterBreakPointLarge)
+        font-size: 1.75rem
+
+    @media (min-width: $chapterBreakPointXLarge)
+        font-size: 2rem
+
+    a
+        color: inherit
+        text-decoration: none
+        white-space: nowrap
+
+        html[data-user-agent*="Chrome"] &
+
+            &:hover span
+                background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#464646, #464646)
+                background-size: .05em 2px, .05em 2px, 2px 2px
+                background-repeat: no-repeat, no-repeat, repeat-x
+                text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff
+                background-position-y: 88%, 88%, 88%
+                background-position-x: 0%, 100%, 0%
+
+                &::selection
+                    text-shadow: .03em 0 $selectionColor, -.03em 0 $selectionColor, 0 .03em $selectionColor, 0 -.03em $selectionColor, .06em 0 $selectionColor, -.06em 0 $selectionColor, .09em 0 $selectionColor, -.09em 0 $selectionColor
+                    background: $selectionColor
+
+                &::-moz-selection
+                    text-shadow: .03em 0 $selectionColor, -.03em 0 $selectionColor, 0 .03em $selectionColor, 0 -.03em $selectionColor, .06em 0 $selectionColor, -.06em 0 $selectionColor, .09em 0 $selectionColor, -.09em 0 $selectionColor
+                    background: $selectionColor
+
+                &[data-starts-with="T"]
+                    background-size: .15em 2px, .05em 2px, 2px 2px
+
+ul.potions, .preface-link
+    list-style: none
+    text-align: center
+
+    li
+        margin-bottom: .5em
+
+// Loading animation
+
+.logo.animated
+
+    .the-magic-of
+        +transition(opacity 800ms ease-in-out 1300ms forwards)
+        opacity: 0
+
+        .trigger-pageload-animations &
+            opacity: 1
+
+    .css-rainbow
+
+        .rainbow
+            -webkit-backface-visibility: hidden
+
+        .css-rainbow-c .rainbow
+            +transition(transform 800ms ease-in-out 0ms forwards)
+            +transform(rotateZ(90deg))
+
+            .trigger-pageload-animations &
+                +transform(rotateZ(-90deg))
+
+        .css-rainbow-s-1
+
+            .bottom-half .rainbow
+                +transition(transform 400ms ease-in 600ms forwards)
+                +transform(rotateZ(270deg))
+
+                .trigger-pageload-animations &
+                    +transform(rotateZ(90deg))
+
+            .top-half .rainbow
+                +transition(transform 400ms ease-out 1000ms forwards)
+                +transform(rotateZ(90deg))
+
+                .trigger-pageload-animations &
+                    +transform(rotateZ(270deg))
+
+        .css-rainbow-s-2
+
+            .bottom-half .rainbow
+                +transition(transform 400ms ease-in 800ms forwards)
+                +transform(rotateZ(270deg))
+
+                .trigger-pageload-animations &
+                    +transform(rotateZ(90deg))
+
+            .top-half .rainbow
+                +transition(transform 400ms ease-out 1200ms forwards)
+                +transform(rotateZ(90deg))
+
+                .trigger-pageload-animations &
+                    +transform(rotateZ(270deg))
+
+.page-inner > *:not(.logo)
+    +transition(opacity 800ms ease-in-out 1300ms forwards)
+    opacity: 0
+
+    .trigger-pageload-animations &
+        opacity: 1
+
+    .window-has-been-scrolled &, .has-been-here-before &
+        +transition(none)
+
+.trigger-pageload-animations.trigger-pageload-animations-3s .logo.animated:hover
+
+    .css-rainbow
+
+        .css-rainbow-c .rainbow
+            +transition(transform 800ms ease-in-out 1200ms forwards)
+            +transform(rotateZ(90deg))
+
+        .css-rainbow-s-1
+
+            .bottom-half .rainbow
+                +transition(transform 400ms ease-out 1000ms forwards)
+                +transform(rotateZ(270deg))
+
+            .top-half .rainbow
+                +transition(transform 400ms ease-in 600ms forwards)
+                +transform(rotateZ(90deg))
+
+        .css-rainbow-s-2
+
+            .bottom-half .rainbow
+                +transition(transform 400ms ease-out 400ms forwards)
+                +transform(rotateZ(270deg))
+
+            .top-half .rainbow
+                +transition(transform 400ms ease-in 0ms forwards)
+                +transform(rotateZ(90deg))

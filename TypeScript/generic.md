@@ -9,14 +9,12 @@ const foo: <T>(x: T) => T = x=> x
 
 let numArr = foo<number>(1) 
 // short version without explicitly pass the type in the angle brackets
-let numArr = foo(1) 
+let numArr = foo(1) br
 ```
 
-- `<T>` **type variable**, a special kind of variable that denotes types. 
+- `<T>` **type variable**, a special kind of variable that denotes types. (But `T` is not type variable.)
 
 - `<T>` remembers the type that the user provides and works with that particular type only.
-
-- `<T>` is a type variable, but `T` is not.
 
 ## why
 
@@ -132,7 +130,8 @@ let myIdentity: { <T>(arg: T): T } = identity;
 interface GenericIdentityFn { <T>(arg: T): T; }
 let myIdentity: GenericIdentityFn = identity
 
-// akin - Dictionary<string> rather than just Dictionary. This makes the type parameter visible to all the other members of the interface.
+// akin - Dictionary<string> rather than just Dictionary. 
+// This makes the type parameter visible to all the other members of the interface.
 interface GenericIdentityFn<T> { (arg: T): T; }
 let myIdentity: GenericIdentityFn<number> = identity;
 ```
@@ -317,6 +316,64 @@ getProperty(x, "a"); // okay
 getProperty(x, "m"); // error: Argument of type 'm' isn't assignable to 'a' | 'b' | 'c' | 'd'.
 ```
 
+## What else can I do with Generic?
+
+### Automatic structure checks
+
+> scenario: you have a fixed structure (i.e an object) and you’re trying to access a property of if dynamically. 
+
+```ts
+type Person = {
+    name: string,
+    age: number,
+    city: string
+}
+function getPersonProp<K extends keyof Person>(p: Person, key: K): any {
+    return p[key]
+}
+```
+
+
+
+### Generic classes
+
+```JavaScript
+// create generic class
+abstract class Animal {
+    handle() {throw new Error("Not implemented") }
+}
+class Horse extends Animal{
+    color: string
+    handle() {console.log("Riding the horse...")}
+}
+class Dog extends Animal{
+    name: string 
+    handle() {console.log("Feeding the dog...")}
+}
+
+// create classes
+class Handler<T extends Animal> {
+    animal: T
+    constructor(animal: T) {
+        this.animal = animal
+    }
+    handle() {this.animal.handle()}
+}
+class DogHandler extends Handler<Dog> {}
+class HorseHandler extends Handler<Horse> {}
+
+```
+
+### Variadic Tuples
+
+```javascript
+type anotherTuple<T extends number[]> = [boolean, ...T, boolean];
+let oneNumber: anotherTuple<[number]> = [true, 1, true];
+let twoNumbers: anotherTuple<[number, number]> = [true, 1, 2, true]
+let manyNumbers: anotherTuple<[number, number, number, number]> = [true, 1, 2, 3, 4, true]
+
+```
+
 ## references:
 
 [typescript generic](https://www.tutorialsteacher.com/typescript/typescript-generic) 
@@ -324,3 +381,5 @@ getProperty(x, "m"); // error: Argument of type 'm' isn't assignable to 'a' | 'b
 [typescript handbook - generics](https://www.typescriptlang.org/v2/docs/handbook/generics.html)
 
 [TypeScript - Using Generics In Interfaces](https://www.logicbig.com/tutorials/misc/typescript/generics-in-interfaces.html) 
+
+[TypeScript: The Value Of a Good Generic](https://blog.bitsrc.io/typescript-the-value-of-a-good-generic-bfd820d52995)

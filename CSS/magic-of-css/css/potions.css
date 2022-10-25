@@ -1,0 +1,18 @@
+.mock-paragraph b {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background: rgba(0, 0, 0, 0.1);
+  width: 3.125em;
+  height: 0.5em;
+  margin-right: 0.3125em;
+  margin-bottom: 0.3125em; }
+  .mock-paragraph b:nth-last-child(4n+1) {
+    width: 4.5625em; }
+  .mock-paragraph b:nth-last-child(10n+1) {
+    width: 0.875em; }
+  .mock-paragraph b:nth-last-child(9n+1) {
+    width: 5em; }

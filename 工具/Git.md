@@ -102,11 +102,11 @@ git checkout -- filename 直接丢弃工作区的修改
   Host github.com
     HostName      github.com
     User  git
-    IdentityFile  /Users/Spring/.ssh/id_rsa_github
+    IdentityFile  /Users/wuzhenquan/.ssh/id_rsa_github
   Host gitlab.meiyou.com
     HostName      gitlab.meiyou.com
     User  git
-    IdentityFile  /Users/Spring/.ssh/id_rsa_meiyou
+    IdentityFile  /Users/wuzhenquan/.ssh/id_rsa_meiyou
   ```
 4. 清空 `.ssh/known_hosts` 文件内容
 5. ssh命令验证结果 `ssh -T git@gitlab.meiyou.com`

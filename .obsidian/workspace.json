@@ -1,0 +1,162 @@
+{
+  "main": {
+    "id": "905391c4ecb7641c",
+    "type": "split",
+    "children": [
+      {
+        "id": "e3fbf61d8cb60a6f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "403fccbc0894be80",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "后端/linux.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cf5ab11343efdcfe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React/hooks/useEffect Hook 自我答疑.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7f33c53dabcf2de4",
+    "type": "split",
+    "children": [
+      {
+        "id": "0240fc1d6aa27521",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ab805a57fd5fb0cd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "996de21f8d51d8e8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "useLayout",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e5bb7da075850622",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2d71f713cba1185d",
+    "type": "split",
+    "children": [
+      {
+        "id": "36abc2fe23f66489",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9820ba71fad4bd14",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "React/hooks/useEffect Hook 自我答疑.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "135a3242c1adf542",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "React/hooks/useEffect Hook 自我答疑.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d3994b0b8023b597",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0d6af33baba81877",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "React/hooks/useEffect Hook 自我答疑.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "cf5ab11343efdcfe",
+  "lastOpenFiles": [
+    "React/hooks/hooks example.md",
+    "React/hooks/hooks.md",
+    "工具/SVN.md",
+    "工具/Git.md",
+    "工具/🤖 ChatGPT 指南.md",
+    "后端/linux.md"
+  ]
+}

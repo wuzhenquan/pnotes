@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "后端/linux.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cf5ab11343efdcfe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React/hooks/useEffect Hook 自我答疑.md",
+                "file": "工具/🤖 ChatGPT 指南.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -78,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React/hooks/useEffect Hook 自我答疑.md",
+                "file": "工具/🤖 ChatGPT 指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React/hooks/useEffect Hook 自我答疑.md",
+                "file": "工具/🤖 ChatGPT 指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React/hooks/useEffect Hook 自我答疑.md"
+                "file": "工具/🤖 ChatGPT 指南.md"
               }
             }
           }
@@ -150,13 +136,14 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "cf5ab11343efdcfe",
+  "active": "403fccbc0894be80",
   "lastOpenFiles": [
+    "后端/linux.md",
+    "React/hooks/useEffect Hook 自我答疑.md",
     "React/hooks/hooks example.md",
     "React/hooks/hooks.md",
     "工具/SVN.md",
     "工具/Git.md",
-    "工具/🤖 ChatGPT 指南.md",
-    "后端/linux.md"
+    "工具/🤖 ChatGPT 指南.md"
   ]
 }

@@ -4,7 +4,7 @@ Plane.prototype.file = function(){
   console.log('发射子弹');
 }
 
-// 装饰类一
+// 装饰类一 给飞机装上导弹
 var MissileDecorator = function(){
   this.plane = plane;
 }
@@ -13,7 +13,7 @@ MissileDecorator.prototype.fire = function(){
   console.log('发射导弹');
 }
 
-// 装饰类二
+// 装饰类二 给飞机装上原子弹
 var MissileDecorator = function(){
   this.plane = plane;
 }

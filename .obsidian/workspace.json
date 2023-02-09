@@ -4,22 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "e3fbf61d8cb60a6f",
+        "id": "e5934456865d7564",
         "type": "tabs",
         "children": [
           {
-            "id": "a98ed240a7bb352d",
+            "id": "76c7a27ceaf4e382",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript基础知识点/ES6/decorator.md",
+                "file": "工具/Git/Git CheatSheet.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e32bb792e450e088",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工具/🤖 ChatGPT 指南.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1c90c4603dce83cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript基础知识点/ES6/Set & Map.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7954b15a5a0eef07",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工具/ChatGPT/ChatGPT Tutorial for Developers.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -85,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript基础知识点/ES6/decorator.md",
+                "file": "工具/ChatGPT/ChatGPT Tutorial for Developers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript基础知识点/ES6/decorator.md",
+                "file": "工具/ChatGPT/ChatGPT Tutorial for Developers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript基础知识点/ES6/decorator.md"
+                "file": "工具/ChatGPT/ChatGPT Tutorial for Developers.md"
               }
             }
           }
@@ -146,17 +183,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a98ed240a7bb352d",
+  "active": "7954b15a5a0eef07",
   "lastOpenFiles": [
-    "微前端/1 Micro-FrontEnd demo.md",
-    "微前端/2 - 3 why Micro-Frontends or Module Federation?.md",
+    "JavaScript基础知识点/ES6/Set & Map.md",
+    "JavaScript基础知识点/ESN/index.md",
+    "工具/ChatGPT/ChatGPT Tutorial - Use ChatGPT for DevOps tasks to 10x Your Productivity.md",
     "工具/🤖 ChatGPT 指南.md",
-    "🎨DesignPatterns/未读.md",
-    "🎨DesignPatterns/todo.md",
-    "后端/linux.md",
-    "React/hooks/useEffect Hook 自我答疑.md",
-    "React/hooks/hooks example.md",
-    "React/hooks/hooks.md",
-    "工具/SVN.md"
+    "工具/Git/Git CheatSheet.md",
+    "工具/Git/Conventional Commits Pattern..md",
+    "工具/用不好搜索引擎的程序员不是好的设计师.md",
+    "微前端/1 Micro-FrontEnd demo.md",
+    "interview konwledge/面试题/如何粗略判断公司是否靠谱.md",
+    "interview konwledge/面试题/怎么谈做过的项目.md"
   ]
 }

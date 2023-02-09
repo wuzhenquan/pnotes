@@ -1,4 +1,5 @@
 {
   "strictLineBreaks": false,
-  "showLineNumber": false
+  "showLineNumber": false,
+  "showUnsupportedFiles": true
 }

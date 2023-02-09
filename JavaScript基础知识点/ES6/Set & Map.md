@@ -1,18 +1,14 @@
 > https://www.javascripttutorial.net/es6/javascript-set/
->
 > https://www.javascripttutorial.net/es6/javascript-map/
+> https://www.builder.io/blog/maps
+> [When You Should Prefer Map Over Object In JavaScript (zhenghao.io)](https://www.zhenghao.io/posts/object-vs-map#performance-extravaganza) (待看)
 
-[我的笔记](https://github.com/wuzhenquan/Notes/blob/master/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/ES6/Map%20Set%20WeakMap%20WeakSet.xmind)
-
+⭐[[Map Set WeakMap WeakSet.xmind]]
 
 Map:`字典`  `键值对的集合` `可以遍历`
-
 Set: `集合` `成员不能重复` `只有键值，没有键名，有点类似数组` `可以遍历`
-
 WeakMap: `只接受对象作为健名`  `键名所指向的对象，不计入垃圾回收机制` `不能遍历`
-
 WeakSet: `成员都是对象` `成员都是弱引用` `不能遍历`
-
 
 
 什么情况下用什么比较好？
@@ -25,7 +21,33 @@ WeakMap: [keeps a visit count for users](http://javascript.info/weakmap-weakset#
 
 WeakSet：[who visited our site](http://javascript.info/weakmap-weakset#weakset), [Store "unread" flags](http://javascript.info/weakmap-weakset#store-unread-flags)
 
-### Set
+> because you _can_ do something, doesn’t (necessarily) mean you _should._
+
+例如：
+```js
+// 🚩
+const mapOfThings = {}
+mapOfThings[myThing.id] = myThing
+delete mapOfThings[myThing.id]
+```
+没错，对对象的增删是可以这样用，但是，可以开始考虑用一下 `Map`
+```js
+// ✅
+const mapOfThings = new Map()
+mapOfThings.set(myThing.id, myThing)
+mapOfThings.delete(myThing.id)
+```
+问题1: 性能问题摆在这里
+![[Pasted image 20230209092439.png]]
+问题2: Object 内置太多 properties
+> This alone should be a clear reason not to use an object for an arbitrary-keyed hashmap, as it can lead to some really hairy bugs you’ll only discover later.
+
+问题3: Iteration awkwardness
+
+
+---
+
+# Set
 
 `新的数据结构` `构造函数`
 
@@ -108,7 +130,7 @@ let difference = new Set([...a].filter(x => !b.has(x)));
 // Set {1}
 ```
 
-### Map
+# Map
 
 Map 结构提供了“值—值”的对应，是一种更完善的 Hash 结构实现。
 
@@ -132,7 +154,7 @@ map.get('title') // "Author"
 
 Map 转为数组/数组转为 Map/Map 转为对象/对象转为 Map/Map 转为 JSON/JSON 转为 Map
 
-### WeakMap
+# WeakMap
 
 与 Map 的区别
 
@@ -140,7 +162,7 @@ Map 转为数组/数组转为 Map/Map 转为对象/对象转为 Map/Map 转为 J
 - 它的键名所引用的对象都是弱引用
 - 没有遍历操作（即没有`keys()`、`values()`和`entries()`方法），也没有`size`属性, 也没有 clear 方法.
 
-### WeakSet
+# WeakSet
 
 与 set 的区别
 

@@ -1,16 +1,14 @@
 #### 用户信息操作
 
 配置
-
 - git config --global user.name <yourname>
 - git config --global user.email <youremail>
 
 获取
-
 - git config --get user.name
 - git config --get user.email
 
-#### 撤销修改
+撤销修改
 
 > 场景1: 修改后还没有放到暂存区, 要撤销的话
 

@@ -1,10 +1,22 @@
+
+### 我可以用来做什么？
+
+- 生成 mock 数据。如果 AI 被训练好，就可以直接通过输入 interface 生成 mock 数据了。
+- 或者通过 api 文档生出 ts interface
+
+---
+常用指令：Rephrase, Lengthen, Shorten, Explain, Pull out 5 most important keywords
+形容词：以中年人的语气、以年轻人的语气、有趣活泼的、正式的
+
+---
 [提问工程师 -- 开发指南](https://github.com/wuchangming/chatgpt-query-engineer-handbook)
 [黑魔法](https://github.com/del-xiong/awesome-chatgpt)
 [# 🧠 Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
 [学会提问](https://book.douban.com/subject/35513147/)
 
-## [prompts.chat](https://prompts.chat/) 
+## prompts.chat 
 
+https://prompts.chat/
 这是一个 collection of prompt examples，可以 example，然后点击 「✂️」就可将 example 复制到剪贴板中。
 
 ## 使用思路

@@ -133,6 +133,9 @@ https://www.youtube.com/watch?v=sTeoEFzVNSc&t=47s
 
 > De
 
+帮我 fix bug
+> can you fix the bugs in the following React code: 然后添加 error 代码
+
 ------
 
 # Node.js Examples
@@ -166,3 +169,9 @@ https://www.youtube.com/watch?v=sTeoEFzVNSc&t=47s
 这结果好像是按 id 降序排序的，不是我们想要的按消费了多少钱排序的，接下来我们可以
 
 > Revise this query and join the customers table with the orders table to find out how much each customer has spent. Then pick the top 5 who have spent the most.
+
+
+
+
+
+

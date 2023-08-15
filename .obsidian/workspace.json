@@ -11,8 +11,12 @@
             "id": "567fcb1d304495f0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "CSS基础知识点/CSS Selector.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "CSS基础知识点/CSS Selector.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "CSS基础知识点/CSS Selector.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "CSS基础知识点/CSS Selector.md"
+              }
             }
           }
         ],
@@ -148,27 +156,34 @@
   },
   "active": "ab805a57fd5fb0cd",
   "lastOpenFiles": [
+    "CSS基础知识点/CSS cursor样式.md",
+    "工具/用不好搜索引擎的程序员不是好的设计师.md",
+    "在服务器上安装nodejs.md",
+    "console.md",
+    "前端好资源.md",
+    "可以学习的项目.md",
+    "面试概要.md",
+    "viewport--视窗.md",
+    "useLayoutEffect.md",
+    "Sass随记.md",
+    "NodeJS随记.md",
+    "meta标签.md",
+    "jslint检测javascript语法规范.md",
+    "jQuery随记.md",
+    "JavaScript随记.md",
+    "iTerm$oh my zsh安装.md",
+    "HTML5随记.md",
+    "deno/Everytime I use Deno.js it is harder to go back to Node..md",
+    "工具/SVN.md",
     "thing 项目笔记/records/03 前端添加登录功能.md",
     "thing 项目笔记/records/02 后端添加登录功能.md",
     "微前端/1 Micro-FrontEnd demo.md",
     "interview konwledge/手写代码/1.md",
     "interview konwledge/跨域.md",
     "CSS基础知识点/CSS Selector.md",
-    "CSS基础知识点/CSS cursor样式.md",
     "images/Pasted image 20230209092439.png",
     "工具/Git/Git CheatSheet.md",
     "images",
-    "工具/Git/Conventional Commits Pattern..md",
-    "useLayoutEffect.md",
-    "Icon\r",
-    "工具/ChatGPT/DevOps Task 1 - Create Dockerfile for Node.js app.md",
-    "工具/🤖 ChatGPT 指南.md",
-    "JavaScript基础知识点/ES6/Set & Map.md",
-    "工具/ChatGPT/ChatGPT Tutorial for Developers.md",
-    "工具/ChatGPT/DevOps Task 2 - Create Kubernetes manifest file.md",
-    "工具/ChatGPT/DevOps Task 3 - Create CICD pipeline code.md",
-    "工具/ChatGPT/ChatGPT Tutorial - Use ChatGPT for DevOps tasks to 10x Your Productivity.md",
-    "工具/ChatGPT/正则.md",
-    "JavaScript基础知识点/ESN/index.md"
+    "Icon\r"
   ]
 }

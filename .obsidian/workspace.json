@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CSS基础知识点/CSS Selector.md",
+                "file": "微前端/1 Micro-FrontEnd demo.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CSS基础知识点/CSS Selector.md",
+                "file": "微前端/1 Micro-FrontEnd demo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CSS基础知识点/CSS Selector.md",
+                "file": "微前端/1 Micro-FrontEnd demo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CSS基础知识点/CSS Selector.md"
+                "file": "微前端/1 Micro-FrontEnd demo.md"
               }
             }
           }
@@ -156,8 +156,16 @@
   },
   "active": "ab805a57fd5fb0cd",
   "lastOpenFiles": [
+    "🔙BE Basics for FE/Nignx.md",
+    "如何学习",
+    "🔙BE Basics for FE",
+    "CSS基础知识点/CSS Selector.md",
     "CSS基础知识点/CSS cursor样式.md",
-    "工具/用不好搜索引擎的程序员不是好的设计师.md",
+    "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-horizontal.png",
+    "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-examples.png",
+    "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-center.png",
+    "CSS/Flexbox30Days/flexbox30-cover.png",
+    "🛠️Tools/用不好搜索引擎的程序员不是好的设计师.md",
     "在服务器上安装nodejs.md",
     "console.md",
     "前端好资源.md",
@@ -179,10 +187,7 @@
     "thing 项目笔记/records/02 后端添加登录功能.md",
     "微前端/1 Micro-FrontEnd demo.md",
     "interview konwledge/手写代码/1.md",
-    "interview konwledge/跨域.md",
-    "CSS基础知识点/CSS Selector.md",
     "images/Pasted image 20230209092439.png",
-    "工具/Git/Git CheatSheet.md",
     "images",
     "Icon\r"
   ]

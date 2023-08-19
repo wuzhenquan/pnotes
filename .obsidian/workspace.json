@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "微前端/1 Micro-FrontEnd demo.md",
+                "file": "📚读书笔记/番茄工作法图解/大脑需要一点时间来巩固记忆.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "微前端/1 Micro-FrontEnd demo.md",
+                "file": "📚读书笔记/番茄工作法图解/大脑需要一点时间来巩固记忆.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "微前端/1 Micro-FrontEnd demo.md",
+                "file": "📚读书笔记/番茄工作法图解/大脑需要一点时间来巩固记忆.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "微前端/1 Micro-FrontEnd demo.md"
+                "file": "📚读书笔记/番茄工作法图解/大脑需要一点时间来巩固记忆.md"
               }
             }
           }
@@ -154,8 +154,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab805a57fd5fb0cd",
+  "active": "567fcb1d304495f0",
   "lastOpenFiles": [
+    "📚读书笔记/JS you don't know 目录/es6 & beyond.md",
+    "📚读书笔记/番茄工作法图解/大脑需要一点时间来巩固记忆.md",
+    "微前端/1 Micro-FrontEnd demo.md",
+    "📚读书笔记/番茄工作法图解",
+    "📚读书笔记/JS语言精粹.md",
     "🔙BE Basics for FE/Nignx.md",
     "如何学习",
     "🔙BE Basics for FE",
@@ -184,9 +189,6 @@
     "deno/Everytime I use Deno.js it is harder to go back to Node..md",
     "工具/SVN.md",
     "thing 项目笔记/records/03 前端添加登录功能.md",
-    "thing 项目笔记/records/02 后端添加登录功能.md",
-    "微前端/1 Micro-FrontEnd demo.md",
-    "interview konwledge/手写代码/1.md",
     "images/Pasted image 20230209092439.png",
     "images",
     "Icon\r"

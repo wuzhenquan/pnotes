@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📚读书笔记/番茄工作法图解/读后感.md",
+                "file": "服务端/koa.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📚读书笔记/番茄工作法图解/读后感.md",
+                "file": "服务端/koa.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📚读书笔记/番茄工作法图解/读后感.md",
+                "file": "服务端/koa.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📚读书笔记/番茄工作法图解/读后感.md"
+                "file": "服务端/koa.md"
               }
             }
           }
@@ -154,41 +154,42 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "567fcb1d304495f0",
+  "active": "ab805a57fd5fb0cd",
   "lastOpenFiles": [
-    "📚读书笔记/番茄工作法图解/07 记录和回归.md",
-    "📚读书笔记/番茄工作法图解/读后感.md",
-    "📚读书笔记/番茄工作法图解/06 预估和测量.md",
-    "📚读书笔记/番茄工作法图解/05 LIFO & BPUF.md",
-    "📚读书笔记/番茄工作法图解/04 阶段性休息.md",
-    "📚读书笔记/番茄工作法图解/03 注意力是人的心智力量.md",
-    "📚读书笔记/番茄工作法图解/02 超时工作就像拿信用卡.md",
-    "📚读书笔记/JS you don't know 目录/es6 & beyond.md",
-    "📚读书笔记/番茄工作法图解/大脑需要一点时间来巩固记忆.md",
-    "📚读书笔记/番茄工作法图解/01 大脑需要一点时间来巩固记忆.md",
-    "微前端/1 Micro-FrontEnd demo.md",
-    "📚读书笔记/番茄工作法图解",
-    "📚读书笔记/JS语言精粹.md",
-    "🔙BE Basics for FE/Nignx.md",
+    "CSS/30-seconds-of-css/snippets/button-hover-grow-animation.md",
+    "CSS/30-seconds-of-css/snippets/button-hover-fill-animation.md",
+    "CSS/30-seconds-of-css/snippets/border-with-top-triangle.md",
+    "CSS/30-seconds-of-css/CONTRIBUTING.md",
+    "CSS/30-seconds-of-css/logo.png",
+    "code snippets/26 滚动条.md",
+    "code snippets/29 水平垂直居中.md",
+    "code snippets/30 隐藏页面元素.md",
+    "code snippets/31 解析 url.md",
+    "code snippets/28 解决 ios audio 无法自动播放、循环播放的问题.md",
+    "code snippets/27  css 写出一个三角形角标.md",
+    "code snippets/26 IOS 手机容器滚动条滑动不流畅.md",
+    "code snippets/25 文本超出显示省略号.md",
+    "code snippets/24 一个目录不存在，如何创建它.md",
+    "code snippets/23 确定页面的浏览器选项卡是否处于前台活跃状态.md",
+    "code snippets/22 将一个字符串复制到剪贴板.md",
+    "code snippets/21 为指定选择器创建具有指定范围、步长和持续时间的计时器.md",
+    "code snippets/20 对传递的 URL 进行 POST 请求.md",
+    "code snippets/19 对传递的 URL 进行 GET 请求.md",
+    "code snippets/18 获取两个日期之间的天数间隔.md",
+    "code snippets/17 获得给定毫秒数的可读格式.md",
+    "code snippets/16 移除一个元素的事件侦听器.md",
+    "code snippets/15 在给定元素上触发特定事件，且可选传递自定义数据.md",
+    "code snippets/14 等待一定时间后调用提供的函数（单位毫秒）.md",
+    "code snippets/13 从对象检索给定选择器指示的一组属性.md",
+    "code snippets/12 将一组表单元素编码为一个对象.md",
+    "code snippets/11 创建一个包含当前 URL 参数的对象.md",
+    "📚 读书笔记/番茄工作法图解",
     "如何学习",
-    "🔙BE Basics for FE",
-    "CSS基础知识点/CSS Selector.md",
-    "CSS基础知识点/CSS cursor样式.md",
+    "🔙 BE Basics for FE",
     "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-horizontal.png",
     "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-examples.png",
     "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-center.png",
     "CSS/Flexbox30Days/flexbox30-cover.png",
-    "🛠️Tools/用不好搜索引擎的程序员不是好的设计师.md",
-    "在服务器上安装nodejs.md",
-    "console.md",
-    "前端好资源.md",
-    "可以学习的项目.md",
-    "面试概要.md",
-    "viewport--视窗.md",
-    "useLayoutEffect.md",
-    "Sass随记.md",
-    "NodeJS随记.md",
-    "meta标签.md",
     "images/Pasted image 20230209092439.png",
     "images",
     "Icon\r"

@@ -1,8 +1,10 @@
 {
   "accentColor": "#004099",
-  "theme": "system",
-  "cssTheme": "",
+  "theme": "obsidian",
+  "cssTheme": "Minimal",
   "enabledCssSnippets": [
     "obsidian"
-  ]
+  ],
+  "showViewHeader": true,
+  "translucency": false
 }

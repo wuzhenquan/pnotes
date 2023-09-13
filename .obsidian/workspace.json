@@ -4,22 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "90776ec62b17608d",
+        "id": "80447bee08cf541f",
         "type": "tabs",
         "children": [
           {
-            "id": "567fcb1d304495f0",
+            "id": "34ab92e87a6f87a3",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true
+            }
+          },
+          {
+            "id": "9a3a4ea78c71ade0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "服务端/koa.md",
-                "mode": "source",
-                "source": false
+                "file": "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -33,7 +42,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ab805a57fd5fb0cd",
+            "id": "fdfaeff1f614ea39",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,21 +57,13 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "跨域",
+                "query": "file:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
-            }
-          },
-          {
-            "id": "e5bb7da075850622",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
             }
           },
           {
@@ -77,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 333.5
   },
   "right": {
     "id": "2d71f713cba1185d",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "服务端/koa.md",
+                "file": "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "服务端/koa.md",
+                "file": "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,8 +134,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "服务端/koa.md"
+                "file": "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg"
               }
+            }
+          },
+          {
+            "id": "d32cad6d3a0c9a37",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
             }
           }
         ],
@@ -142,7 +151,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 261.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -151,46 +160,55 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "markdown-importer:Open format converter": false
     }
   },
-  "active": "ab805a57fd5fb0cd",
+  "active": "9a3a4ea78c71ade0",
   "lastOpenFiles": [
-    "CSS/30-seconds-of-css/snippets/button-hover-grow-animation.md",
-    "CSS/30-seconds-of-css/snippets/button-hover-fill-animation.md",
+    "Interview Knowledge/https.md",
+    "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg",
+    "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl 1.jpg",
+    "Interview Knowledge/{E409F66C-A7D4-4B02-BD19-CB70B873EA1F}_20200514101846.jpg",
+    "images/Pasted image 20230209092439.png",
+    "Interview Knowledge/前端内参/readme.md",
+    "thing 项目笔记/records/README.md",
+    "🔙 BE Basics for FE/Nignx.md",
+    "CSS/awesome-css-grid/README.md",
+    "CSS/You-need-to-know-css/static/5afc2e5f6fb9a07a9b362527.png",
+    "CSS/You-need-to-know-css/static/5a124b29f265da431d3c472e.png",
+    "CSS/You-need-to-know-css/single-projection.md",
+    "CSS/You-need-to-know-css/smooth.md",
+    "CSS/You-need-to-know-css/frosted-glass.md",
+    "CSS/You-need-to-know-css/ellipse.md",
+    "CSS/You-need-to-know-css/zh-cn/one-pixel-line.md",
+    "CSS/You-need-to-know-css/zh-cn/bevel-corners.md",
+    "CSS/You-need-to-know-css/zh-cn/_sidebar.md",
+    "CSS/You-need-to-know-css/zh-cn/circular-text.md",
+    "CSS/You-need-to-know-css/zh-cn/custom-variables.md",
+    "Networking/HTTP 2.0.md",
+    "Networking/CORS 跨域.md",
+    "CSS/30-seconds-of-css/snippets/button-border-animation.md",
     "CSS/30-seconds-of-css/snippets/border-with-top-triangle.md",
-    "CSS/30-seconds-of-css/CONTRIBUTING.md",
+    "CSS/30-seconds-of-css/snippets/disable-selection.md",
+    "CSS/30-seconds-of-css/snippets/vertical-gallery.md",
+    "CSS/30-seconds-of-css/snippets/sibling-fade.md",
+    "CSS/30-seconds-of-css/snippets/focus-within.md",
+    "Untitled.canvas",
+    "2023-09-13.md",
+    "Interview Knowledge/面试题/怎么谈做过的项目.md",
+    "Networking",
+    "Interview Knowledge/面试题/如何粗略判断公司是否靠谱.md",
+    "Interview Knowledge/面试题/投递简历篇.md",
+    "Interview Knowledge/面试题/Untitled",
     "CSS/30-seconds-of-css/logo.png",
-    "code snippets/26 滚动条.md",
-    "code snippets/29 水平垂直居中.md",
-    "code snippets/30 隐藏页面元素.md",
-    "code snippets/31 解析 url.md",
-    "code snippets/28 解决 ios audio 无法自动播放、循环播放的问题.md",
-    "code snippets/27  css 写出一个三角形角标.md",
-    "code snippets/26 IOS 手机容器滚动条滑动不流畅.md",
-    "code snippets/25 文本超出显示省略号.md",
-    "code snippets/24 一个目录不存在，如何创建它.md",
-    "code snippets/23 确定页面的浏览器选项卡是否处于前台活跃状态.md",
-    "code snippets/22 将一个字符串复制到剪贴板.md",
-    "code snippets/21 为指定选择器创建具有指定范围、步长和持续时间的计时器.md",
-    "code snippets/20 对传递的 URL 进行 POST 请求.md",
-    "code snippets/19 对传递的 URL 进行 GET 请求.md",
-    "code snippets/18 获取两个日期之间的天数间隔.md",
-    "code snippets/17 获得给定毫秒数的可读格式.md",
-    "code snippets/16 移除一个元素的事件侦听器.md",
-    "code snippets/15 在给定元素上触发特定事件，且可选传递自定义数据.md",
-    "code snippets/14 等待一定时间后调用提供的函数（单位毫秒）.md",
-    "code snippets/13 从对象检索给定选择器指示的一组属性.md",
-    "code snippets/12 将一组表单元素编码为一个对象.md",
-    "code snippets/11 创建一个包含当前 URL 参数的对象.md",
     "📚 读书笔记/番茄工作法图解",
     "如何学习",
     "🔙 BE Basics for FE",
     "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-horizontal.png",
     "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-examples.png",
     "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-center.png",
-    "CSS/Flexbox30Days/flexbox30-cover.png",
-    "images/Pasted image 20230209092439.png",
     "images",
     "Icon\r"
   ]

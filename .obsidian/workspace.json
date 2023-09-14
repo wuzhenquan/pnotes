@@ -16,19 +16,8 @@
               "state": {},
               "pinned": true
             }
-          },
-          {
-            "id": "9a3a4ea78c71ade0",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +83,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +99,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +120,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg"
-              }
+              "state": {}
             }
           },
           {
@@ -147,7 +132,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -165,14 +150,18 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "9a3a4ea78c71ade0",
+  "active": "34ab92e87a6f87a3",
   "lastOpenFiles": [
-    "Interview Knowledge/https.md",
+    "Interview Knowledge/前端面试之道 掘金小册/2JS 基础知识点及常考面试题（二）.md",
+    "Interview Knowledge/前端面试之道 掘金小册/0小册食用指南.md",
+    "Interview Knowledge/前端内参/readme.md",
+    "0/0.1.1.md",
+    "0",
     "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg",
+    "Interview Knowledge/https.md",
     "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl 1.jpg",
     "Interview Knowledge/{E409F66C-A7D4-4B02-BD19-CB70B873EA1F}_20200514101846.jpg",
     "images/Pasted image 20230209092439.png",
-    "Interview Knowledge/前端内参/readme.md",
     "thing 项目笔记/records/README.md",
     "🔙 BE Basics for FE/Nignx.md",
     "CSS/awesome-css-grid/README.md",
@@ -197,10 +186,7 @@
     "CSS/30-seconds-of-css/snippets/focus-within.md",
     "Untitled.canvas",
     "2023-09-13.md",
-    "Interview Knowledge/面试题/怎么谈做过的项目.md",
     "Networking",
-    "Interview Knowledge/面试题/如何粗略判断公司是否靠谱.md",
-    "Interview Knowledge/面试题/投递简历篇.md",
     "Interview Knowledge/面试题/Untitled",
     "CSS/30-seconds-of-css/logo.png",
     "📚 读书笔记/番茄工作法图解",

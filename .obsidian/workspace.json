@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "80447bee08cf541f",
+        "id": "364c712d8ad35d05",
         "type": "tabs",
         "children": [
           {
-            "id": "34ab92e87a6f87a3",
+            "id": "5bb14fd5393e8bed",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "graph",
-              "state": {},
-              "pinned": true
+              "state": {}
             }
           }
         ]
@@ -67,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333.5
+    "width": 314.5
   },
   "right": {
     "id": "2d71f713cba1185d",
@@ -130,72 +128,117 @@
               "type": "calendar",
               "state": {}
             }
+          },
+          {
+            "id": "87039444f41b2dcd",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 261.5
+    "width": 261.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "random-note:Open random note": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "markdown-importer:Open format converter": false
+      "markdown-importer:Open format converter": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "34ab92e87a6f87a3",
+  "floating": {
+    "id": "f9d5477c479006a7",
+    "type": "floating",
+    "children": [
+      {
+        "id": "f2e1ba224ac161cf",
+        "type": "window",
+        "children": [
+          {
+            "id": "603b65d32f991200",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "10cf702d2723de3b",
+                "type": "leaf",
+                "state": {
+                  "type": "graph",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 264,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "10cf702d2723de3b",
   "lastOpenFiles": [
-    "Interview Knowledge/前端面试之道 掘金小册/2JS 基础知识点及常考面试题（二）.md",
-    "Interview Knowledge/前端面试之道 掘金小册/0小册食用指南.md",
-    "Interview Knowledge/前端内参/readme.md",
-    "0/0.1.1.md",
-    "0",
-    "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl.jpg",
-    "Interview Knowledge/https.md",
-    "Interview Knowledge/6c0378f8ly1g3qo7cxwrpj20u0389nfl 1.jpg",
-    "Interview Knowledge/{E409F66C-A7D4-4B02-BD19-CB70B873EA1F}_20200514101846.jpg",
-    "images/Pasted image 20230209092439.png",
+    "📚 读书笔记/JS you don't know 目录/this & object prototypes.md",
+    "[Prototype.md",
+    "[Get.md",
+    "📚 读书笔记/JS you don't know 目录/es6 & beyond.md",
+    "prototype.md",
+    "📚 读书笔记/JS 高级程序设计/第6章 面向对象的程序设计.md",
+    "Configurable.md",
+    "README.md",
+    "DevOps/NGINX.md",
+    "Readme.md.md",
+    "thing 项目笔记/logo/HatchfulExport-All/twitter_profile_image.png",
+    "thing 项目笔记/logo/HatchfulExport-All/youtube_profile_image.png",
+    "thing 项目笔记/logo/HatchfulExport-All/twitter_header_photo_2.png",
+    "thing 项目笔记/logo/HatchfulExport-All/twitter_header_photo_1.png",
+    "thing 项目笔记/logo/HatchfulExport-All/pinterest_profile_image.png",
+    "thing 项目笔记/logo/HatchfulExport-All/logo_transparent.png",
+    "thing 项目笔记/logo/HatchfulExport-All/pinterest_board_photo.png",
+    "thing 项目笔记/logo/HatchfulExport-All/logo.png",
+    "thing 项目笔记/logo/HatchfulExport-All/linkedin_banner_image_2.png",
+    "thing 项目笔记/logo/HatchfulExport-All/linkedin_profile_image.png",
+    "thing 项目笔记/records/运行开发环境.md",
+    "thing 项目笔记/records/未完善的地方.md",
+    "thing 项目笔记/records/思考.md",
+    "thing 项目笔记/records/参考.md",
+    "thing 项目笔记/records/上线步骤.md",
+    "thing 项目笔记/records/mongoDB 笔记.md",
+    "thing 项目笔记/records/important commits.md",
+    "thing 项目笔记/records/hooks 解惑.md",
+    "thing 项目笔记/records/15 typescript-eslint.md",
     "thing 项目笔记/records/README.md",
-    "🔙 BE Basics for FE/Nignx.md",
-    "CSS/awesome-css-grid/README.md",
-    "CSS/You-need-to-know-css/static/5afc2e5f6fb9a07a9b362527.png",
-    "CSS/You-need-to-know-css/static/5a124b29f265da431d3c472e.png",
-    "CSS/You-need-to-know-css/single-projection.md",
-    "CSS/You-need-to-know-css/smooth.md",
-    "CSS/You-need-to-know-css/frosted-glass.md",
-    "CSS/You-need-to-know-css/ellipse.md",
-    "CSS/You-need-to-know-css/zh-cn/one-pixel-line.md",
-    "CSS/You-need-to-know-css/zh-cn/bevel-corners.md",
-    "CSS/You-need-to-know-css/zh-cn/_sidebar.md",
-    "CSS/You-need-to-know-css/zh-cn/circular-text.md",
-    "CSS/You-need-to-know-css/zh-cn/custom-variables.md",
-    "Networking/HTTP 2.0.md",
-    "Networking/CORS 跨域.md",
-    "CSS/30-seconds-of-css/snippets/button-border-animation.md",
-    "CSS/30-seconds-of-css/snippets/border-with-top-triangle.md",
-    "CSS/30-seconds-of-css/snippets/disable-selection.md",
-    "CSS/30-seconds-of-css/snippets/vertical-gallery.md",
-    "CSS/30-seconds-of-css/snippets/sibling-fade.md",
-    "CSS/30-seconds-of-css/snippets/focus-within.md",
+    "thing 项目笔记/records/14 迁移到 typescript.md",
+    "thing 项目笔记/records/13 RSA.md",
+    "thing 项目笔记/records/12 去掉 _id 和 __v.md",
+    "thing 项目笔记/records/11 修改数据库返回的数据 copy.md",
+    "thing 项目笔记/records/10 使用 react HOC（未完成）.md",
+    "thing 项目笔记/records/09 获取 scss 里的变量.md",
+    "thing 项目笔记/logo/HatchfulExport-All",
+    "thing 项目笔记/records",
+    "thing 项目笔记/logo",
+    "thing 项目笔记/css problem saved",
+    "thing 项目笔记",
+    "Excalidraw",
     "Untitled.canvas",
-    "2023-09-13.md",
+    "DevOps",
+    "0",
     "Networking",
-    "Interview Knowledge/面试题/Untitled",
-    "CSS/30-seconds-of-css/logo.png",
-    "📚 读书笔记/番茄工作法图解",
-    "如何学习",
-    "🔙 BE Basics for FE",
-    "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-horizontal.png",
-    "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-examples.png",
-    "CSS/Flexbox30Days/flexbox-aligning-with-auto-margins/auto-margins-center.png",
-    "images",
-    "Icon\r"
+    "Interview Knowledge/面试题/Untitled"
   ]
 }

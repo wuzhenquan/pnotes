@@ -1,10 +1,10 @@
 {
-  "accentColor": "#004099",
+  "accentColor": "#6a8695",
   "theme": "moonstone",
   "cssTheme": "Minimal",
   "enabledCssSnippets": [
     "obsidian"
   ],
   "showViewHeader": true,
-  "translucency": false
+  "translucency": true
 }

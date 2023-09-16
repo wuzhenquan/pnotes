@@ -3,5 +3,6 @@
   "showLineNumber": false,
   "showUnsupportedFiles": true,
   "promptDelete": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "showInlineTitle": true
 }

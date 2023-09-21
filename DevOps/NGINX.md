@@ -56,8 +56,6 @@ location [modifier] /uri/ {  }
 server {
     listen 80;
     server_name example.com;
-
-	
 	#精确匹配 (exact match)
 	location = /specific-path/ {
         alias /var/www/specific;

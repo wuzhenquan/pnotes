@@ -4,5 +4,7 @@
   "showUnsupportedFiles": true,
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "showInlineTitle": true
+  "showInlineTitle": true,
+  "focusNewTab": true,
+  "newFileLocation": "root"
 }

@@ -6,5 +6,7 @@
     "obsidian"
   ],
   "showViewHeader": true,
-  "translucency": true
+  "translucency": true,
+  "nativeMenus": true,
+  "monospaceFontFamily": "Andale Mono"
 }

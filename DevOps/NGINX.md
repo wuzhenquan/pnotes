@@ -1,9 +1,9 @@
-是一个：web server software
+m是一个：web server software
 
 
 Nginx 可以用来做什么：
 - Web Server
-- [[正向代理和反向代理#反向代理 reverse proxy|反向代理]] 
+- 反向代理
 - 负载均衡（Load Balancer）
 - HTTP Cache
 - Security

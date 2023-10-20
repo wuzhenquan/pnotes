@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/NGINX.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,20 +21,19 @@
             }
           },
           {
-            "id": "abfeadb050fdedb9",
+            "id": "f7f8391e9db33832",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/正向代理和反向代理.md",
+                "file": "Networking/HTTP 2.0.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -63,7 +62,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:",
+                "query": "zettle",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -100,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/正向代理和反向代理.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/正向代理和反向代理.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/正向代理和反向代理.md"
+                "file": "README.md"
               }
             }
           },
@@ -183,51 +182,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "floating": {
-    "id": "f9d5477c479006a7",
-    "type": "floating",
-    "children": [
-      {
-        "id": "f2e1ba224ac161cf",
-        "type": "window",
-        "children": [
-          {
-            "id": "603b65d32f991200",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "10cf702d2723de3b",
-                "type": "leaf",
-                "state": {
-                  "type": "graph",
-                  "state": {}
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": -1181,
-        "y": 709,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "abfeadb050fdedb9",
+  "active": "6da0019e2b13d71b",
   "lastOpenFiles": [
-    "学习方法",
     "DevOps/NGINX.md",
+    "DevOps/正向代理和反向代理.md",
     "README.md",
+    "TypeScript/typescript.md",
+    "🎨 DesignPatterns/todo.md",
+    "Networking/HTTP 2.0.md",
+    "🎨 DesignPatterns/稍后阅读.md",
+    "React/React.md",
+    "React/capture value.md",
+    "数据库/SQL.md",
+    "数据库",
+    "学习方法",
     "Templates/调研技术.md",
     "Untitled.md",
     "Templates/Untitled.md",
-    "DevOps/正向代理和反向代理.md",
     "Templates",
     "DevOps/Untitled.md",
-    "Networking/HTTP 2.0.md",
     "📚 读书笔记/README.md",
     "📚 读书笔记/番茄工作法图解/活动清单和今日待办.md",
     "📚 读书笔记/JS you don't know 目录/this & object prototypes.md",
@@ -250,11 +223,6 @@
     "thing 项目笔记/logo/HatchfulExport-All/linkedin_profile_image.png",
     "thing 项目笔记/records/运行开发环境.md",
     "thing 项目笔记/records/未完善的地方.md",
-    "thing 项目笔记/records/思考.md",
-    "thing 项目笔记/records/参考.md",
-    "thing 项目笔记/records/上线步骤.md",
-    "thing 项目笔记/records/mongoDB 笔记.md",
-    "thing 项目笔记/records/important commits.md",
     "thing 项目笔记/logo/HatchfulExport-All",
     "thing 项目笔记/records",
     "thing 项目笔记/logo",
@@ -262,8 +230,6 @@
     "thing 项目笔记",
     "Excalidraw",
     "Untitled.canvas",
-    "DevOps",
-    "0",
-    "Networking"
+    "DevOps"
   ]
 }

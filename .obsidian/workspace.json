@@ -11,26 +11,8 @@
             "id": "6da0019e2b13d71b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f7f8391e9db33832",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/HTTP 2.0.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -99,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -182,11 +160,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fdfaeff1f614ea39",
+  "active": "6da0019e2b13d71b",
   "lastOpenFiles": [
-    "📚 读书笔记/番茄工作法图解/08 活动清单和今日待办.md",
-    "README.md",
+    "React/React.md",
     "Excalidraw/Drawing 2023-11-03 06.53.23.excalidraw.md",
+    "README.md",
+    "📚 读书笔记/番茄工作法图解/08 活动清单和今日待办.md",
     "Excalidraw",
     "Icon\r",
     "DevOps/NGINX.md",
@@ -195,7 +174,6 @@
     "🎨 DesignPatterns/todo.md",
     "Networking/HTTP 2.0.md",
     "🎨 DesignPatterns/稍后阅读.md",
-    "React/React.md",
     "React/capture value.md",
     "数据库/SQL.md",
     "数据库",

@@ -1,6 +1,0 @@
-[0428/170502.397:ERROR:file_io.cc(89)] ReadExactly: expected 1288, observed 0
-[0428/170502.398:ERROR:crash_report_database_win.cc(445)] failed to read records
-[0429/153305.327:ERROR:file_io.cc(89)] ReadExactly: expected 1288, observed 0
-[0429/153305.328:ERROR:crash_report_database_win.cc(445)] failed to read records
-[0429/153601.828:ERROR:file_io.cc(89)] ReadExactly: expected 1288, observed 0
-[0429/153601.829:ERROR:crash_report_database_win.cc(445)] failed to read records

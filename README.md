@@ -1,7 +1,10 @@
 
 > [!NOTE] 打碎并且重塑我的知识体系
 
-# 声明
+## 为什么我要用英文
+
+我的希望全世界的人都能看到。墙内人民水深火热。
+## 声明
 
 这里是 Permanent Notes 存放处
 
@@ -15,13 +18,13 @@ Fleeting Notes 不在这，在 Logseq 和 [Notion](https://www.notion.so/wuzhenq
 
 > Obsidian的 Graph View 把一个简单的东西变得更加复杂了。不能固定位置的 Graph View 毫无卵用。
 
-# 录入原则
+## 录入原则
 
 - 加入的内容必须是自己加工和处理过的。
 - Fleeting Notes 不在这进行处理。
 - [make sure that it is expressed clearly without needing a lot of context](https://youtu.be/GpV47rUYk8I?t=251)
 
-# TODO
+## TODO
 
 待整理的文件移动到了 iCloud 的 Fleeting Notes 目录下，需要重新整理回来。
 
@@ -29,6 +32,7 @@ Fleeting Notes 不在这，在 Logseq 和 [Notion](https://www.notion.so/wuzhenq
 - [ ] JavaScript 基础知识点：目录中的内容多且零碎，无法形成知识网络，需要重新整理
 - [ ] thing 项目笔记：项目笔记应该放到项目中去，如果在项目笔记中产生了知识，应该重新整理到知识网络中
 - [ ] 前端进阶系列：重新学习，重新放到知识网络中
+- [ ] 发布成 Obsidian Web 版
 
 # 学习
 

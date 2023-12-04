@@ -8,5 +8,6 @@
   "showViewHeader": true,
   "translucency": true,
   "nativeMenus": true,
-  "monospaceFontFamily": "Andale Mono"
+  "monospaceFontFamily": "Andale Mono",
+  "baseFontSize": 14
 }

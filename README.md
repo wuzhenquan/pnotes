@@ -1,14 +1,10 @@
 
-> [!NOTE] 打碎并且重塑我的知识体系
+> [!NOTE] Smash and rebuild my system of knowledge
 
-## 为什么我要用英文
 
-我的希望全世界的人都能看到。墙内人民水深火热。
 ## 声明
 
 这里是 Permanent Notes 存放处
-
-Fleeting Notes 不在这，在 Logseq 和 [Notion](https://www.notion.so/wuzhenquan/DailyLearning-25baab1beb36411ebcc0604ba523a66c?pvs=4) 上
 
 [我的 Logseq](https://github.com/wuzhenquan/Fleeting-Notes) 作为我的思维体系（aka. 第二大脑）
 

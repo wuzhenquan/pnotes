@@ -1,8 +1,13 @@
 {
-  "accentColor": "#004099",
-  "theme": "system",
-  "cssTheme": "",
+  "accentColor": "#6a8695",
+  "theme": "moonstone",
+  "cssTheme": "Minimal",
   "enabledCssSnippets": [
     "obsidian"
-  ]
+  ],
+  "showViewHeader": true,
+  "translucency": true,
+  "nativeMenus": true,
+  "monospaceFontFamily": "Andale Mono",
+  "baseFontSize": 14
 }

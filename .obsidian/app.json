@@ -2,5 +2,9 @@
   "strictLineBreaks": false,
   "showLineNumber": false,
   "showUnsupportedFiles": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "showInlineTitle": true,
+  "focusNewTab": true,
+  "newFileLocation": "root"
 }

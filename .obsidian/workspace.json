@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Server in the House/Untitled.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Server in the House/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Server in the House/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Server in the House/Untitled.md"
               }
             }
           },
@@ -144,7 +144,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -169,11 +171,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6da0019e2b13d71b",
+  "active": "fdfaeff1f614ea39",
   "lastOpenFiles": [
+    "Server in the House/Untitled 1.md",
+    "Server in the House/Untitled.md",
+    "README.md",
+    "Server in the House",
+    "Server in the House",
     "React/React.md",
     "Excalidraw/Drawing 2023-11-03 06.53.23.excalidraw.md",
-    "README.md",
     "📚 读书笔记/番茄工作法图解/08 活动清单和今日待办.md",
     "Excalidraw",
     "Icon\r",
@@ -200,8 +206,6 @@
     "📚 读书笔记/JS you don't know 目录/es6 & beyond.md",
     "prototype.md",
     "📚 读书笔记/JS 高级程序设计/第6章 面向对象的程序设计.md",
-    "Configurable.md",
-    "Readme.md.md",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/youtube_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_header_photo_2.png",
@@ -215,8 +219,6 @@
     "thing 项目笔记/logo/HatchfulExport-All",
     "thing 项目笔记/records",
     "thing 项目笔记/logo",
-    "thing 项目笔记/css problem saved",
-    "thing 项目笔记",
     "Untitled.canvas"
   ]
 }

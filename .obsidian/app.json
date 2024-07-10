@@ -6,5 +6,6 @@
   "alwaysUpdateLinks": true,
   "showInlineTitle": true,
   "focusNewTab": true,
-  "newFileLocation": "root"
+  "newFileLocation": "root",
+  "showRibbon": true
 }

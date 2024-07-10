@@ -1,13 +1,15 @@
 {
-  "accentColor": "#6a8695",
+  "accentColor": "#4348fb",
   "theme": "moonstone",
-  "cssTheme": "Minimal",
+  "cssTheme": "Typomagical",
   "enabledCssSnippets": [
     "obsidian"
   ],
-  "showViewHeader": true,
-  "translucency": true,
+  "showViewHeader": false,
+  "translucency": false,
   "nativeMenus": true,
-  "monospaceFontFamily": "Andale Mono",
-  "baseFontSize": 14
+  "monospaceFontFamily": "",
+  "baseFontSize": 16,
+  "interfaceFontFamily": "",
+  "textFontFamily": "Spectral"
 }

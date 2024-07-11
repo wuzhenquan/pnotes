@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "364c712d8ad35d05",
+        "id": "1f1468d503c7d8b4",
         "type": "tabs",
         "children": [
           {
-            "id": "e0a0d5e675bae103",
+            "id": "3a2e948d75fd8b7a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Readme.md",
+                "file": "🎴🀄🃏 Cards/What is Left and Right?.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Readme.md",
+                "file": "🎴🀄🃏 Cards/What is Left and Right?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Readme.md",
+                "file": "🎴🀄🃏 Cards/What is Left and Right?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Readme.md"
+                "file": "🎴🀄🃏 Cards/What is Left and Right?.md"
               }
             }
           },
@@ -151,11 +151,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 261.5,
+    "width": 441.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -170,10 +170,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e0a0d5e675bae103",
+  "active": "fdfaeff1f614ea39",
   "lastOpenFiles": [
-    "知识星图.md",
+    "📰 Articles",
+    "📰 Articles/📟 Server in The House/2 SSH without IP.md",
+    "🎴🀄🃏 Cards/What is Left and Right?.md",
+    "🎴🀄🃏 Cards",
+    "📰 Articles/📟 Server in The House/3 Duck DNS.md",
+    "SSH Connecting to your local network with your damn bad Domain Name!!!!!!!!!.md",
+    "📰 Articles/📟 Server in The House/1 WSL 2 Setup.md",
+    "Cloudflare.md",
     "Readme.md",
+    "📰 Articles/📟 Server in The House",
+    "知识星图.md",
     "Server in the House/WSL 2 Setup for SSH Remote AccessUntitled.md",
     "Untitled.canvas",
     "Untitled 1.canvas",
@@ -201,12 +210,6 @@
     "Templates",
     "DevOps/Untitled.md",
     "📚 读书笔记/README.md",
-    "📚 读书笔记/番茄工作法图解/活动清单和今日待办.md",
-    "📚 读书笔记/JS you don't know 目录/this & object prototypes.md",
-    "[Prototype.md",
-    "[Get.md",
-    "📚 读书笔记/JS you don't know 目录/es6 & beyond.md",
-    "prototype.md",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/youtube_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_header_photo_2.png",
@@ -216,8 +219,6 @@
     "thing 项目笔记/logo/HatchfulExport-All/pinterest_board_photo.png",
     "thing 项目笔记/logo/HatchfulExport-All/logo.png",
     "thing 项目笔记/logo/HatchfulExport-All/linkedin_banner_image_2.png",
-    "thing 项目笔记/logo/HatchfulExport-All/linkedin_profile_image.png",
-    "thing 项目笔记/logo/HatchfulExport-All",
-    "thing 项目笔记/records"
+    "thing 项目笔记/logo/HatchfulExport-All/linkedin_profile_image.png"
   ]
 }

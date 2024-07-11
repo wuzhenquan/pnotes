@@ -7,5 +7,6 @@
   "showInlineTitle": true,
   "focusNewTab": true,
   "newFileLocation": "root",
-  "showRibbon": true
+  "showRibbon": true,
+  "vimMode": true
 }

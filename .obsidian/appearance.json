@@ -1,11 +1,11 @@
 {
   "accentColor": "#4348fb",
-  "theme": "moonstone",
+  "theme": "system",
   "cssTheme": "Typomagical",
   "enabledCssSnippets": [
     "obsidian"
   ],
-  "showViewHeader": false,
+  "showViewHeader": true,
   "translucency": false,
   "nativeMenus": true,
   "monospaceFontFamily": "",

@@ -1,0 +1,12 @@
+{
+  "typomagical-title@@font-title": "Amiri",
+  "typomagical-text@@blockquote": "blockquote-neuomorphic",
+  "typomagical-colour@@theme-variant": "obsidian",
+  "typomagical-text@@body-ligatures": true,
+  "typomagical-text@@font-default": "Spectral",
+  "typomagical-text@@ordered-lists": "circled-ol",
+  "typomagical-text@@link-font": "ss-links-spectral",
+  "typomagical-text@@callout-quote-style": true,
+  "typomagical-text@@alignment": "align-justified",
+  "typomagical-text@@body-weight": 300
+}

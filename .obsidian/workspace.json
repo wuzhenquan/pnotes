@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🎴🀄🃏 Cards/What is Left and Right?.md",
+                "file": "🎴🀄️🃏Cards/What is Left & Right?.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🎴🀄🃏 Cards/What is Left and Right?.md",
+                "file": "🎴🀄️🃏Cards/What is Left & Right?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🎴🀄🃏 Cards/What is Left and Right?.md",
+                "file": "🎴🀄️🃏Cards/What is Left & Right?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🎴🀄🃏 Cards/What is Left and Right?.md"
+                "file": "🎴🀄️🃏Cards/What is Left & Right?.md"
               }
             }
           },
@@ -170,11 +170,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fdfaeff1f614ea39",
+  "active": "3a2e948d75fd8b7a",
   "lastOpenFiles": [
-    "📰 Articles",
     "📰 Articles/📟 Server in The House/2 SSH without IP.md",
+    "🎴🀄️🃏Cards/What is Left & Right?.md",
+    "🎴🀄️🃏Cards",
     "🎴🀄🃏 Cards/What is Left and Right?.md",
+    "📰 Articles",
     "🎴🀄🃏 Cards",
     "📰 Articles/📟 Server in The House/3 Duck DNS.md",
     "SSH Connecting to your local network with your damn bad Domain Name!!!!!!!!!.md",
@@ -204,10 +206,8 @@
     "React/capture value.md",
     "数据库/SQL.md",
     "数据库",
-    "学习方法",
     "Templates/调研技术.md",
     "Templates/Untitled.md",
-    "Templates",
     "DevOps/Untitled.md",
     "📚 读书笔记/README.md",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_profile_image.png",

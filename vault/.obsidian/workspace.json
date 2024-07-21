@@ -26,10 +26,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📰 Articles/📟 Server in The House/2 SSH without IP.md",
+                "file": "Doing it in Public.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": true
+                "source": false
               }
             }
           }
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📰 Articles/📟 Server in The House/2 SSH without IP.md",
+                "file": "Doing it in Public.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📰 Articles/📟 Server in The House/2 SSH without IP.md",
+                "file": "Doing it in Public.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📰 Articles/📟 Server in The House/2 SSH without IP.md"
+                "file": "Doing it in Public.md"
               }
             }
           },
@@ -165,7 +165,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -186,21 +186,34 @@
   },
   "active": "c69a77c710644985",
   "lastOpenFiles": [
+    "vercel.json",
+    "📰 Articles/📟 Server in The House/📟 Server in The House.md",
     "📰 Articles/📟 Server in The House/3 Duck DNS.md",
     "📰 Articles/📟 Server in The House/2 SSH without IP.md",
     "📰 Articles/📟 Server in The House/1 WSL 2 Setup.md",
-    "📰 Articles/📟 Server in The House/📟 Server in The House.md",
-    "Cloudflare.md",
-    "Doing it in Public.md",
+    "📰 Articles/📟 Server in The House",
     "SSH Connecting to your local network with your damn bad Domain Name!!!!!!!!!.md",
+    "Cloudflare.md",
+    "📰 Articles/📟 Server in My House/1 WSL 2 Setup.md",
+    "📰 Articles/📟 Server in My House/📟 Server in my House.md",
+    "🗂️ Cards/What is Left & Right?.md",
+    "✏️ Drafts/SSH Connecting to your local network with your damn bad Domain Name!!!!!!!!!.md",
+    "✏️ Drafts/Cloudflare.md",
+    "✏️ Drafts",
+    "✍️ Drafts/SSH Connecting to your local network with your damn bad Domain Name!!!!!!!!!.md",
+    "✍️ Drafts/Cloudflare.md",
+    "✍️ Drafts",
     "index.md",
+    "📰 Articles/📟 Server in My House/2 SSH without IP.md",
+    "📰 Articles/📟 Server in My House/3 Duck DNS.md",
+    "Doing it in Public.md",
     "🎴🀄🃏 Cards/What is Left and Right?.md",
     "🎴🀄️🃏Cards/What is Left & Right?.md",
     "🎴🀄🃏 Cards",
     "🎴🀄️🃏Cards",
     "📰 Articles",
     "Readme.md",
-    "📰 Articles/📟 Server in The House",
+    "📰 Articles/📟 Server in My House",
     "知识星图.md",
     "Server in the House/WSL 2 Setup for SSH Remote AccessUntitled.md",
     "Untitled.canvas",
@@ -211,19 +224,6 @@
     "Server in the House",
     "React/React.md",
     "Excalidraw/Drawing 2023-11-03 06.53.23.excalidraw.md",
-    "📚 读书笔记/番茄工作法图解/08 活动清单和今日待办.md",
-    "Excalidraw",
-    "Icon\r",
-    "DevOps/NGINX.md",
-    "DevOps/正向代理和反向代理.md",
-    "TypeScript/typescript.md",
-    "🎨 DesignPatterns/todo.md",
-    "Networking/HTTP 2.0.md",
-    "🎨 DesignPatterns/稍后阅读.md",
-    "React/capture value.md",
-    "数据库/SQL.md",
-    "数据库",
-    "Templates/调研技术.md",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/youtube_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_header_photo_2.png",

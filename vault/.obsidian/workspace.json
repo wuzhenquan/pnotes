@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🎴🀄️🃏Cards/What is Left & Right?.md",
+                "file": "Doing it in Public.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c69a77c710644985",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🎴🀄️🃏Cards/What is Left & Right?.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🎴🀄️🃏Cards/What is Left & Right?.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🎴🀄️🃏Cards/What is Left & Right?.md"
+                "file": "index.md"
               }
             }
           },
@@ -170,8 +184,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3a2e948d75fd8b7a",
+  "active": "c69a77c710644985",
   "lastOpenFiles": [
+    "Doing it in Public.md",
+    "Cloudflare.md",
+    "📰 Articles/📟 Server in The House/📟 Server in The House.md",
+    "index.md",
+    "SSH Connecting to your local network with your damn bad Domain Name!!!!!!!!!.md",
     "🎴🀄🃏 Cards/What is Left and Right?.md",
     "🎴🀄️🃏Cards/What is Left & Right?.md",
     "🎴🀄🃏 Cards",
@@ -179,9 +198,7 @@
     "🎴🀄️🃏Cards",
     "📰 Articles",
     "📰 Articles/📟 Server in The House/3 Duck DNS.md",
-    "SSH Connecting to your local network with your damn bad Domain Name!!!!!!!!!.md",
     "📰 Articles/📟 Server in The House/1 WSL 2 Setup.md",
-    "Cloudflare.md",
     "Readme.md",
     "📰 Articles/📟 Server in The House",
     "知识星图.md",
@@ -207,8 +224,6 @@
     "数据库/SQL.md",
     "数据库",
     "Templates/调研技术.md",
-    "Templates/Untitled.md",
-    "DevOps/Untitled.md",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/youtube_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_header_photo_2.png",

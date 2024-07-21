@@ -1,6 +1,6 @@
 ---
 date: "20231201"
-published: true
+draft: false
 ---
 # WSL 2 Setup for SSH Remote Access
  

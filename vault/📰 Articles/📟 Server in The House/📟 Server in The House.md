@@ -1,5 +1,6 @@
 ---
 title: 📟 Server in The House
+draft: "false"
 ---
 [[1 WSL 2 Setup]]
 [[2 SSH without IP]]

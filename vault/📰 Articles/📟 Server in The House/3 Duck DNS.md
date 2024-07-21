@@ -1,6 +1,6 @@
 ---
 date: "20240322"
-published: true
+draft: false
 ---
 # Dynamic IP Solutions - Duck DNS Setup
 

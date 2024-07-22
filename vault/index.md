@@ -1,6 +1,6 @@
 ---
-title: 🚂 Welcome to Train's Permanent Notes
+title: 💭 One cannot think without writing
 publish: true
 ---
 Article series:
-- [[📟 Server in The House]]
+- [[📟 Server in My House]]

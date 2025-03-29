@@ -13,28 +13,98 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Doing it in Public.md",
+                "file": "Yearly Review/2024.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
-              }
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2024"
             }
           },
           {
-            "id": "c69a77c710644985",
+            "id": "60ca5adbd8fb0c00",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Doing it in Public.md",
+                "file": "Yearly Review/2024.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
-              }
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2024"
+            }
+          },
+          {
+            "id": "70ff138c86119271",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🧭 PKM/我的 Zettlekasten 笔记法.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "我的 Zettlekasten 笔记法"
+            }
+          },
+          {
+            "id": "9d42b2f693a547a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Gap 对我的改变（全英）.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Gap 对我的改变（全英）"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -53,8 +123,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -69,7 +142,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -77,7 +152,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -108,7 +185,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Doing it in Public"
             }
           },
           {
@@ -120,7 +199,9 @@
                 "file": "Doing it in Public.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Doing it in Public"
             }
           },
           {
@@ -131,7 +212,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -141,15 +224,9 @@
               "type": "outline",
               "state": {
                 "file": "Doing it in Public.md"
-              }
-            }
-          },
-          {
-            "id": "87039444f41b2dcd",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Doing it in Public"
             }
           },
           {
@@ -161,11 +238,25 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "5f25a690fe52f00a",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Doing it in Public.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for Doing it in Public"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -180,56 +271,59 @@
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "markdown-importer:Open format converter": false
     }
   },
-  "active": "c69a77c710644985",
+  "active": "9d42b2f693a547a6",
   "lastOpenFiles": [
-    "📄 Articles/📟 Server in My House/📟 Server in My House.md",
-    "Doing it in Public.md",
-    "✏️ Drafts/Cloudflare.md",
-    "✏️ Drafts/SSH Connecting to your local network with your damn bad Domain Name!!!!!!!!!.md",
-    "✏️ Drafts",
+    "2025.md",
+    "🧭 PKM/我的 Zettlekasten 笔记法.md",
+    "Yearly Review/2024.md",
     "index.md",
+    "Gap 对我的改变（全英）.md",
+    "Doing it in Public.md",
+    "🎴 Knowledge Cards/101.canvas",
+    "🎴 Knowledge Cards/1 Dash Board.md",
+    "🎴 Knowledge Cards/What is Left & Right?.md",
+    "🎴 Knowledge Cards/Keyrings.md",
+    "🎴 Knowledge Cards/GPG key.md",
+    "🎴 Knowledge Cards/Cloudflared.md",
+    "🌌 Roam Research/Untitled.md",
+    "Yearly Review",
+    "✏️ Drafts/✍🏻 SSH to Home Server Without a Public IP.md",
+    "🧭 PKM",
+    "✏️ Drafts/Pasted image 20240910153245.png",
+    "✏️ Drafts/Pasted image 20240910143704.png",
+    "✏️ Drafts/Pasted image 20240910142611.png",
+    "📟 Server in My House/3️⃣ Duck DNS.md",
+    "📟 Server in My House/2️⃣ SSH without IP.md",
+    "📟 Server in My House/1️⃣ WSL 2 Setup.md",
+    "📟 Server in My House/📟 Server in My House.md",
+    "🌌 Roam Research",
+    "✏️ Drafts/Pasted image 20240910154406.png",
+    "✏️ Drafts/Pasted image 20240910154150.png",
+    "✏️ Drafts/drafts of drafts/Publish your website on you home server and acceesable outside.md",
+    "✏️ Drafts/drafts of drafts/免费真的是最贵的吗.md",
+    "✏️ Drafts/drafts of drafts",
+    "Pasted image 20240828135831.png",
+    "✏️ Drafts/Cloudflare.md",
+    "✏️ Drafts",
     "vercel.json",
-    "📄 Articles/📟 Server in My House/3️⃣ Duck DNS.md",
-    "📄 Articles/📟 Server in My House/2️⃣ SSH without IP.md",
-    "📄 Articles/📟 Server in My House/1️⃣ WSL 2 Setup.md",
-    "📄 Articles/📟 Server in My House",
+    "📟 Server in My House",
     "📰 Articles/📟 Server in My House/1 WSL 2 Setup.md",
     "📰 Articles/📟 Server in My House/📟 Server in my House.md",
-    "🎴 Cards/What is Left & Right?.md",
     "✏️ Drafts",
     "✍️ Drafts/SSH Connecting to your local network with your damn bad Domain Name!!!!!!!!!.md",
     "✍️ Drafts/Cloudflare.md",
     "✍️ Drafts",
     "📰 Articles/📟 Server in My House/2 SSH without IP.md",
     "📰 Articles/📟 Server in My House/3 Duck DNS.md",
-    "🎴🀄🃏 Cards/What is Left and Right?.md",
-    "🎴🀄️🃏Cards/What is Left & Right?.md",
     "🎴🀄🃏 Cards",
-    "🎴🀄️🃏Cards",
-    "📄 Articles",
-    "Readme.md",
-    "📰 Articles/📟 Server in My House",
-    "知识星图.md",
-    "Server in the House/WSL 2 Setup for SSH Remote AccessUntitled.md",
     "Untitled.canvas",
     "Untitled 1.canvas",
-    "Server in the House",
-    "Server in the House/Untitled 1.md",
-    "React/React.md",
-    "Excalidraw/Drawing 2023-11-03 06.53.23.excalidraw.md",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/youtube_profile_image.png",
     "thing 项目笔记/logo/HatchfulExport-All/twitter_header_photo_2.png",
-    "thing 项目笔记/logo/HatchfulExport-All/twitter_header_photo_1.png",
-    "thing 项目笔记/logo/HatchfulExport-All/pinterest_profile_image.png",
-    "thing 项目笔记/logo/HatchfulExport-All/logo_transparent.png",
-    "thing 项目笔记/logo/HatchfulExport-All/pinterest_board_photo.png",
-    "thing 项目笔记/logo/HatchfulExport-All/logo.png",
-    "thing 项目笔记/logo/HatchfulExport-All/linkedin_banner_image_2.png",
-    "thing 项目笔记/logo/HatchfulExport-All/linkedin_profile_image.png"
+    "thing 项目笔记/logo/HatchfulExport-All/twitter_header_photo_1.png"
   ]
 }

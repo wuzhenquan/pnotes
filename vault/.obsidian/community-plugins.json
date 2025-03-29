@@ -1,10 +1,6 @@
 [
-  "table-editor-obsidian",
-  "file-explorer-note-count",
-  "oz-clear-unused-images",
-  "obsidian-paste-image-rename",
-  "obsidian-image-caption",
-  "obsidian-style-settings",
+  "obsidian-minimal-settings",
   "obsidian-hider",
-  "draft-indicator"
+  "obsidian-style-settings",
+  "dataview"
 ]

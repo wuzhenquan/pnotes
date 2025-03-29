@@ -1,12 +1,14 @@
 {
   "strictLineBreaks": false,
-  "showLineNumber": false,
+  "showLineNumber": true,
   "showUnsupportedFiles": true,
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "showInlineTitle": true,
+  "showInlineTitle": false,
   "focusNewTab": true,
   "newFileLocation": "root",
-  "showRibbon": true,
-  "vimMode": true
+  "vimMode": true,
+  "useMarkdownLinks": false,
+  "livePreview": true,
+  "defaultViewMode": "preview"
 }

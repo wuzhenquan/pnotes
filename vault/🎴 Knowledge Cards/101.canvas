@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"c44dfb058f89a0d0","type":"file","file":"🎴 Knowledge Cards/GPG key.md","x":-520,"y":-920,"width":400,"height":400},
+		{"id":"2dc8ea59783b738c","type":"file","file":"🎴 Knowledge Cards/Cloudflared.md","x":-23,"y":-920,"width":400,"height":400},
+		{"id":"1ccb98bfadb5e72e","type":"file","file":"🎴 Knowledge Cards/Keyrings.md","x":-520,"y":-280,"width":400,"height":400},
+		{"id":"8ac921b6c672b065","type":"file","file":"🎴 Knowledge Cards/What is Left & Right?.md","x":-23,"y":-280,"width":400,"height":400}
+	],
+	"edges":[]
+}
